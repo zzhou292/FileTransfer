@@ -130,7 +130,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     AddWall(bin, size_YZ, pos_xp);
     AddWall(bin, size_YZ, pos_xn);
     AddWall(bin, size_XZ, pos_yp + ChVector<>(+1.5 * initSpace0, +1.5 * initSpace0, 0.0));
-    AddWall(bin, size_XZ, pos_yn + ChVector<>(-0.5 * initSpace0, -0.5 * initSpace0, 0.0));
+    AddWall(bin, size_XZ, pos_yn + ChVector<>(-1.0 * initSpace0, -1.0 * initSpace0, 0.0));
     bin->GetCollisionModel()->BuildModel();
 
     bin->SetCollide(true);
