@@ -30,10 +30,10 @@
   {
     "Adaptive Time stepping":        false,
     "CFL number":                    0.1,
-    "Fluid time step":               0.1,
-    "Solid time step":               0.02,
+    "Fluid time step":               0.2,
+    "Solid time step":               0.04,
     "Maximum time step":             0.1,
-    "End time":                      1,
+    "End time":                      5,
     "Write frame per second":        1
   },
 

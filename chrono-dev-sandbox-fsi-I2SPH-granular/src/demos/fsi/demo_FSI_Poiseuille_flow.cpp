@@ -45,13 +45,17 @@ std::string demo_dir;
 
 bool save_output = true;
 
-Real bxDim = 0.2;
+Real bxDim = 0.4;
 Real byDim = 0.1;
 Real bzDim = 0.2;
 
 Real fxDim = bxDim;
 Real fyDim = byDim;
 Real fzDim = bzDim;
+
+
+double cyl_length = 0.2001;
+double cyl_radius = .12;
 
 void ShowUsage() {
     cout << "usage: ./demo_FSI_ <json_file>" << endl;
@@ -114,6 +118,42 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     //    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_yp, chrono::QUNIT, size_XZ,
     //    13); fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_yn, chrono::QUNIT,
     //    size_XZ, 13);
+
+
+
+        /// Create falling cylinder
+    ChVector<> cyl_pos = ChVector<>(0, 0, fzDim + cyl_radius + 2 * initSpace0);
+    ChQuaternion<> cyl_rot = QUNIT;
+    auto cylinder = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
+    cylinder->SetPos(cyl_pos);
+    double volume = utils::CalcCylinderVolume(cyl_radius, cyl_length / 2);
+    ChVector<> gyration = utils::CalcCylinderGyration(cyl_radius, cyl_length / 2).diagonal();
+    double density = paramsH->rho0 * 0.7;
+    double mass = density * volume;
+    cylinder->SetCollide(true);
+    cylinder->SetBodyFixed(false);
+
+    cylinder->SetMaterialSurface(mysurfmaterial);
+    cylinder->GetCollisionModel()->ClearModel();
+    cylinder->GetCollisionModel()->SetSafeMargin(initSpace0);
+    utils::AddCylinderGeometry(cylinder.get(), cyl_radius, cyl_length, ChVector<>(0.0, 0.0, 0.0),
+                               ChQuaternion<>(1, 0, 0, 0));
+    cylinder->GetCollisionModel()->BuildModel();
+    size_t numRigidObjects = mphysicalSystem.Get_bodylist().size();
+    mphysicalSystem.AddBody(cylinder);
+
+    /// Add this body to the FSI system
+    myFsiSystem.AddFsiBody(cylinder);
+    /// Fluid-Solid Coupling of the cylinder via Condition Enforcement (BCE) Markers
+    fsi::utils::AddCylinderBce(myFsiSystem.GetDataManager(), paramsH, cylinder, ChVector<>(0, 0, 0),
+                               ChQuaternion<>(1, 0, 0, 0), cyl_radius, cyl_length + initSpace0, paramsH->HSML, false);
+
+    double FSI_MASS = myFsiSystem.GetDataManager()->numObjects->numRigid_SphMarkers * paramsH->markerMass;
+    //    cylinder->SetMass(FSI_MASS);
+    cylinder->SetMass(mass);
+    cylinder->SetInertiaXX(mass * gyration);
+    printf("inertia=%f,%f,%f\n", mass * gyration.x(), mass * gyration.y(), mass * gyration.z());
+    printf("\nreal mass=%f, FSI_MASS=%f\n\n", mass, FSI_MASS);
 }
 
 // =============================================================================
