@@ -11,7 +11,7 @@
 // =============================================================================
 // Author: Milad Rakhsha, Wei Hu
 // =============================================================================
-//This is the final tversion of testing voce
+
 // General Includes
 #include <cassert>
 #include <cstdlib>
@@ -47,16 +47,16 @@ bool pv_output = true;
 typedef fsi::Real Real;
 
 /// Dimensions of the cylinder, fluid and boundary
-Real bxDim = 6;
-Real byDim = 1.0;
-Real bzDim = 4.0;
+Real bxDim = 1;
+Real byDim = 0.55;
+Real bzDim = 4;
 
-Real fxDim = 2;
+Real fxDim = bxDim;
 Real fyDim = byDim;
-Real fzDim = 2;
+Real fzDim = 1;
 
-double cyl_length = 0.6000;
-double cyl_radius = 0.4000;
+double cyl_length = 0.2001;
+double cyl_radius = .12;
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 /// Forward declaration of helper functions
@@ -88,31 +88,24 @@ void ShowUsage() {
 void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
                       fsi::ChSystemFsi& myFsiSystem,
                       std::shared_ptr<fsi::SimParams> paramsH) {
- std::shared_ptr<ChMaterialSurfaceNSC> mat_g(new ChMaterialSurfaceNSC);
-    auto mysurfmaterial = chrono_types::make_shared<ChMaterialSurfaceSMC>();
-    std::cout<<"Test Point 1.24~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl;
-    // Set common material Properties
-    mysurfmaterial->SetYoungModulus(6e4);
-    mysurfmaterial->SetFriction(0.3f);
-    mysurfmaterial->SetRestitution(0.2f);
-    mysurfmaterial->SetAdhesion(0);
-    // Ground body
-    auto ground = chrono_types::make_shared<ChBody>();
-    ground->SetIdentifier(-1);
-    ground->SetBodyFixed(true);
-    ground->SetCollide(true);
-    ground->SetMaterialSurface(mysurfmaterial);
-    ground->GetCollisionModel()->ClearModel();
-
     Real initSpace0 = paramsH->MULT_INITSPACE * paramsH->HSML;
 
-    /// Create the geometry of the boundaries
+    ChVector<> gravity = ChVector<>(paramsH->gravity.x, paramsH->gravity.y, paramsH->gravity.z);
+    mphysicalSystem.Set_G_acc(gravity);
+
+    auto mysurfmaterial = chrono_types::make_shared<ChMaterialSurfaceSMC>();
+    /// Set common material Properties
+    mysurfmaterial->SetYoungModulus(1e8);
+    mysurfmaterial->SetFriction(0.2f);
+    mysurfmaterial->SetRestitution(0.05f);
+    mysurfmaterial->SetAdhesion(0);
+
     /// Bottom wall
     ChVector<> sizeBottom(bxDim / 2 + 3 * initSpace0, byDim / 2 + 3 * initSpace0, 2 * initSpace0);
     ChVector<> posBottom(0, 0, -2 * initSpace0);
     ChVector<> posTop(0, 0, bzDim + 2 * initSpace0);
 
-    /// left and right Wall p:positive n:negative
+    /// left and right Wall
     ChVector<> size_YZ(2 * initSpace0, byDim / 2 + 3 * initSpace0, bzDim / 2);
     ChVector<> pos_xp(bxDim / 2 + initSpace0, 0.0, bzDim / 2 + 1 * initSpace0);
     ChVector<> pos_xn(-bxDim / 2 - 3 * initSpace0, 0.0, bzDim / 2 + 1 * initSpace0);
@@ -121,29 +114,35 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     ChVector<> size_XZ(bxDim / 2, 2 * initSpace0, bzDim / 2);
     ChVector<> pos_yp(0, byDim / 2 + initSpace0, bzDim / 2 + 1 * initSpace0);
     ChVector<> pos_yn(0, -byDim / 2 - 3 * initSpace0, bzDim / 2 + 1 * initSpace0);
-    std::cout<<"Test Point 1.25~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl;
-    /// Add the Boundaries to the chrono system
-    chrono::utils::AddBoxGeometry(ground.get(), sizeBottom, posBottom, QUNIT, true);
-    chrono::utils::AddBoxGeometry(ground.get(), size_YZ, pos_xp, QUNIT, true);
-    chrono::utils::AddBoxGeometry(ground.get(), size_YZ, pos_xn, QUNIT, true);
 
-    /// You may uncomment the following lines to have side walls as well.
-    /// To show the use of Periodic boundary condition, these walls are not added
-    /// To this end, paramsH->cMin and paramsH->cMax were set up appropriately (see the .h file)
-    chrono::utils::AddBoxGeometry(ground.get(), size_XZ, pos_yp, QUNIT, true);
-    chrono::utils::AddBoxGeometry(ground.get(), size_XZ, pos_yn, QUNIT, true);
-    ground->GetCollisionModel()->BuildModel();
-    mphysicalSystem.AddBody(ground);
+    /// Create a container
+    auto bin = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
+    bin->SetPos(ChVector<>(0.0, 0.0, 0.0));
+    bin->SetRot(ChQuaternion<>(1, 0, 0, 0));
+    bin->SetIdentifier(-1);
+    bin->SetBodyFixed(true);
+    bin->GetCollisionModel()->ClearModel();
+    bin->GetCollisionModel()->SetSafeMargin(initSpace0 / 2);
+    bin->SetMaterialSurface(mysurfmaterial);
+    /// MBD representation of the walls
+    AddWall(bin, sizeBottom, posBottom);
+    AddWall(bin, sizeBottom, posTop + ChVector<>(0.0, 0.0, 3 * initSpace0));
+    AddWall(bin, size_YZ, pos_xp+ ChVector<>(3 * initSpace0, 3 * initSpace0,0.0 );
+    AddWall(bin, size_YZ, pos_xn);
+    AddWall(bin, size_XZ, pos_yp + ChVector<>(+1.5 * initSpace0, +1.5 * initSpace0, 0.0));
+    AddWall(bin, size_XZ, pos_yn + ChVector<>(-0.5 * initSpace0, -0.5 * initSpace0, 0.0));
+    bin->GetCollisionModel()->BuildModel();
 
-    // Add the boundaries to the FSI system
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, posBottom, QUNIT, sizeBottom);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, posTop, QUNIT, sizeBottom);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_xp, QUNIT, size_YZ, 23);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_xn, QUNIT, size_YZ, 23);
-    // If you uncommented the above lines that add the side walls, you should uncomment the following two lines as
-    // well This is necessary in order to populate the walls with BCE markers for the fluid simulation
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_yp, QUNIT, size_XZ, 13);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_yn, QUNIT, size_XZ, 13);
+    bin->SetCollide(true);
+    mphysicalSystem.AddBody(bin);
+
+    /// Fluid-Solid Coupling at the walls via Condition Enforcement (BCE) Markers
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, posBottom, chrono::QUNIT, sizeBottom);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, posTop, chrono::QUNIT, sizeBottom);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xp, chrono::QUNIT, size_YZ, 23);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xn, chrono::QUNIT, size_YZ, 23);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yp, chrono::QUNIT, size_XZ, 13);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yn, chrono::QUNIT, size_XZ, 13);
 
     /// Create falling cylinder
     ChVector<> cyl_pos = ChVector<>(0, 0, fzDim + cyl_radius + 2 * initSpace0);
@@ -206,22 +205,27 @@ int main(int argc, char* argv[]) {
 
     // ******************************* Create Fluid region ****************************************
     /// Create an initial box of fluid
-    //Real initSpace0 = paramsH->MULT_INITSPACE * paramsH->HSML;
     utils::GridSampler<> sampler(initSpace0);
-    /// Use a chrono sampler to create a bucket of fluid
-    ChVector<> boxCenter(-bxDim / 2 + fxDim / 2, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
+    ChVector<> boxCenter(0, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
     ChVector<> boxHalfDim(fxDim / 2, fyDim / 2, fzDim / 2);
     utils::Generator::PointVector points = sampler.SampleBox(boxCenter, boxHalfDim);
-    /// Add fluid markers from the sampler points to the FSI system
     size_t numPart = points.size();
     for (int i = 0; i < numPart; i++) {
-        Real pre_ini = paramsH->rho0 * abs(paramsH->gravity.z) * (-points[i].z() + fzDim);
-        Real rho_ini = paramsH->rho0 + pre_ini / (paramsH->Cs * paramsH->Cs);
-        myFsiSystem.GetDataManager()->AddSphMarker(
-            fsi::mR4(points[i].x(), points[i].y(), points[i].z(), paramsH->HSML), fsi::mR3(1e-10),
-            fsi::mR4(paramsH->rho0, pre_ini, paramsH->mu0, -1));
+        myFsiSystem.GetDataManager()->AddSphMarker(fsi::mR4(points[i].x(), points[i].y(), points[i].z(), paramsH->HSML),
+                                                   fsi::mR3(1e-10),
+                                                   fsi::mR4(paramsH->rho0, paramsH->BASEPRES, paramsH->mu0, -1));
     }
-    myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.push_back(mI4(0, numPart, -1, -1));
+
+    size_t numPhases = myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.size();
+
+    if (numPhases != 0) {
+        std::cout << "Error! numPhases is wrong, thrown from main\n" << std::endl;
+        std::cin.get();
+        return -1;
+    } else {
+        myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.push_back(mI4(0, numPart, -1, -1));
+        myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.push_back(mI4(numPart, numPart, 0, 0));
+    }
 
     /// Create MBD model
     CreateSolidPhase(mphysicalSystem, myFsiSystem, paramsH);
@@ -303,22 +307,12 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->sr_tau_I_mu_i,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray_FEA, demo_dir, true);
-
-
-
-
-
         char SaveAsRigidObjVTK[256];  // The filename buffer.
         static int RigidCounter = 0;
 
         snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder.%d.vtk").c_str(), RigidCounter);
         WriteCylinderVTK(Cylinder, cyl_radius, cyl_length, 100, SaveAsRigidObjVTK);
         RigidCounter++;
-
-
-
-
-        
         cout << "-------------------------------------\n" << endl;
         cout << "             Output frame:   " << next_frame << endl;
         cout << "             Time:           " << mTime << endl;
