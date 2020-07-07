@@ -47,13 +47,13 @@ bool pv_output = true;
 typedef fsi::Real Real;
 
 /// Dimensions of the cylinder, fluid and boundary
-Real bxDim = 1;
-Real byDim = 0.55;
-Real bzDim = 4;
+Real bxDim = 6;
+Real byDim = 1.0;
+Real bzDim = 4.0;
 
-Real fxDim = bxDim;
+Real fxDim = 2;
 Real fyDim = byDim;
-Real fzDim = 1;
+Real fzDim = 2;
 
 double cyl_length = 0.2001;
 double cyl_radius = .12;
