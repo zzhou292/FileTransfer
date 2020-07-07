@@ -1,0 +1,1 @@
+mpiexec -n 4 --oversubscribe ./demo_MPI_parkst

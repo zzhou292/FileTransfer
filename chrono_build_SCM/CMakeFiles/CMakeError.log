@@ -1,0 +1,132 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9612e/fast && /usr/bin/make -f CMakeFiles/cmTC_9612e.dir/build.make CMakeFiles/cmTC_9612e.dir/build
+make[1]: Entering directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9612e.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_9612e.dir/src.c.o   -c /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9612e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9612e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_9612e.dir/src.c.o  -o cmTC_9612e 
+/usr/bin/ld: CMakeFiles/cmTC_9612e.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9612e.dir/build.make:87: cmTC_9612e] Error 1
+make[1]: Leaving directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9612e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test DETECTED_AVX_20 failed with the following output:
+Change Dir: /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d9e1d/fast && /usr/bin/make -f CMakeFiles/cmTC_d9e1d.dir/build.make CMakeFiles/cmTC_d9e1d.dir/build
+make[1]: Entering directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d9e1d.dir/src.cxx.o
+/usr/bin/c++    -pthread -fopenmp -DDETECTED_AVX_20 -mavx2   -o CMakeFiles/cmTC_d9e1d.dir/src.cxx.o -c /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_d9e1d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9e1d.dir/link.txt --verbose=1
+/usr/bin/c++   -pthread -fopenmp -DDETECTED_AVX_20 -mavx2    -rdynamic CMakeFiles/cmTC_d9e1d.dir/src.cxx.o  -o cmTC_d9e1d 
+make[1]: Leaving directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+
+
+...and run output:
+Illegal instruction
+Return value: FAILED_TO_RUN
+Source file was:
+
+  #include <immintrin.h>
+  int main()
+    {
+    __m256i a = _mm256_set_epi32 (-1, 2, -3, 4, -1, 2, -3, 4);
+    __m256i result = _mm256_abs_epi32 (a);
+    return 0;
+    }
+Performing C++ SOURCE FILE Test DETECTED_FMA failed with the following output:
+Change Dir: /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bc213/fast && /usr/bin/make -f CMakeFiles/cmTC_bc213.dir/build.make CMakeFiles/cmTC_bc213.dir/build
+make[1]: Entering directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bc213.dir/src.cxx.o
+/usr/bin/c++    -pthread -fopenmp -DDETECTED_FMA -mavx2 -mfma   -o CMakeFiles/cmTC_bc213.dir/src.cxx.o -c /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_bc213
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc213.dir/link.txt --verbose=1
+/usr/bin/c++   -pthread -fopenmp -DDETECTED_FMA -mavx2 -mfma    -rdynamic CMakeFiles/cmTC_bc213.dir/src.cxx.o  -o cmTC_bc213 
+make[1]: Leaving directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+
+
+...and run output:
+Illegal instruction
+Return value: FAILED_TO_RUN
+Source file was:
+
+  #include <immintrin.h>
+  int main()
+    {
+    __m256d a = _mm256_set_pd (-1, 2, -3, 4);
+    __m256d b = _mm256_set_pd (-2, 3, -4, 1);
+    __m256d c = _mm256_set_pd (-11, 6, 4, -1);
+
+    __m256d result =  _mm256_fmsub_pd (a, b, c);
+    return 0;
+    }
+Performing C++ SOURCE FILE Test DETECTED_NEON failed with the following output:
+Change Dir: /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_31b3a/fast && /usr/bin/make -f CMakeFiles/cmTC_31b3a.dir/build.make CMakeFiles/cmTC_31b3a.dir/build
+make[1]: Entering directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_31b3a.dir/src.cxx.o
+/usr/bin/c++    -pthread -fopenmp -DDETECTED_NEON   -o CMakeFiles/cmTC_31b3a.dir/src.cxx.o -c /home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx
+/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: arm_neon.h: No such file or directory
+    2 | #include <arm_neon.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_31b3a.dir/build.make:66: CMakeFiles/cmTC_31b3a.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/jz/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_31b3a/fast] Error 2
+
+
+...and run output:
+Illegal instruction
+Return value: 1
+Source file was:
+
+#include <arm_neon.h>
+int main()
+{
+  float64_t a[2] = {  1., 2. };
+  float64_t b[2] = { -1., 3. };
+  float64_t c[2];
+
+  float64x2_t va = vld1q_f64(&a[0]);
+  float64x2_t vb = vld1q_f64(&b[0]);
+  float64x2_t vc = vaddq_f64(va, vb);
+  vst1q_f64(&c[0], vc);
+
+  if (c[0] == 0. && c[1] == 5.)
+    return 0;
+  else
+    return 0;
+}
+
