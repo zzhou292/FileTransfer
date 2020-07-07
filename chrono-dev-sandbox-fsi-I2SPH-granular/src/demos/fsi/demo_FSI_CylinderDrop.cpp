@@ -139,8 +139,8 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     /// Fluid-Solid Coupling at the walls via Condition Enforcement (BCE) Markers
     fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, posBottom, chrono::QUNIT, sizeBottom);
     fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, posTop, chrono::QUNIT, sizeBottom);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xp, chrono::QUNIT, size_YZ, 23);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xn, chrono::QUNIT, size_YZ, 23);
+    //fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xp, chrono::QUNIT, size_YZ, 23);
+    //fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xn, chrono::QUNIT, size_YZ, 23);
     fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yp, chrono::QUNIT, size_XZ, 13);
     fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yn, chrono::QUNIT, size_XZ, 13);
 
