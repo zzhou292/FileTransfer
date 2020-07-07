@@ -88,24 +88,31 @@ void ShowUsage() {
 void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
                       fsi::ChSystemFsi& myFsiSystem,
                       std::shared_ptr<fsi::SimParams> paramsH) {
+ std::shared_ptr<ChMaterialSurfaceNSC> mat_g(new ChMaterialSurfaceNSC);
+    auto mysurfmaterial = chrono_types::make_shared<ChMaterialSurfaceSMC>();
+    std::cout<<"Test Point 1.24~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl;
+    // Set common material Properties
+    mysurfmaterial->SetYoungModulus(6e4);
+    mysurfmaterial->SetFriction(0.3f);
+    mysurfmaterial->SetRestitution(0.2f);
+    mysurfmaterial->SetAdhesion(0);
+    // Ground body
+    auto ground = chrono_types::make_shared<ChBody>();
+    ground->SetIdentifier(-1);
+    ground->SetBodyFixed(true);
+    ground->SetCollide(true);
+    ground->SetMaterialSurface(mysurfmaterial);
+    ground->GetCollisionModel()->ClearModel();
+
     Real initSpace0 = paramsH->MULT_INITSPACE * paramsH->HSML;
 
-    ChVector<> gravity = ChVector<>(paramsH->gravity.x, paramsH->gravity.y, paramsH->gravity.z);
-    mphysicalSystem.Set_G_acc(gravity);
-
-    auto mysurfmaterial = chrono_types::make_shared<ChMaterialSurfaceSMC>();
-    /// Set common material Properties
-    mysurfmaterial->SetYoungModulus(1e8);
-    mysurfmaterial->SetFriction(0.2f);
-    mysurfmaterial->SetRestitution(0.05f);
-    mysurfmaterial->SetAdhesion(0);
-
+    /// Create the geometry of the boundaries
     /// Bottom wall
     ChVector<> sizeBottom(bxDim / 2 + 3 * initSpace0, byDim / 2 + 3 * initSpace0, 2 * initSpace0);
     ChVector<> posBottom(0, 0, -2 * initSpace0);
     ChVector<> posTop(0, 0, bzDim + 2 * initSpace0);
 
-    /// left and right Wall
+    /// left and right Wall p:positive n:negative
     ChVector<> size_YZ(2 * initSpace0, byDim / 2 + 3 * initSpace0, bzDim / 2);
     ChVector<> pos_xp(bxDim / 2 + initSpace0, 0.0, bzDim / 2 + 1 * initSpace0);
     ChVector<> pos_xn(-bxDim / 2 - 3 * initSpace0, 0.0, bzDim / 2 + 1 * initSpace0);
@@ -114,35 +121,29 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     ChVector<> size_XZ(bxDim / 2, 2 * initSpace0, bzDim / 2);
     ChVector<> pos_yp(0, byDim / 2 + initSpace0, bzDim / 2 + 1 * initSpace0);
     ChVector<> pos_yn(0, -byDim / 2 - 3 * initSpace0, bzDim / 2 + 1 * initSpace0);
+    std::cout<<"Test Point 1.25~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<std::endl;
+    /// Add the Boundaries to the chrono system
+    chrono::utils::AddBoxGeometry(ground.get(), sizeBottom, posBottom, QUNIT, true);
+    chrono::utils::AddBoxGeometry(ground.get(), size_YZ, pos_xp, QUNIT, true);
+    chrono::utils::AddBoxGeometry(ground.get(), size_YZ, pos_xn, QUNIT, true);
 
-    /// Create a container
-    auto bin = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
-    bin->SetPos(ChVector<>(0.0, 0.0, 0.0));
-    bin->SetRot(ChQuaternion<>(1, 0, 0, 0));
-    bin->SetIdentifier(-1);
-    bin->SetBodyFixed(true);
-    bin->GetCollisionModel()->ClearModel();
-    bin->GetCollisionModel()->SetSafeMargin(initSpace0 / 2);
-    bin->SetMaterialSurface(mysurfmaterial);
-    /// MBD representation of the walls
-    AddWall(bin, sizeBottom, posBottom);
-    AddWall(bin, sizeBottom, posTop + ChVector<>(0.0, 0.0, 3 * initSpace0));
-    AddWall(bin, size_YZ, pos_xp);
-    AddWall(bin, size_YZ, pos_xn);
-    AddWall(bin, size_XZ, pos_yp + ChVector<>(+1.5 * initSpace0, +1.5 * initSpace0, 0.0));
-    AddWall(bin, size_XZ, pos_yn + ChVector<>(-0.5 * initSpace0, -0.5 * initSpace0, 0.0));
-    bin->GetCollisionModel()->BuildModel();
+    /// You may uncomment the following lines to have side walls as well.
+    /// To show the use of Periodic boundary condition, these walls are not added
+    /// To this end, paramsH->cMin and paramsH->cMax were set up appropriately (see the .h file)
+    chrono::utils::AddBoxGeometry(ground.get(), size_XZ, pos_yp, QUNIT, true);
+    chrono::utils::AddBoxGeometry(ground.get(), size_XZ, pos_yn, QUNIT, true);
+    ground->GetCollisionModel()->BuildModel();
+    mphysicalSystem.AddBody(ground);
 
-    bin->SetCollide(true);
-    mphysicalSystem.AddBody(bin);
-
-    /// Fluid-Solid Coupling at the walls via Condition Enforcement (BCE) Markers
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, posBottom, chrono::QUNIT, sizeBottom);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, posTop, chrono::QUNIT, sizeBottom);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xp, chrono::QUNIT, size_YZ, 23);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_xn, chrono::QUNIT, size_YZ, 23);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yp, chrono::QUNIT, size_XZ, 13);
-    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yn, chrono::QUNIT, size_XZ, 13);
+    // Add the boundaries to the FSI system
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, posBottom, QUNIT, sizeBottom);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, posTop, QUNIT, sizeBottom);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_xp, QUNIT, size_YZ, 23);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_xn, QUNIT, size_YZ, 23);
+    // If you uncommented the above lines that add the side walls, you should uncomment the following two lines as
+    // well This is necessary in order to populate the walls with BCE markers for the fluid simulation
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_yp, QUNIT, size_XZ, 13);
+    fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, ground, pos_yn, QUNIT, size_XZ, 13);
 
     /// Create falling cylinder
     ChVector<> cyl_pos = ChVector<>(0, 0, fzDim + cyl_radius + 2 * initSpace0);
