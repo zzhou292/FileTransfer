@@ -56,8 +56,8 @@ message(STATUS "Finding package Chrono...")
 # Initialize output variables with settings for the main Chrono::Engine
 #-------------------------------------------------------------------------------
 
-set(CHRONO_CXX_FLAGS " -std=c++14 -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx  ")
-set(CHRONO_C_FLAGS " -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx  ")
+set(CHRONO_CXX_FLAGS " -std=c++14 -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx2  -march=native -mfma ")
+set(CHRONO_C_FLAGS " -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx2  -march=native -mfma ")
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   set(CHRONO_LINKER_FLAGS "")
@@ -65,7 +65,7 @@ else()
   set(CHRONO_LINKER_FLAGS "-L/usr/local/lib")
 endif()
 
-list(APPEND CHRONO_INCLUDE_DIRS "/usr/local/include;/usr/local/include/chrono;/usr/local/include/chrono/collision/bullet;/usr/local/include/chrono/collision/gimpact;/usr/local/include/chrono_thirdparty/HACD;/usr/local/include/chrono_thirdparty/HACDv2;/usr/local/include/eigen3")
+list(APPEND CHRONO_INCLUDE_DIRS "/usr/local/include;/usr/local/include/chrono;/usr/local/include/chrono/collision/bullet;/usr/local/include/chrono/collision/gimpact;/usr/local/include/chrono_thirdparty/HACD;/usr/local/include/chrono_thirdparty/HACDv2;/usr/include/eigen3")
 list(APPEND CHRONO_LIBRARIES "")
 list(APPEND CHRONO_LIB_NAMES "ChronoEngine")
 list(APPEND CHRONO_DLLS "")

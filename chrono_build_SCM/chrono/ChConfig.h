@@ -126,9 +126,9 @@
 //   #define CHRONO_AVX_2.0
 
 #define CHRONO_HAS_AVX
-#define CHRONO_AVX_LEVEL "1.0"
+#define CHRONO_AVX_LEVEL "2.0"
 #define CHRONO_AVX_1_0
-
+#define CHRONO_AVX_2_0
 
 // -----------------------------------------------------------------------------
 
@@ -142,7 +142,7 @@
 // If FMA support was found, then
 //   #define CHRONO_HAS_FMA
 
-
+#define CHRONO_HAS_FMA
 
 // -----------------------------------------------------------------------------
 

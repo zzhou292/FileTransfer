@@ -56,24 +56,24 @@ message(STATUS "Finding package Chrono...")
 # Initialize output variables with settings for the main Chrono::Engine
 #-------------------------------------------------------------------------------
 
-set(CHRONO_CXX_FLAGS " -std=c++14 -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx  ")
-set(CHRONO_C_FLAGS " -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx  ")
+set(CHRONO_CXX_FLAGS " -std=c++14 -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx2  -march=native -mfma ")
+set(CHRONO_C_FLAGS " -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -march=native -mavx2  -march=native -mfma ")
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   set(CHRONO_LINKER_FLAGS "")
 else()
-  set(CHRONO_LINKER_FLAGS "-L/home/jz/Desktop/FileTransfer/chrono_build_SCM/lib")
+  set(CHRONO_LINKER_FLAGS "-L/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM/lib")
 endif()
 
-list(APPEND CHRONO_INCLUDE_DIRS "/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src;/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono;/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/bullet;/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/gimpact;/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACD;/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACDv2;/home/jz/Desktop/FileTransfer/chrono_build_SCM;/usr/local/include/eigen3")
+list(APPEND CHRONO_INCLUDE_DIRS "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/bullet;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/gimpact;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACD;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACDv2;/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM;/usr/include/eigen3")
 list(APPEND CHRONO_LIBRARIES "")
 list(APPEND CHRONO_LIB_NAMES "ChronoEngine")
 list(APPEND CHRONO_DLLS "")
 list(APPEND CHRONO_DLL_NAMES "ChronoEngine.dll")
 
-set(CHRONO_DATA_DIR "/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/")
-set(CHRONO_VEHICLE_DATA_DIR "/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/vehicle/")
-set(CHRONO_FSI_DATA_DIR "/home/jz/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/fsi/")
+set(CHRONO_DATA_DIR "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/")
+set(CHRONO_VEHICLE_DATA_DIR "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/vehicle/")
+set(CHRONO_FSI_DATA_DIR "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/fsi/")
 
 set(CHRONO_SSE_FOUND "1")
 set(CHRONO_AVX_FOUND "1")
@@ -266,7 +266,7 @@ endforeach()
 foreach(lib ${CHRONO_LIB_NAMES})
   set(onelib "${lib}-NOTFOUND")
   find_library(onelib ${lib}
-    PATHS "/home/jz/Desktop/FileTransfer/chrono_build_SCM/lib"
+    PATHS "/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM/lib"
     PATH_SUFFIXES "Release"
     NO_DEFAULT_PATH
   )
@@ -288,7 +288,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   foreach(dll ${CHRONO_DLL_NAMES})
     set(onedll "${dll}-NOTFOUND")
     find_file(onedll ${dll}
-      PATHS "/home/jz/Desktop/FileTransfer/chrono_build_SCM/bin"
+      PATHS "/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM/bin"
       PATH_SUFFIXES "Release"
       NO_DEFAULT_PATH
     )
