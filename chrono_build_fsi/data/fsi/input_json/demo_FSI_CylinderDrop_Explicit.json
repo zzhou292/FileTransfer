@@ -32,8 +32,8 @@
     "Adaptive Time stepping":        true,
     "Beta":                          0.75,
     "CFL number":                    0.05,
-    "Fluid time step":               1e-6,
-    "Solid time step":               1e-6,
+    "Fluid time step":               1e-5,
+    "Solid time step":               1e-5,
     "Maximum time step":             0.005,
     "End time":                      20,
     "Write frame per second":        50
