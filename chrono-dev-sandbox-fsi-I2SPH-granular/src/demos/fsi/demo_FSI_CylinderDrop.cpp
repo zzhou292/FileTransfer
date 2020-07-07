@@ -47,16 +47,16 @@ bool pv_output = true;
 typedef fsi::Real Real;
 
 /// Dimensions of the cylinder, fluid and boundary
-Real bxDim = 1;
-Real byDim = 0.55;
-Real bzDim = 4;
+Real bxDim = 6;
+Real byDim = 1.0;
+Real bzDim = 4.0;
 
-Real fxDim = bxDim;
+Real fxDim = 2;
 Real fyDim = byDim;
-Real fzDim = 1;
+Real fzDim = 2;
 
-double cyl_length = 0.2001;
-double cyl_radius = .12;
+double cyl_length = 0.6000;
+double cyl_radius = 0.4000;
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 /// Forward declaration of helper functions
@@ -130,7 +130,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     AddWall(bin, size_YZ, pos_xp);
     AddWall(bin, size_YZ, pos_xn);
     AddWall(bin, size_XZ, pos_yp + ChVector<>(+1.5 * initSpace0, +1.5 * initSpace0, 0.0));
-    AddWall(bin, size_XZ, pos_yn + ChVector<>(-1.0 * initSpace0, -1.0 * initSpace0, 0.0));
+    AddWall(bin, size_XZ, pos_yn + ChVector<>(-0.5 * initSpace0, -0.5 * initSpace0, 0.0));
     bin->GetCollisionModel()->BuildModel();
 
     bin->SetCollide(true);
@@ -205,27 +205,22 @@ int main(int argc, char* argv[]) {
 
     // ******************************* Create Fluid region ****************************************
     /// Create an initial box of fluid
+    //Real initSpace0 = paramsH->MULT_INITSPACE * paramsH->HSML;
     utils::GridSampler<> sampler(initSpace0);
-    ChVector<> boxCenter(0, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
+    /// Use a chrono sampler to create a bucket of fluid
+    ChVector<> boxCenter(-bxDim / 2 + fxDim / 2, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
     ChVector<> boxHalfDim(fxDim / 2, fyDim / 2, fzDim / 2);
     utils::Generator::PointVector points = sampler.SampleBox(boxCenter, boxHalfDim);
+    /// Add fluid markers from the sampler points to the FSI system
     size_t numPart = points.size();
     for (int i = 0; i < numPart; i++) {
-        myFsiSystem.GetDataManager()->AddSphMarker(fsi::mR4(points[i].x(), points[i].y(), points[i].z(), paramsH->HSML),
-                                                   fsi::mR3(1e-10),
-                                                   fsi::mR4(paramsH->rho0, paramsH->BASEPRES, paramsH->mu0, -1));
+        Real pre_ini = paramsH->rho0 * abs(paramsH->gravity.z) * (-points[i].z() + fzDim);
+        Real rho_ini = paramsH->rho0 + pre_ini / (paramsH->Cs * paramsH->Cs);
+        myFsiSystem.GetDataManager()->AddSphMarker(
+            fsi::mR4(points[i].x(), points[i].y(), points[i].z(), paramsH->HSML), fsi::mR3(1e-10),
+            fsi::mR4(paramsH->rho0, pre_ini, paramsH->mu0, -1));
     }
-
-    size_t numPhases = myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.size();
-
-    if (numPhases != 0) {
-        std::cout << "Error! numPhases is wrong, thrown from main\n" << std::endl;
-        std::cin.get();
-        return -1;
-    } else {
-        myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.push_back(mI4(0, numPart, -1, -1));
-        myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.push_back(mI4(numPart, numPart, 0, 0));
-    }
+    myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray.push_back(mI4(0, numPart, -1, -1));
 
     /// Create MBD model
     CreateSolidPhase(mphysicalSystem, myFsiSystem, paramsH);
@@ -307,12 +302,22 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->sr_tau_I_mu_i,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray_FEA, demo_dir, true);
+
+
+
+
+
         char SaveAsRigidObjVTK[256];  // The filename buffer.
         static int RigidCounter = 0;
 
         snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder.%d.vtk").c_str(), RigidCounter);
         WriteCylinderVTK(Cylinder, cyl_radius, cyl_length, 100, SaveAsRigidObjVTK);
         RigidCounter++;
+
+
+
+
+        
         cout << "-------------------------------------\n" << endl;
         cout << "             Output frame:   " << next_frame << endl;
         cout << "             Time:           " << mTime << endl;
