@@ -51,9 +51,9 @@ Real bxDim = 2;
 Real byDim = 1;
 Real bzDim = 4;
 
-Real fxDim = 1.5;
-Real fyDim = 0.5;
-Real fzDim = 1;
+Real fxDim = 1.8;
+Real fyDim = 0.8;
+Real fzDim = 2;
 
 double cyl_length = 0.2001;
 double cyl_radius = .12;
