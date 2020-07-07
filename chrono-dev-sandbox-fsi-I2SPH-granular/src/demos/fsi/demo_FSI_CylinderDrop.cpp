@@ -47,10 +47,11 @@ bool pv_output = true;
 typedef fsi::Real Real;
 
 /// Dimensions of the cylinder, fluid and boundary
-Real bxDim = 6;
+/// Dimension of the domain
+Real bxDim = 6.;
 Real byDim = 1.0;
 Real bzDim = 4.0;
-
+/// Dimension of the fluid domain
 Real fxDim = 2;
 Real fyDim = byDim;
 Real fzDim = 2;
@@ -127,7 +128,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     /// MBD representation of the walls
     AddWall(bin, sizeBottom, posBottom);
     AddWall(bin, sizeBottom, posTop + ChVector<>(0.0, 0.0, 3 * initSpace0));
-    AddWall(bin, size_YZ, pos_xp+ ChVector<>(3 * initSpace0, 3 * initSpace0,0.0) );
+    AddWall(bin, size_YZ, pos_xp);
     AddWall(bin, size_YZ, pos_xn);
     AddWall(bin, size_XZ, pos_yp + ChVector<>(+1.5 * initSpace0, +1.5 * initSpace0, 0.0));
     AddWall(bin, size_XZ, pos_yn + ChVector<>(-0.5 * initSpace0, -0.5 * initSpace0, 0.0));
