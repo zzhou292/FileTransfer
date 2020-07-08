@@ -32,7 +32,7 @@
 #undef CHRONO_COSIMULATION
 
 // If module IRRLICHT was enabled, define CHRONO_IRRLICHT
-#undef CHRONO_IRRLICHT
+#define CHRONO_IRRLICHT
 
 // If module MATLAB was enabled, define CHRONO_MATLAB
 #undef CHRONO_MATLAB
@@ -44,10 +44,10 @@
 #undef CHRONO_MUMPS
 
 // If module OPENGL was enabled, define CHRONO_OPENGL
-#undef CHRONO_OPENGL
+#define CHRONO_OPENGL
 
 // If module PARALLEL was enabled, define CHRONO_PARALLEL
-#undef CHRONO_PARALLEL
+#define CHRONO_PARALLEL
 
 // If module POSTPROCESS was enabled, define CHRONO_POSTPROCESS
 #undef CHRONO_POSTPROCESS
@@ -56,7 +56,7 @@
 #undef CHRONO_PYTHON
 
 // If module VEHICLE was enabled, define CHRONO_VEHICLE
-#undef CHRONO_VEHICLE
+#define CHRONO_VEHICLE
 
 // If module FSI was enabled, define CHRONO_FSI
 #undef CHRONO_FSI

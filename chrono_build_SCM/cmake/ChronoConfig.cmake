@@ -62,18 +62,18 @@ set(CHRONO_C_FLAGS " -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -ma
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   set(CHRONO_LINKER_FLAGS "")
 else()
-  set(CHRONO_LINKER_FLAGS "-L/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM/lib")
+  set(CHRONO_LINKER_FLAGS "-L/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib")
 endif()
 
-list(APPEND CHRONO_INCLUDE_DIRS "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/bullet;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/gimpact;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACD;/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACDv2;/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM;/usr/include/eigen3")
+list(APPEND CHRONO_INCLUDE_DIRS "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/bullet;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/gimpact;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACD;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACDv2;/home/jason/Desktop/FileTransfer/chrono_build_SCM;/usr/include/eigen3")
 list(APPEND CHRONO_LIBRARIES "")
 list(APPEND CHRONO_LIB_NAMES "ChronoEngine")
 list(APPEND CHRONO_DLLS "")
 list(APPEND CHRONO_DLL_NAMES "ChronoEngine.dll")
 
-set(CHRONO_DATA_DIR "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/")
-set(CHRONO_VEHICLE_DATA_DIR "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/vehicle/")
-set(CHRONO_FSI_DATA_DIR "/home/jason/Desktop/FileTransfer/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/fsi/")
+set(CHRONO_DATA_DIR "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/")
+set(CHRONO_VEHICLE_DATA_DIR "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/vehicle/")
+set(CHRONO_FSI_DATA_DIR "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/fsi/")
 
 set(CHRONO_SSE_FOUND "1")
 set(CHRONO_AVX_FOUND "1")
@@ -84,18 +84,18 @@ set(CHRONO_AVX_FOUND "1")
 
 set(Chrono_HAS_cascade OFF)
 set(Chrono_HAS_cosimulation OFF)
-set(Chrono_HAS_irrlicht OFF)
+set(Chrono_HAS_irrlicht ON)
 set(Chrono_HAS_matlab OFF)
 set(Chrono_HAS_mkl OFF)
 set(Chrono_HAS_mumps OFF)
-set(Chrono_HAS_parallel OFF)
-set(Chrono_HAS_opengl OFF)
+set(Chrono_HAS_parallel ON)
+set(Chrono_HAS_opengl ON)
 set(Chrono_HAS_postprocess OFF)
 set(Chrono_HAS_python OFF)
-set(Chrono_HAS_vehicle OFF)
+set(Chrono_HAS_vehicle ON)
 set(Chrono_HAS_fsi OFF)
 set(Chrono_HAS_granular OFF)
-set(Chrono_HAS_sensor OFF)
+set(Chrono_HAS_sensor ON)
 
 #-------------------------------------------------------------------------------
 # Loop over the list of requested components
@@ -139,16 +139,16 @@ foreach(COMPONENT ${Chrono_FIND_COMPONENTS})
       set(CHRONO_CXX_FLAGS "${CHRONO_CXX_FLAGS} ")
       set(CHRONO_C_FLAGS "${CHRONO_C_FLAGS} ")
 
-      list(APPEND CHRONO_INCLUDE_DIRS "")
+      list(APPEND CHRONO_INCLUDE_DIRS "/usr/include;/usr/local/cuda/include;/usr/include")
       list(APPEND CHRONO_LIB_NAMES "ChronoEngine_parallel")
       list(APPEND CHRONO_DLL_NAMES "ChronoEngine_parallel.dll")
 
     elseif(${COMPONENT_UPPER} MATCHES "OPENGL")
 
-      list(APPEND CHRONO_INCLUDE_DIRS "")
+      list(APPEND CHRONO_INCLUDE_DIRS "/usr/include;/usr/include;/usr/include/GLFW")
       list(APPEND CHRONO_LIB_NAMES "ChronoEngine_opengl")
-      list(APPEND CHRONO_LIBRARIES "")
-      list(APPEND CHRONO_LIBRARIES "")
+      list(APPEND CHRONO_LIBRARIES "/usr/lib/libGLEW.so")
+      list(APPEND CHRONO_LIBRARIES "/usr/lib/libglfw.so")
       list(APPEND CHRONO_LIBRARIES "")
       list(APPEND CHRONO_DLL_NAMES "ChronoEngine_opengl.dll")
       list(APPEND CHRONO_DLLS "")
@@ -159,9 +159,9 @@ foreach(COMPONENT ${Chrono_FIND_COMPONENTS})
       set(CHRONO_CXX_FLAGS "${CHRONO_CXX_FLAGS} ")
       set(CHRONO_C_FLAGS "${CHRONO_C_FLAGS} ")
 
-      list(APPEND CHRONO_INCLUDE_DIRS "")
+      list(APPEND CHRONO_INCLUDE_DIRS "/usr/include/irrlicht")
       list(APPEND CHRONO_LIB_NAMES "ChronoEngine_irrlicht")
-      list(APPEND CHRONO_LIBRARIES "")
+      list(APPEND CHRONO_LIBRARIES "/usr/lib/libIrrlicht.so;-lXxf86vm;-lglut;-lX11;-lGL")
       list(APPEND CHRONO_DLL_NAMES "ChronoEngine_irrlicht.dll")
       list(APPEND CHRONO_DLLS "")
 
@@ -187,9 +187,9 @@ foreach(COMPONENT ${Chrono_FIND_COMPONENTS})
       set(CHRONO_CXX_FLAGS "${CHRONO_CXX_FLAGS} ")
       set(CHRONO_C_FLAGS "${CHRONO_C_FLAGS} ")
 
-      list(APPEND CHRONO_INCLUDE_DIRS "")
+      list(APPEND CHRONO_INCLUDE_DIRS "/usr/include/GLFW;/usr/include;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/include/optixu;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/include;/opt/cuda/include;/opt/cuda/include")
       list(APPEND CHRONO_LIB_NAMES "ChronoEngine_sensor")
-      list(APPEND CHRONO_LIBRARIES "")
+      list(APPEND CHRONO_LIBRARIES "/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so;/opt/cuda/lib64/libcudart_static.a;Threads::Threads;dl;/usr/lib/librt.so;/opt/cuda/lib64/libnppc.so;/opt/cuda/lib64/libnppial.so;/opt/cuda/lib64/libnppicc.so;/opt/cuda/lib64/libnppicom.so;/opt/cuda/lib64/libnppidei.so;/opt/cuda/lib64/libnppif.so;/opt/cuda/lib64/libnppig.so;/opt/cuda/lib64/libnppim.so;/opt/cuda/lib64/libnppist.so;/opt/cuda/lib64/libnppisu.so;/opt/cuda/lib64/libnppitc.so;/opt/cuda/lib64/libnpps.so;/usr/lib/libglfw.so;/usr/lib/libGLEW.so;/usr/lib/libGL.so;/usr/lib/libGLU.so;/opt/cuda/lib64/libnvrtc.so")
       list(APPEND CHRONO_DLL_NAMES "ChronoEngine_sensor.dll")
 
     elseif(${COMPONENT_UPPER} MATCHES "GRANULAR")
@@ -266,7 +266,7 @@ endforeach()
 foreach(lib ${CHRONO_LIB_NAMES})
   set(onelib "${lib}-NOTFOUND")
   find_library(onelib ${lib}
-    PATHS "/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM/lib"
+    PATHS "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib"
     PATH_SUFFIXES "Release"
     NO_DEFAULT_PATH
   )
@@ -288,7 +288,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   foreach(dll ${CHRONO_DLL_NAMES})
     set(onedll "${dll}-NOTFOUND")
     find_file(onedll ${dll}
-      PATHS "/home/jason/Desktop/FileTransfer/FileTransfer/chrono_build_SCM/bin"
+      PATHS "/home/jason/Desktop/FileTransfer/chrono_build_SCM/bin"
       PATH_SUFFIXES "Release"
       NO_DEFAULT_PATH
     )
