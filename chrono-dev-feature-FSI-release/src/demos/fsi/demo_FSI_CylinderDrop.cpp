@@ -55,8 +55,8 @@ Real fxDim = 1.7;
 Real fyDim = 0.7;
 Real fzDim = 2.5;
 
-double cyl_length = 0.2001;
-double cyl_radius = .12;
+double cyl_length = 0.4000;
+double cyl_radius = .24;
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 /// Forward declaration of helper functions
@@ -151,7 +151,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     cylinder->SetPos(cyl_pos);
     double volume = utils::CalcCylinderVolume(cyl_radius, cyl_length / 2);
     ChVector<> gyration = utils::CalcCylinderGyration(cyl_radius, cyl_length / 2).diagonal();
-    double density = paramsH->rho0 * 0.5;
+    double density = paramsH->rho0 * 0.2;
     double mass = density * volume;
     cylinder->SetCollide(true);
     cylinder->SetBodyFixed(false);
@@ -173,7 +173,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
 
     double FSI_MASS = myFsiSystem.GetDataManager()->numObjects->numRigid_SphMarkers * paramsH->markerMass;
     //    cylinder->SetMass(FSI_MASS);
-    cylinder->SetDensity(density);
+    //cylinder->SetDensity(density);
     cylinder->SetMass(mass);
     cylinder->SetInertiaXX(mass * gyration);
     printf("inertia=%f,%f,%f\n", mass * gyration.x(), mass * gyration.y(), mass * gyration.z());
