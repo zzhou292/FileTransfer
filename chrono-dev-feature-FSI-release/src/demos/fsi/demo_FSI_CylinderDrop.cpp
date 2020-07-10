@@ -51,8 +51,8 @@ Real bxDim = 2;
 Real byDim = 1;
 Real bzDim = 4;
 
-Real fxDim = 1.9;
-Real fyDim = 0.9;
+Real fxDim = 1.7;
+Real fyDim = 0.7;
 Real fzDim = 2.5;
 
 double cyl_length = 0.2001;
@@ -151,7 +151,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     cylinder->SetPos(cyl_pos);
     double volume = utils::CalcCylinderVolume(cyl_radius, cyl_length / 2);
     ChVector<> gyration = utils::CalcCylinderGyration(cyl_radius, cyl_length / 2).diagonal();
-    double density = paramsH->rho0 * 0.7;
+    double density = paramsH->rho0 * 0.5;
     double mass = density * volume;
     cylinder->SetCollide(true);
     cylinder->SetBodyFixed(false);
