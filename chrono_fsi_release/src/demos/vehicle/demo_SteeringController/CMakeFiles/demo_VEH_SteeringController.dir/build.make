@@ -80,7 +80,7 @@ include src/demos/vehicle/demo_SteeringController/CMakeFiles/demo_VEH_SteeringCo
 src/demos/vehicle/demo_SteeringController/CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.o: src/demos/vehicle/demo_SteeringController/CMakeFiles/demo_VEH_SteeringController.dir/flags.make
 src/demos/vehicle/demo_SteeringController/CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_SteeringController/demo_VEH_SteeringController.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/vehicle/demo_SteeringController/CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_SteeringController && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_SteeringController/demo_VEH_SteeringController.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_SteeringController && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_SteeringController/demo_VEH_SteeringController.cpp
 
 src/demos/vehicle/demo_SteeringController/CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.i"
@@ -103,7 +103,7 @@ bin/demo_VEH_SteeringController: lib/libChronoModels_vehicle.so
 bin/demo_VEH_SteeringController: lib/libChronoEngine_vehicle.so
 bin/demo_VEH_SteeringController: lib/libChronoEngine_irrlicht.so
 bin/demo_VEH_SteeringController: lib/libChronoEngine.so
-bin/demo_VEH_SteeringController: /usr/lib/libIrrlicht.so
+bin/demo_VEH_SteeringController: /usr/local/lib/libIrrlicht.so
 bin/demo_VEH_SteeringController: /usr/lib/openmpi/libmpi_cxx.so
 bin/demo_VEH_SteeringController: /usr/lib/openmpi/libmpi.so
 bin/demo_VEH_SteeringController: src/demos/vehicle/demo_SteeringController/CMakeFiles/demo_VEH_SteeringController.dir/link.txt

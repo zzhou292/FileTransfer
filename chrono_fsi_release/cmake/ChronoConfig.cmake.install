@@ -160,7 +160,7 @@ foreach(COMPONENT ${Chrono_FIND_COMPONENTS})
 
       list(APPEND CHRONO_INCLUDE_DIRS "/usr/include/irrlicht")
       list(APPEND CHRONO_LIB_NAMES "ChronoEngine_irrlicht")
-      list(APPEND CHRONO_LIBRARIES "/usr/lib/libIrrlicht.so;-lXxf86vm;-lglut;-lX11;-lGL")
+      list(APPEND CHRONO_LIBRARIES "/usr/local/lib/libIrrlicht.so;-lXxf86vm;-lglut;-lX11;-lGL")
       list(APPEND CHRONO_DLL_NAMES "ChronoEngine_irrlicht.dll")
       list(APPEND CHRONO_DLLS "")
 

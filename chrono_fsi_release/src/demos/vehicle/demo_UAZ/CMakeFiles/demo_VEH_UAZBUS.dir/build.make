@@ -80,7 +80,7 @@ include src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/flags.make
 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.o: src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/flags.make
 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_UAZ/demo_VEH_UAZBUS.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_UAZ && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_UAZ/demo_VEH_UAZBUS.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_UAZ && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_UAZ/demo_VEH_UAZBUS.cpp
 
 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.i"
@@ -103,7 +103,7 @@ bin/demo_VEH_UAZBUS: lib/libChronoModels_vehicle.so
 bin/demo_VEH_UAZBUS: lib/libChronoEngine_vehicle.so
 bin/demo_VEH_UAZBUS: lib/libChronoEngine_irrlicht.so
 bin/demo_VEH_UAZBUS: lib/libChronoEngine.so
-bin/demo_VEH_UAZBUS: /usr/lib/libIrrlicht.so
+bin/demo_VEH_UAZBUS: /usr/local/lib/libIrrlicht.so
 bin/demo_VEH_UAZBUS: /usr/lib/openmpi/libmpi_cxx.so
 bin/demo_VEH_UAZBUS: /usr/lib/openmpi/libmpi.so
 bin/demo_VEH_UAZBUS: src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/link.txt

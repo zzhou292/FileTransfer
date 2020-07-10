@@ -42,7 +42,7 @@ BUILD_DEMOS_VEHICLE:BOOL=ON
 BUILD_TESTING:BOOL=OFF
 
 //Path to a program.
-CCACHE_EXE:FILEPATH=/usr/bin/ccache
+CCACHE_EXE:FILEPATH=CCACHE_EXE-NOTFOUND
 
 //Compiler Type
 CH_COMPILER:STRING=COMPILER_GCC_X64
@@ -140,7 +140,7 @@ CMAKE_INSTALL_PREFIX:PATH=/usr/local
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
 //Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -415,7 +415,7 @@ ChronoEngine_fsi_LIB_DEPENDS:STATIC=general;/opt/cuda/lib64/libcudart_static.a;g
 ChronoEngine_granular_LIB_DEPENDS:STATIC=general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;ChronoEngine;
 
 //Dependencies for the target
-ChronoEngine_irrlicht_LIB_DEPENDS:STATIC=general;ChronoEngine;general;/usr/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;
+ChronoEngine_irrlicht_LIB_DEPENDS:STATIC=general;ChronoEngine;general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;
 
 //Dependencies for the target
 ChronoEngine_vehicle_LIB_DEPENDS:STATIC=general;ChronoEngine;general;ChronoEngine_irrlicht;general;/usr/lib/openmpi/libmpi_cxx.so;general;/usr/lib/openmpi/libmpi.so;
@@ -490,7 +490,7 @@ Eigen3_DIR:PATH=/usr/share/eigen3/cmake
 GRANULAR_VERBOSE_PTXAS:BOOL=OFF
 
 //Path to a library.
-IRRLICHT_LIBRARY:FILEPATH=/usr/lib/libIrrlicht.so
+IRRLICHT_LIBRARY:FILEPATH=/usr/local/lib/libIrrlicht.so
 
 //Path to a file.
 IRRLICHT_ROOT:PATH=/usr/include/irrlicht
@@ -499,7 +499,7 @@ IRRLICHT_ROOT:PATH=/usr/include/irrlicht
 MPIEXEC_EXECUTABLE:FILEPATH=/usr/bin/mpiexec
 
 //Maximum number of processors available to run MPI applications.
-MPIEXEC_MAX_NUMPROCS:STRING=6
+MPIEXEC_MAX_NUMPROCS:STRING=4
 
 //Flag used by MPI to specify the number of processes for mpiexec;
 // the next option will be the number of processes.

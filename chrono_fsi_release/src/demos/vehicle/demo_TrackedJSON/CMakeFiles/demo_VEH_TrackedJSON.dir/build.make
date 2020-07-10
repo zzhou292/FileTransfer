@@ -80,7 +80,7 @@ include src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH_TrackedJSON.dir/f
 src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH_TrackedJSON.dir/demo_VEH_TrackedJSON.cpp.o: src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH_TrackedJSON.dir/flags.make
 src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH_TrackedJSON.dir/demo_VEH_TrackedJSON.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_TrackedJSON/demo_VEH_TrackedJSON.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH_TrackedJSON.dir/demo_VEH_TrackedJSON.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_TrackedJSON && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_TrackedJSON.dir/demo_VEH_TrackedJSON.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_TrackedJSON/demo_VEH_TrackedJSON.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_TrackedJSON && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_TrackedJSON.dir/demo_VEH_TrackedJSON.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_TrackedJSON/demo_VEH_TrackedJSON.cpp
 
 src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH_TrackedJSON.dir/demo_VEH_TrackedJSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_TrackedJSON.dir/demo_VEH_TrackedJSON.cpp.i"
@@ -102,7 +102,7 @@ bin/demo_VEH_TrackedJSON: src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH
 bin/demo_VEH_TrackedJSON: lib/libChronoEngine_vehicle.so
 bin/demo_VEH_TrackedJSON: lib/libChronoEngine_irrlicht.so
 bin/demo_VEH_TrackedJSON: lib/libChronoEngine.so
-bin/demo_VEH_TrackedJSON: /usr/lib/libIrrlicht.so
+bin/demo_VEH_TrackedJSON: /usr/local/lib/libIrrlicht.so
 bin/demo_VEH_TrackedJSON: /usr/lib/openmpi/libmpi_cxx.so
 bin/demo_VEH_TrackedJSON: /usr/lib/openmpi/libmpi.so
 bin/demo_VEH_TrackedJSON: src/demos/vehicle/demo_TrackedJSON/CMakeFiles/demo_VEH_TrackedJSON.dir/link.txt

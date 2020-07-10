@@ -80,7 +80,7 @@ include src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/flags.make
 src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.o: src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/flags.make
 src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fsi/demo_FSI_DamBreak.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fsi && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fsi/demo_FSI_DamBreak.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fsi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fsi/demo_FSI_DamBreak.cpp
 
 src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.i"
@@ -110,7 +110,7 @@ bin/demo_FSI_DamBreak: /usr/lib/librt.so
 bin/demo_FSI_DamBreak: lib/libChronoEngine_vehicle.so
 bin/demo_FSI_DamBreak: lib/libChronoEngine_irrlicht.so
 bin/demo_FSI_DamBreak: lib/libChronoEngine.so
-bin/demo_FSI_DamBreak: /usr/lib/libIrrlicht.so
+bin/demo_FSI_DamBreak: /usr/local/lib/libIrrlicht.so
 bin/demo_FSI_DamBreak: /usr/lib/openmpi/libmpi_cxx.so
 bin/demo_FSI_DamBreak: /usr/lib/openmpi/libmpi.so
 bin/demo_FSI_DamBreak: src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/link.txt

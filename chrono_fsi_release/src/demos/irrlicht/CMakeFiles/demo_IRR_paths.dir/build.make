@@ -80,7 +80,7 @@ include src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/flags.make
 src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/demo_IRR_paths.cpp.o: src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/flags.make
 src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/demo_IRR_paths.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/irrlicht/demo_IRR_paths.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/demo_IRR_paths.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/irrlicht && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_IRR_paths.dir/demo_IRR_paths.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/irrlicht/demo_IRR_paths.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/irrlicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_IRR_paths.dir/demo_IRR_paths.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/irrlicht/demo_IRR_paths.cpp
 
 src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/demo_IRR_paths.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_IRR_paths.dir/demo_IRR_paths.cpp.i"
@@ -101,7 +101,7 @@ bin/demo_IRR_paths: src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/demo_IRR_pa
 bin/demo_IRR_paths: src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/build.make
 bin/demo_IRR_paths: lib/libChronoEngine_irrlicht.so
 bin/demo_IRR_paths: lib/libChronoEngine.so
-bin/demo_IRR_paths: /usr/lib/libIrrlicht.so
+bin/demo_IRR_paths: /usr/local/lib/libIrrlicht.so
 bin/demo_IRR_paths: src/demos/irrlicht/CMakeFiles/demo_IRR_paths.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/demo_IRR_paths"
 	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/irrlicht && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_IRR_paths.dir/link.txt --verbose=$(VERBOSE)

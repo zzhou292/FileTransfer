@@ -80,7 +80,7 @@ include src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/flags.make
 src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/demo_VEH_HMMWV.cpp.o: src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/flags.make
 src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/demo_VEH_HMMWV.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_HMMWV/demo_VEH_HMMWV.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/demo_VEH_HMMWV.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_HMMWV && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_HMMWV.dir/demo_VEH_HMMWV.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_HMMWV/demo_VEH_HMMWV.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_HMMWV && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_HMMWV.dir/demo_VEH_HMMWV.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_HMMWV/demo_VEH_HMMWV.cpp
 
 src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/demo_VEH_HMMWV.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_HMMWV.dir/demo_VEH_HMMWV.cpp.i"
@@ -103,7 +103,7 @@ bin/demo_VEH_HMMWV: lib/libChronoModels_vehicle.so
 bin/demo_VEH_HMMWV: lib/libChronoEngine_vehicle.so
 bin/demo_VEH_HMMWV: lib/libChronoEngine_irrlicht.so
 bin/demo_VEH_HMMWV: lib/libChronoEngine.so
-bin/demo_VEH_HMMWV: /usr/lib/libIrrlicht.so
+bin/demo_VEH_HMMWV: /usr/local/lib/libIrrlicht.so
 bin/demo_VEH_HMMWV: /usr/lib/openmpi/libmpi_cxx.so
 bin/demo_VEH_HMMWV: /usr/lib/openmpi/libmpi.so
 bin/demo_VEH_HMMWV: src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/link.txt

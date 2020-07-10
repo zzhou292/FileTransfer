@@ -80,7 +80,7 @@ include src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/flags.make
 src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.o: src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/flags.make
 src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea/demo_FEA_ancfShell.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fea && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea/demo_FEA_ancfShell.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fea && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea/demo_FEA_ancfShell.cpp
 
 src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.i"
@@ -101,7 +101,7 @@ bin/demo_FEA_ancfShell: src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA
 bin/demo_FEA_ancfShell: src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/build.make
 bin/demo_FEA_ancfShell: lib/libChronoEngine_irrlicht.so
 bin/demo_FEA_ancfShell: lib/libChronoEngine.so
-bin/demo_FEA_ancfShell: /usr/lib/libIrrlicht.so
+bin/demo_FEA_ancfShell: /usr/local/lib/libIrrlicht.so
 bin/demo_FEA_ancfShell: src/demos/fea/CMakeFiles/demo_FEA_ancfShell.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/demo_FEA_ancfShell"
 	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fea && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_FEA_ancfShell.dir/link.txt --verbose=$(VERBOSE)

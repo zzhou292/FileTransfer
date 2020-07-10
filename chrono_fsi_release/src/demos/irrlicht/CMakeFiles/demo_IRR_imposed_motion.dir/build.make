@@ -80,7 +80,7 @@ include src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/flags.make
 src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/demo_IRR_imposed_motion.cpp.o: src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/flags.make
 src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/demo_IRR_imposed_motion.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/irrlicht/demo_IRR_imposed_motion.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/demo_IRR_imposed_motion.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/irrlicht && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_IRR_imposed_motion.dir/demo_IRR_imposed_motion.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/irrlicht/demo_IRR_imposed_motion.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/irrlicht && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_IRR_imposed_motion.dir/demo_IRR_imposed_motion.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/irrlicht/demo_IRR_imposed_motion.cpp
 
 src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/demo_IRR_imposed_motion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_IRR_imposed_motion.dir/demo_IRR_imposed_motion.cpp.i"
@@ -101,7 +101,7 @@ bin/demo_IRR_imposed_motion: src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_moti
 bin/demo_IRR_imposed_motion: src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/build.make
 bin/demo_IRR_imposed_motion: lib/libChronoEngine_irrlicht.so
 bin/demo_IRR_imposed_motion: lib/libChronoEngine.so
-bin/demo_IRR_imposed_motion: /usr/lib/libIrrlicht.so
+bin/demo_IRR_imposed_motion: /usr/local/lib/libIrrlicht.so
 bin/demo_IRR_imposed_motion: src/demos/irrlicht/CMakeFiles/demo_IRR_imposed_motion.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/demo_IRR_imposed_motion"
 	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/irrlicht && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_IRR_imposed_motion.dir/link.txt --verbose=$(VERBOSE)

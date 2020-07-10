@@ -80,7 +80,7 @@ include src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH_WheeledJSON.dir/f
 src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.o: src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH_WheeledJSON.dir/flags.make
 src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_WheeledJSON/demo_VEH_WheeledJSON.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_WheeledJSON && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_WheeledJSON/demo_VEH_WheeledJSON.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_WheeledJSON && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_WheeledJSON/demo_VEH_WheeledJSON.cpp
 
 src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.i"
@@ -102,7 +102,7 @@ bin/demo_VEH_WheeledJSON: src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH
 bin/demo_VEH_WheeledJSON: lib/libChronoEngine_vehicle.so
 bin/demo_VEH_WheeledJSON: lib/libChronoEngine_irrlicht.so
 bin/demo_VEH_WheeledJSON: lib/libChronoEngine.so
-bin/demo_VEH_WheeledJSON: /usr/lib/libIrrlicht.so
+bin/demo_VEH_WheeledJSON: /usr/local/lib/libIrrlicht.so
 bin/demo_VEH_WheeledJSON: /usr/lib/openmpi/libmpi_cxx.so
 bin/demo_VEH_WheeledJSON: /usr/lib/openmpi/libmpi.so
 bin/demo_VEH_WheeledJSON: src/demos/vehicle/demo_WheeledJSON/CMakeFiles/demo_VEH_WheeledJSON.dir/link.txt

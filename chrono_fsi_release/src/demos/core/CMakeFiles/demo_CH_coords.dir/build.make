@@ -80,7 +80,7 @@ include src/demos/core/CMakeFiles/demo_CH_coords.dir/flags.make
 src/demos/core/CMakeFiles/demo_CH_coords.dir/demo_CH_coords.cpp.o: src/demos/core/CMakeFiles/demo_CH_coords.dir/flags.make
 src/demos/core/CMakeFiles/demo_CH_coords.dir/demo_CH_coords.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/core/demo_CH_coords.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/core/CMakeFiles/demo_CH_coords.dir/demo_CH_coords.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/core && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_CH_coords.dir/demo_CH_coords.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/core/demo_CH_coords.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/core && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_CH_coords.dir/demo_CH_coords.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/core/demo_CH_coords.cpp
 
 src/demos/core/CMakeFiles/demo_CH_coords.dir/demo_CH_coords.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_CH_coords.dir/demo_CH_coords.cpp.i"

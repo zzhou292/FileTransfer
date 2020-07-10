@@ -80,7 +80,7 @@ include src/demos/fea/CMakeFiles/demo_FEA_brick.dir/flags.make
 src/demos/fea/CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.cpp.o: src/demos/fea/CMakeFiles/demo_FEA_brick.dir/flags.make
 src/demos/fea/CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea/demo_FEA_brick.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/fea/CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fea && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea/demo_FEA_brick.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fea && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea/demo_FEA_brick.cpp
 
 src/demos/fea/CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.cpp.i"
@@ -101,7 +101,7 @@ bin/demo_FEA_brick: src/demos/fea/CMakeFiles/demo_FEA_brick.dir/demo_FEA_brick.c
 bin/demo_FEA_brick: src/demos/fea/CMakeFiles/demo_FEA_brick.dir/build.make
 bin/demo_FEA_brick: lib/libChronoEngine_irrlicht.so
 bin/demo_FEA_brick: lib/libChronoEngine.so
-bin/demo_FEA_brick: /usr/lib/libIrrlicht.so
+bin/demo_FEA_brick: /usr/local/lib/libIrrlicht.so
 bin/demo_FEA_brick: src/demos/fea/CMakeFiles/demo_FEA_brick.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/demo_FEA_brick"
 	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/fea && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_FEA_brick.dir/link.txt --verbose=$(VERBOSE)

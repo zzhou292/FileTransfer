@@ -80,7 +80,7 @@ include src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/flags.make
 src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/demo_VEH_HMMWV9.cpp.o: src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/flags.make
 src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/demo_VEH_HMMWV9.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_HMMWV9/demo_VEH_HMMWV9.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_fsi_release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/demo_VEH_HMMWV9.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_HMMWV9 && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_HMMWV9.dir/demo_VEH_HMMWV9.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_HMMWV9/demo_VEH_HMMWV9.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/vehicle/demo_HMMWV9 && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_HMMWV9.dir/demo_VEH_HMMWV9.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_HMMWV9/demo_VEH_HMMWV9.cpp
 
 src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/demo_VEH_HMMWV9.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_HMMWV9.dir/demo_VEH_HMMWV9.cpp.i"
@@ -103,7 +103,7 @@ bin/demo_VEH_HMMWV9: lib/libChronoModels_vehicle.so
 bin/demo_VEH_HMMWV9: lib/libChronoEngine_vehicle.so
 bin/demo_VEH_HMMWV9: lib/libChronoEngine_irrlicht.so
 bin/demo_VEH_HMMWV9: lib/libChronoEngine.so
-bin/demo_VEH_HMMWV9: /usr/lib/libIrrlicht.so
+bin/demo_VEH_HMMWV9: /usr/local/lib/libIrrlicht.so
 bin/demo_VEH_HMMWV9: /usr/lib/openmpi/libmpi_cxx.so
 bin/demo_VEH_HMMWV9: /usr/lib/openmpi/libmpi.so
 bin/demo_VEH_HMMWV9: src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/link.txt

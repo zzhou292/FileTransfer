@@ -53,7 +53,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libChronoEngine_fsi.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libChronoEngine_fsi.so"
-         OLD_RPATH "/opt/cuda/lib64:/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/lib/openmpi:"
+         OLD_RPATH "/opt/cuda/lib64:/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:/usr/lib/openmpi:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libChronoEngine_fsi.so")
