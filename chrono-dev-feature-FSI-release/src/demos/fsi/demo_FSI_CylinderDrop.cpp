@@ -51,12 +51,12 @@ Real bxDim = 2;
 Real byDim = 1;
 Real bzDim = 4;
 
-Real fxDim = 1.7;
-Real fyDim = 0.7;
+Real fxDim = 1.9;
+Real fyDim = 0.9;
 Real fzDim = 2.5;
 
-double cyl_length = 0.4000;
-double cyl_radius = .24;
+double cyl_length = 0.300;
+double cyl_radius = .20;
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 /// Forward declaration of helper functions
@@ -324,7 +324,6 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
         out_frame++;
     }
 }
-
 void WriteCylinderVTK(std::shared_ptr<ChBody> Body, double radius, double length, int res, char SaveAsBuffer[256]) {
     std::ofstream output;
     output.open(SaveAsBuffer, std::ios::app);
