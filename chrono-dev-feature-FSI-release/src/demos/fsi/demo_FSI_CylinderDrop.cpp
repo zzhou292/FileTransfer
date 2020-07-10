@@ -173,6 +173,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
 
     double FSI_MASS = myFsiSystem.GetDataManager()->numObjects->numRigid_SphMarkers * paramsH->markerMass;
     //    cylinder->SetMass(FSI_MASS);
+    cylinder->SetDensity(density);
     cylinder->SetMass(mass);
     cylinder->SetInertiaXX(mass * gyration);
     printf("inertia=%f,%f,%f\n", mass * gyration.x(), mass * gyration.y(), mass * gyration.z());
