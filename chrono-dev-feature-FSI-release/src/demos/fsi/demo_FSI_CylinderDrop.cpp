@@ -292,8 +292,8 @@ int main(int argc, char* argv[]) {
     std::vector<std::shared_ptr<ChBody>>& FSI_Bodies = myFsiSystem.GetFsiBodies();
     auto Cylinder = FSI_Bodies[0];
     auto Cylinder_2 = FSI_Bodies[1];
-    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder);
-    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder_2);
+    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder,1);
+    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder_2,2);
 
     Real time = 0;
     Real Global_max_dT = paramsH->dT_Max;
