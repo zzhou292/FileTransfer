@@ -244,7 +244,7 @@ int main(int argc, char* argv[]) {
     // ******************************* Create Fluid region ****************************************
     /// Create an initial box of fluid
     utils::GridSampler<> sampler(initSpace0);
-    ChVector<> boxCenter(1, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
+    ChVector<> boxCenter(0, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
     ChVector<> boxHalfDim(fxDim / 2, fyDim / 2, fzDim / 2);
     utils::Generator::PointVector points = sampler.SampleBox(boxCenter, boxHalfDim);
     size_t numPart = points.size();
