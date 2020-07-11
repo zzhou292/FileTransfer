@@ -16,8 +16,8 @@
   "SPH Parameters":
   {
     "Method":                        "WCSPH",  //WCSPH, IISPH, I2SPHH
-    "Kernel h":                       0.05,
-    "Initial Spacing":                0.05,
+    "Kernel h":                       0.03,
+    "Initial Spacing":                0.03,
     "Epsilon":                        0.001,
     "Maximum Velocity":               4.0,
     "XSPH Coefficient":               0.5,
@@ -32,8 +32,8 @@
     "Adaptive Time stepping":        false,
     "Beta":                          0.75,
     "CFL number":                    0.05,
-    "Fluid time step":               1e-4,
-    "Solid time step":               1e-4,
+    "Fluid time step":               5e-5,
+    "Solid time step":               5e-5,
     "Maximum time step":             0.005,
     "End time":                      20,
     "Write frame per second":        50
