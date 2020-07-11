@@ -51,8 +51,8 @@ Real bxDim = 4;
 Real byDim = 4;
 Real bzDim = 4;
 
-Real fxDim = 3.8;
-Real fyDim = 3.5;
+Real fxDim = 2;
+Real fyDim = 4;
 Real fzDim = 2.8;
 
 double cyl_length = 0.300;
@@ -170,7 +170,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
 
 
     /// Create the second falling cylinder
-    ChVector<> cyl_pos_2 = ChVector<>(1, 0, fzDim + cyl_radius + 2 * initSpace0);
+    ChVector<> cyl_pos_2 = ChVector<>(1, 0, fzDim + cyl_radius + 2 * initSpace0 + 1);
     ChQuaternion<> cyl_rot_2 = QUNIT;
     auto cylinder_2 = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
     cylinder_2->SetPos(cyl_pos_2);
@@ -243,7 +243,7 @@ int main(int argc, char* argv[]) {
     // ******************************* Create Fluid region ****************************************
     /// Create an initial box of fluid
     utils::GridSampler<> sampler(initSpace0);
-    ChVector<> boxCenter(0, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
+    ChVector<> boxCenter(1, 0 * initSpace0, fzDim / 2 + 1 * initSpace0);
     ChVector<> boxHalfDim(fxDim / 2, fyDim / 2, fzDim / 2);
     utils::Generator::PointVector points = sampler.SampleBox(boxCenter, boxHalfDim);
     size_t numPart = points.size();
