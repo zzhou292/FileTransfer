@@ -369,7 +369,7 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
             cout << "             Time:           " << mTime << endl;
             cout << "-------------------------------------\n" << endl;
         }
-         RigidCounter++;
+        RigidCounter++;
         out_frame++;
     }
 }
