@@ -319,7 +319,7 @@ int main(int argc, char* argv[]) {
 
         printf("bin=%f,%f,%f\n", bin->GetPos().x(), bin->GetPos().y(), bin->GetPos().z());
         printf("cyl_1=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
-        printf("cyl_2=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
+        printf("cyl_2=%f,%f,%f\n", cyl_2->GetPos().x(), cyl_2->GetPos().y(), cyl_2->GetPos().z());
 
         if (time > paramsH->tFinal)
             break;
