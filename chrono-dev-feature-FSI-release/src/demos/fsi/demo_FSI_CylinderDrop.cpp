@@ -211,7 +211,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     cylinder_2->SetMass(mass_2);
     cylinder->SetInertiaXX(mass_2*gyration_2);
     printf("2 inertia=%f,%f,%f\n", mass * gyration.x(), mass * gyration.y(), mass * gyration.z());
-    printf("\n2 real mass=%f, FSI_MASS=%f\n\n", mass2, FSI_MASS);
+    printf("\n2 real mass=%f, FSI_MASS=%f\n\n", mass_2, FSI_MASS);
 }
 
 // =============================================================================
@@ -315,7 +315,7 @@ int main(int argc, char* argv[]) {
 
         auto bin = mphysicalSystem.Get_bodylist()[0];
         auto cyl = mphysicalSystem.Get_bodylist()[1];
-        auto cyl = mphysicalSystem.Get_bodylist()[2];
+        auto cyl_2 = mphysicalSystem.Get_bodylist()[2];
 
         printf("bin=%f,%f,%f\n", bin->GetPos().x(), bin->GetPos().y(), bin->GetPos().z());
         printf("cyl_1=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
