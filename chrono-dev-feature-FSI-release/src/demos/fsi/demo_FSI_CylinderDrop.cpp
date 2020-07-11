@@ -52,11 +52,14 @@ Real byDim = 4;
 Real bzDim = 4;
 
 Real fxDim = 3.8;
-Real fyDim = 0.7;
+Real fyDim = 3.5;
 Real fzDim = 2.8;
 
 double cyl_length = 0.300;
 double cyl_radius = .20;
+
+double cyl_length_2 = 0.250;
+double cyl_radius_2 = .20;
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 /// Forward declaration of helper functions
@@ -144,7 +147,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yp, chrono::QUNIT, size_XZ, 13);
     fsi::utils::AddBoxBce(myFsiSystem.GetDataManager(), paramsH, bin, pos_yn, chrono::QUNIT, size_XZ, 13);
 
-    /// Create falling cylinder
+    /// Create the first falling cylinder
     ChVector<> cyl_pos = ChVector<>(0, 0, fzDim + cyl_radius + 2 * initSpace0);
     ChQuaternion<> cyl_rot = QUNIT;
     auto cylinder = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
@@ -165,11 +168,37 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     size_t numRigidObjects = mphysicalSystem.Get_bodylist().size();
     mphysicalSystem.AddBody(cylinder);
 
+
+    /// Create the second falling cylinder
+    ChVector<> cyl_pos_2 = ChVector<>(1, 0, fzDim + cyl_radius + 2 * initSpace0);
+    ChQuaternion<> cyl_rot_2 = QUNIT;
+    auto cylinder_2 = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
+    cylinder_2->SetPos(cyl_pos_2);
+    double volume_2 = utils::CalcCylinderVolume(cyl_radius_2, cyl_length_2 / 2);
+    ChVector<> gyration_2 = utils::CalcCylinderGyration(cyl_radius_2, cyl_length_2 / 2).diagonal();
+    double density_2 = paramsH->rho0 * 0.25;
+    double mass_2 = density_2 * volume_2;
+    cylinder_2->SetCollide(true);
+    cylinder_2->SetBodyFixed(false);
+
+    cylinder_2->SetMaterialSurface(mysurfmaterial);
+    cylinder_2->GetCollisionModel()->ClearModel();
+    cylinder_2->GetCollisionModel()->SetSafeMargin(initSpace0);
+    utils::AddCylinderGeometry(cylinder_2.get(), cyl_radius_2, cyl_length_2, ChVector<>(0.0, 0.0, 0.0),
+                               ChQuaternion<>(1, 0, 0, 0));
+    cylinder_2->GetCollisionModel()->BuildModel();
+    size_t numRigidObjects_2 = mphysicalSystem.Get_bodylist().size();
+    mphysicalSystem.AddBody(cylinder_2);
+
     /// Add this body to the FSI system
     myFsiSystem.AddFsiBody(cylinder);
+    myFsiSystem.AddFsiBody(cylinder_2);
     /// Fluid-Solid Coupling of the cylinder via Condition Enforcement (BCE) Markers
     fsi::utils::AddCylinderBce(myFsiSystem.GetDataManager(), paramsH, cylinder, ChVector<>(0, 0, 0),
                                ChQuaternion<>(1, 0, 0, 0), cyl_radius, cyl_length + initSpace0, paramsH->HSML, false);
+
+    fsi::utils::AddCylinderBce(myFsiSystem.GetDataManager(), paramsH, cylinder_2, ChVector<>(0, 0, 0),
+                                ChQuaternion<>(1, 0, 0, 0), cyl_radius_2, cyl_length_2 + initSpace0, paramsH->HSML, false);
 
     double FSI_MASS = myFsiSystem.GetDataManager()->numObjects->numRigid_SphMarkers * paramsH->markerMass;
     //    cylinder->SetMass(FSI_MASS);
@@ -178,6 +207,11 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     cylinder->SetInertiaXX(mass * gyration);
     printf("inertia=%f,%f,%f\n", mass * gyration.x(), mass * gyration.y(), mass * gyration.z());
     printf("\nreal mass=%f, FSI_MASS=%f\n\n", mass, FSI_MASS);
+
+    cylinder_2->SetMass(mass_2);
+    cylinder->SetInertiaXX(mass_2*gyration_2);
+    printf("2 inertia=%f,%f,%f\n", mass * gyration.x(), mass * gyration.y(), mass * gyration.z());
+    printf("\n2 real mass=%f, FSI_MASS=%f\n\n", mass2, FSI_MASS);
 }
 
 // =============================================================================
@@ -257,7 +291,9 @@ int main(int argc, char* argv[]) {
     /// Get the body from the FSI system
     std::vector<std::shared_ptr<ChBody>>& FSI_Bodies = myFsiSystem.GetFsiBodies();
     auto Cylinder = FSI_Bodies[0];
+    auto Cylinder_2 = FSI_Bodies[1];
     SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder);
+    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder_2);
 
     Real time = 0;
     Real Global_max_dT = paramsH->dT_Max;
@@ -275,12 +311,15 @@ int main(int argc, char* argv[]) {
         myFsiSystem.DoStepDynamics_FSI();
         time += paramsH->dT;
         SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder);
+        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder_2);
 
         auto bin = mphysicalSystem.Get_bodylist()[0];
         auto cyl = mphysicalSystem.Get_bodylist()[1];
+        auto cyl = mphysicalSystem.Get_bodylist()[2];
 
         printf("bin=%f,%f,%f\n", bin->GetPos().x(), bin->GetPos().y(), bin->GetPos().z());
-        printf("cyl=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
+        printf("cyl_1=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
+        printf("cyl_2=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
 
         if (time > paramsH->tFinal)
             break;
