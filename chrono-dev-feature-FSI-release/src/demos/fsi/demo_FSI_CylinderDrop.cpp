@@ -310,8 +310,8 @@ int main(int argc, char* argv[]) {
 
         myFsiSystem.DoStepDynamics_FSI();
         time += paramsH->dT;
-        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder);
-        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder_2);
+        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder,1);
+        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder_2,2);
 
         auto bin = mphysicalSystem.Get_bodylist()[0];
         auto cyl = mphysicalSystem.Get_bodylist()[1];
@@ -336,7 +336,7 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                        std::shared_ptr<fsi::SimParams> paramsH,
                        int next_frame,
                        double mTime,
-                       std::shared_ptr<ChBody> Cylinder) {
+                       std::shared_ptr<ChBody> Cylinder, int numIndicator) {
     int out_steps = (int)ceil((1.0 / paramsH->dT) / paramsH->out_fps);
     int num_contacts = mphysicalSystem.GetNcontacts();
     double frame_time = 1.0 / paramsH->out_fps;
@@ -352,14 +352,25 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
         char SaveAsRigidObjVTK[256];  // The filename buffer.
         static int RigidCounter = 0;
 
-        snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder.%d.vtk").c_str(), RigidCounter);
-        WriteCylinderVTK(Cylinder, cyl_radius, cyl_length, 100, SaveAsRigidObjVTK);
-        RigidCounter++;
-        cout << "-------------------------------------\n" << endl;
-        cout << "             Output frame:   " << next_frame << endl;
-        cout << "             Time:           " << mTime << endl;
-        cout << "-------------------------------------\n" << endl;
-
+        if(numIndicator == 1)
+        {
+            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_1.%d.vtk").c_str(), RigidCounter);
+            WriteCylinderVTK(Cylinder, cyl_radius, cyl_length, 100, SaveAsRigidObjVTK);
+            RigidCounter++;
+            cout << "-------------------------------------\n" << endl;
+            cout << "             Output frame:   " << next_frame << endl;
+            cout << "             Time:           " << mTime << endl;
+            cout << "-------------------------------------\n" << endl;
+        }else if(numIndicator == 2)
+        {
+            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_2.%d.vtk").c_str(), RigidCounter);
+            WriteCylinderVTK(Cylinder, cyl_radius_2, cyl_length_2, 100, SaveAsRigidObjVTK);
+            RigidCounter++;
+            cout << "-------------------------------------\n" << endl;
+            cout << "             Output frame:   " << next_frame << endl;
+            cout << "             Time:           " << mTime << endl;
+            cout << "-------------------------------------\n" << endl;
+        }
         out_frame++;
     }
 }
