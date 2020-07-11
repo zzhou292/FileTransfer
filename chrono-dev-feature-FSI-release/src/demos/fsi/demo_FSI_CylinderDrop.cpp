@@ -340,7 +340,8 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
     int out_steps = (int)ceil((1.0 / paramsH->dT) / paramsH->out_fps);
     int num_contacts = mphysicalSystem.GetNcontacts();
     double frame_time = 1.0 / paramsH->out_fps;
-    static int out_frame = 0;
+    static int out_frame_1 = 0;
+    static int out_frame_2 = 0;
 
     if (pv_output && std::abs(mTime - (next_frame)*frame_time) < 1e-7) {
         fsi::utils::PrintToFile(myFsiSystem.GetDataManager()->sphMarkersD2->posRadD,
@@ -350,7 +351,8 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray_FEA, demo_dir, true);
         char SaveAsRigidObjVTK[256];  // The filename buffer.
-        static int RigidCounter = 0;
+        static int RigidCounter_1 = 0;
+        static int RigidCounter_2 = 0;
 
         if(numIndicator == 1)
         {
@@ -360,6 +362,8 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
             cout << "             Output frame:   " << next_frame << endl;
             cout << "             Time:           " << mTime << endl;
             cout << "-------------------------------------\n" << endl;
+            RigidCounter_1++;
+            out_frame_1++;
         }else if(numIndicator == 2)
         {
             snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_2.%d.vtk").c_str(), RigidCounter);
@@ -368,9 +372,9 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
             cout << "             Output frame:   " << next_frame << endl;
             cout << "             Time:           " << mTime << endl;
             cout << "-------------------------------------\n" << endl;
+            RigidCounter_2++;
+            out_frame_2++;
         }
-        RigidCounter++;
-        out_frame++;
     }
 }
 void WriteCylinderVTK(std::shared_ptr<ChBody> Body, double radius, double length, int res, char SaveAsBuffer[256]) {
