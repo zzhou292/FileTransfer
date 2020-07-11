@@ -356,7 +356,7 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
 
         if(numIndicator == 1)
         {
-            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_1.%d.vtk").c_str(), RigidCounter);
+            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_1.%d.vtk").c_str(), RigidCounter_1);
             WriteCylinderVTK(Cylinder, cyl_radius, cyl_length, 100, SaveAsRigidObjVTK);
             cout << "-------------------------------------\n" << endl;
             cout << "             Output frame:   " << next_frame << endl;
@@ -366,7 +366,7 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
             out_frame_1++;
         }else if(numIndicator == 2)
         {
-            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_2.%d.vtk").c_str(), RigidCounter);
+            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_2.%d.vtk").c_str(), RigidCounter_2);
             WriteCylinderVTK(Cylinder, cyl_radius_2, cyl_length_2, 100, SaveAsRigidObjVTK);
             cout << "-------------------------------------\n" << endl;
             cout << "             Output frame:   " << next_frame << endl;
