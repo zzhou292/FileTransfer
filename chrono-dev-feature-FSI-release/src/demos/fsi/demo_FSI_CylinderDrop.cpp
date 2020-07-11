@@ -70,7 +70,8 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                        std::shared_ptr<fsi::SimParams> paramsH,
                        int tStep,
                        double mTime,
-                       std::shared_ptr<ChBody> Cylinder,int numIndicator);
+                       std::shared_ptr<ChBody> Cylinder,
+                       std::shared_ptr<ChBody> Cylinder_2);
 
 //------------------------------------------------------------------
 // Create the objects of the MBD system. Rigid bodies, and if fsi, their
