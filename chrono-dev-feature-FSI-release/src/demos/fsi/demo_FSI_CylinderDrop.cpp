@@ -292,8 +292,7 @@ int main(int argc, char* argv[]) {
     std::vector<std::shared_ptr<ChBody>>& FSI_Bodies = myFsiSystem.GetFsiBodies();
     auto Cylinder = FSI_Bodies[0];
     auto Cylinder_2 = FSI_Bodies[1];
-    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder,1);
-    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder_2,2);
+    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder, Cylinder_2);
 
     Real time = 0;
     Real Global_max_dT = paramsH->dT_Max;
@@ -310,8 +309,7 @@ int main(int argc, char* argv[]) {
 
         myFsiSystem.DoStepDynamics_FSI();
         time += paramsH->dT;
-        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder,1);
-        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder_2,2);
+        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder, Cylinder_2);
 
         auto bin = mphysicalSystem.Get_bodylist()[0];
         auto cyl = mphysicalSystem.Get_bodylist()[1];
@@ -336,12 +334,12 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                        std::shared_ptr<fsi::SimParams> paramsH,
                        int next_frame,
                        double mTime,
-                       std::shared_ptr<ChBody> Cylinder, int numIndicator) {
+                       std::shared_ptr<ChBody> Cylinder,
+                       std::shared_ptr<ChBody> Cylinder_2) {
     int out_steps = (int)ceil((1.0 / paramsH->dT) / paramsH->out_fps);
     int num_contacts = mphysicalSystem.GetNcontacts();
     double frame_time = 1.0 / paramsH->out_fps;
-    static int out_frame_1 = 0;
-    static int out_frame_2 = 0;
+    static int out_frame = 0;
 
     if (pv_output && std::abs(mTime - (next_frame)*frame_time) < 1e-7) {
         fsi::utils::PrintToFile(myFsiSystem.GetDataManager()->sphMarkersD2->posRadD,
@@ -351,30 +349,26 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray,
                                 myFsiSystem.GetDataManager()->fsiGeneralData->referenceArray_FEA, demo_dir, true);
         char SaveAsRigidObjVTK[256];  // The filename buffer.
-        static int RigidCounter_1 = 0;
-        static int RigidCounter_2 = 0;
+        static int RigidCounter = 0;
 
-        if(numIndicator == 1)
-        {
-            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_1.%d.vtk").c_str(), RigidCounter_1);
-            WriteCylinderVTK(Cylinder, cyl_radius, cyl_length, 100, SaveAsRigidObjVTK);
+        
+        snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_1.%d.vtk").c_str(), RigidCounter);
+        WriteCylinderVTK(Cylinder, cyl_radius, cyl_length, 100, SaveAsRigidObjVTK);
+            cout << "             Saving Cylinder 1        \n" << endl;
             cout << "-------------------------------------\n" << endl;
             cout << "             Output frame:   " << next_frame << endl;
             cout << "             Time:           " << mTime << endl;
             cout << "-------------------------------------\n" << endl;
-            RigidCounter_1++;
-            out_frame_1++;
-        }else if(numIndicator == 2)
-        {
-            snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_2.%d.vtk").c_str(), RigidCounter_2);
-            WriteCylinderVTK(Cylinder, cyl_radius_2, cyl_length_2, 100, SaveAsRigidObjVTK);
+
+        snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Cylinder_2.%d.vtk").c_str(), RigidCounter);
+        WriteCylinderVTK(Cylinder_2, cyl_radius_2, cyl_length_2, 100, SaveAsRigidObjVTK);
+            cout << "             Saving Cylinder 2        \n" << endl;
             cout << "-------------------------------------\n" << endl;
             cout << "             Output frame:   " << next_frame << endl;
             cout << "             Time:           " << mTime << endl;
             cout << "-------------------------------------\n" << endl;
-            RigidCounter_2++;
-            out_frame_2++;
-        }
+        RigidCounter++;
+        out_frame++;
     }
 }
 void WriteCylinderVTK(std::shared_ptr<ChBody> Body, double radius, double length, int res, char SaveAsBuffer[256]) {
