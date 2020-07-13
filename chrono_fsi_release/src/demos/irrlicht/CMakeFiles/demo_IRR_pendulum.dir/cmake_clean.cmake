@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_pendulum"
-  "../../../bin/demo_IRR_pendulum.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_pendulum"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_pendulum.pdb"
   "CMakeFiles/demo_IRR_pendulum.dir/demo_IRR_pendulum.cpp.o"
 )
 

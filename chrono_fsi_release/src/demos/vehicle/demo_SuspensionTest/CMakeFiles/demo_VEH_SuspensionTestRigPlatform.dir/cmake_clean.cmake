@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../../bin/demo_VEH_SuspensionTestRigPlatform"
-  "../../../../bin/demo_VEH_SuspensionTestRigPlatform.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SuspensionTestRigPlatform"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SuspensionTestRigPlatform.pdb"
   "CMakeFiles/demo_VEH_SuspensionTestRigPlatform.dir/demo_VEH_SuspensionTestRigPlatform.cpp.o"
 )
 

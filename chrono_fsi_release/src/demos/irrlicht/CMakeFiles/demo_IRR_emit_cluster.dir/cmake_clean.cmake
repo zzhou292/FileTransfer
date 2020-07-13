@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_emit_cluster"
-  "../../../bin/demo_IRR_emit_cluster.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_emit_cluster"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_emit_cluster.pdb"
   "CMakeFiles/demo_IRR_emit_cluster.dir/demo_IRR_emit_cluster.cpp.o"
 )
 

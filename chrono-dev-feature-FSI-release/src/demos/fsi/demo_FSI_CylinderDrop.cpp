@@ -53,7 +53,7 @@ Real bzDim = 4;
 
 Real fxDim = 2;
 Real fyDim = 4;
-Real fzDim = 2.8;
+Real fzDim = 2;
 
 double cyl_length = 0.300;
 double cyl_radius = .20;
@@ -171,7 +171,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
 
 
     /// Create the second falling cylinder
-    ChVector<> cyl_pos_2 = ChVector<>(1, 0, fzDim + cyl_radius + 2 * initSpace0 + 1);
+    ChVector<> cyl_pos_2 = ChVector<>(1, 0, fzDim + cyl_radius + 2 * initSpace0);
     ChQuaternion<> cyl_rot_2 = QUNIT;
     auto cylinder_2 = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
     cylinder_2->SetPos(cyl_pos_2);

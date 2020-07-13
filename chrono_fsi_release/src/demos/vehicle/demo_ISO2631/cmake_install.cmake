@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ISO2631
+# Install script for directory: //home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ISO2631
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Ride"
          RPATH "/usr/local/lib:/usr/lib/openmpi")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_Ride")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_Ride")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Ride" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Ride")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Ride"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/lib/openmpi:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/lib/openmpi:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib:/usr/lib/openmpi")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Ride")
@@ -64,12 +64,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Shock"
          RPATH "/usr/local/lib:/usr/lib/openmpi")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_Shock")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_Shock")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Shock" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Shock")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Shock"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/lib/openmpi:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/lib/openmpi:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib:/usr/lib/openmpi")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_Shock")

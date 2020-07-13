@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_CH_matrix_ref"
-  "../../../bin/demo_CH_matrix_ref.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_CH_matrix_ref"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_CH_matrix_ref.pdb"
   "CMakeFiles/demo_CH_matrix_ref.dir/demo_CH_matrix_ref.cpp.o"
 )
 

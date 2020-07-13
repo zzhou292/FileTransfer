@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_crank"
-  "../../../bin/demo_IRR_crank.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_crank"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_crank.pdb"
   "CMakeFiles/demo_IRR_crank.dir/demo_IRR_crank.cpp.o"
 )
 

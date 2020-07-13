@@ -62,18 +62,18 @@ set(CHRONO_C_FLAGS " -pthread -fopenmp  -march=native -msse4.2 -mfpmath=sse  -ma
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   set(CHRONO_LINKER_FLAGS "")
 else()
-  set(CHRONO_LINKER_FLAGS "-L/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib")
+  set(CHRONO_LINKER_FLAGS "-L//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib")
 endif()
 
-list(APPEND CHRONO_INCLUDE_DIRS "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD;/home/jason/Desktop/FileTransfer/chrono_fsi_release;/usr/include/eigen3")
+list(APPEND CHRONO_INCLUDE_DIRS "//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD;//home/jason/Desktop/FileTransfer/chrono_fsi_release;/usr/include/eigen3")
 list(APPEND CHRONO_LIBRARIES "")
 list(APPEND CHRONO_LIB_NAMES "ChronoEngine")
 list(APPEND CHRONO_DLLS "")
 list(APPEND CHRONO_DLL_NAMES "ChronoEngine.dll")
 
-set(CHRONO_DATA_DIR "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/")
-set(CHRONO_VEHICLE_DATA_DIR "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/vehicle/")
-set(CHRONO_FSI_DATA_DIR "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/fsi/")
+set(CHRONO_DATA_DIR "//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/")
+set(CHRONO_VEHICLE_DATA_DIR "//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/vehicle/")
+set(CHRONO_FSI_DATA_DIR "//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/fsi/")
 
 set(CHRONO_SSE_FOUND "1")
 set(CHRONO_AVX_FOUND "1")
@@ -251,7 +251,7 @@ endforeach()
 foreach(lib ${CHRONO_LIB_NAMES})
   set(onelib "${lib}-NOTFOUND")
   find_library(onelib ${lib}
-    PATHS "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib"
+    PATHS "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib"
     PATH_SUFFIXES "Release"
     NO_DEFAULT_PATH
   )
@@ -273,7 +273,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
   foreach(dll ${CHRONO_DLL_NAMES})
     set(onedll "${dll}-NOTFOUND")
     find_file(onedll ${dll}
-      PATHS "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin"
+      PATHS "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin"
       PATH_SUFFIXES "Release"
       NO_DEFAULT_PATH
     )

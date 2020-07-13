@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_FEA_ancfShell"
-  "../../../bin/demo_FEA_ancfShell.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_ancfShell"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_ancfShell.pdb"
   "CMakeFiles/demo_FEA_ancfShell.dir/demo_FEA_ancfShell.cpp.o"
 )
 

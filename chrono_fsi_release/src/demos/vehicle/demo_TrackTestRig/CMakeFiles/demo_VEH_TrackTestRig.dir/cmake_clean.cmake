@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../../bin/demo_VEH_TrackTestRig"
-  "../../../../bin/demo_VEH_TrackTestRig.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_TrackTestRig"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_TrackTestRig.pdb"
   "CMakeFiles/demo_VEH_TrackTestRig.dir/demo_VEH_TrackTestRig.cpp.o"
 )
 

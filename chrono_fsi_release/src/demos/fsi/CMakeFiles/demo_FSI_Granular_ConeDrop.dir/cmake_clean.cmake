@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_FSI_Granular_ConeDrop"
-  "../../../bin/demo_FSI_Granular_ConeDrop.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_Granular_ConeDrop"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_Granular_ConeDrop.pdb"
   "CMakeFiles/demo_FSI_Granular_ConeDrop.dir/demo_FSI_Granular_ConeDrop.cpp.o"
 )
 

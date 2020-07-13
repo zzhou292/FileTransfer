@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_FSI_CylinderDrop"
-  "../../../bin/demo_FSI_CylinderDrop.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_CylinderDrop"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_CylinderDrop.pdb"
   "CMakeFiles/demo_FSI_CylinderDrop.dir/demo_FSI_CylinderDrop.cpp.o"
 )
 

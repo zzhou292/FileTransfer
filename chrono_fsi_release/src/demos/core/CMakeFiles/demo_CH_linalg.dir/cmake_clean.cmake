@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_CH_linalg"
-  "../../../bin/demo_CH_linalg.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_CH_linalg"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_CH_linalg.pdb"
   "CMakeFiles/demo_CH_linalg.dir/demo_CH_linalg.cpp.o"
 )
 

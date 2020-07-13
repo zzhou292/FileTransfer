@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_python
+# Install script for directory: //home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_SuspensionTest
+# Install script for directory: //home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_SuspensionTest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPlatform"
          RPATH "/usr/local/lib:/usr/lib/openmpi")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SuspensionTestRigPlatform")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SuspensionTestRigPlatform")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPlatform" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPlatform")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPlatform"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:/usr/lib/openmpi:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:/usr/lib/openmpi:"
          NEW_RPATH "/usr/local/lib:/usr/lib/openmpi")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPlatform")
@@ -64,12 +64,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPushrod"
          RPATH "/usr/local/lib:/usr/lib/openmpi")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SuspensionTestRigPushrod")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SuspensionTestRigPushrod")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPushrod" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPushrod")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPushrod"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:/usr/lib/openmpi:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:/usr/lib/openmpi:"
          NEW_RPATH "/usr/local/lib:/usr/lib/openmpi")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_VEH_SuspensionTestRigPushrod")

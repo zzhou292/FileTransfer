@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_GRAN_ShearBand"
-  "../../../bin/demo_GRAN_ShearBand.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_GRAN_ShearBand"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_GRAN_ShearBand.pdb"
   "CMakeFiles/demo_GRAN_ShearBand.dir/demo_GRAN_ShearBand.cpp.o"
 )
 

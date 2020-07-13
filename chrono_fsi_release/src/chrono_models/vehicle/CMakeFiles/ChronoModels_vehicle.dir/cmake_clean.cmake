@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../lib/libChronoModels_vehicle.pdb"
-  "../../../lib/libChronoModels_vehicle.so"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoModels_vehicle.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoModels_vehicle.so"
   "CMakeFiles/ChronoModels_vehicle.dir/citybus/CityBus.cpp.o"
   "CMakeFiles/ChronoModels_vehicle.dir/citybus/CityBus_BrakeSimple.cpp.o"
   "CMakeFiles/ChronoModels_vehicle.dir/citybus/CityBus_Chassis.cpp.o"

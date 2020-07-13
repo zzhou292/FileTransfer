@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_callbackNSC"
-  "../../../bin/demo_IRR_callbackNSC.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_callbackNSC"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_callbackNSC.pdb"
   "CMakeFiles/demo_IRR_callbackNSC.dir/demo_IRR_callbackNSC.cpp.o"
 )
 

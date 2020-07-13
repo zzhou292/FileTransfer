@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_GRAN_terrainBox_SMC"
-  "../../../bin/demo_GRAN_terrainBox_SMC.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_GRAN_terrainBox_SMC"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_GRAN_terrainBox_SMC.pdb"
   "CMakeFiles/demo_GRAN_terrainBox_SMC.dir/demo_GRAN_terrainBox_SMC.cpp.o"
 )
 

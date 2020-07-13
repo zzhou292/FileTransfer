@@ -58,18 +58,18 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/bin/cmake") # path
-set(source_file "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_fsi/physics/ChFsiForceIISPH.cu") # path
-set(NVCC_generated_dependency_file "/home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o.NVCC-depend") # path
-set(cmake_dependency_file "/home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o.depend") # path
+set(source_file "//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_fsi/physics/ChFsiForceIISPH.cu") # path
+set(NVCC_generated_dependency_file "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o.NVCC-depend") # path
+set(cmake_dependency_file "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o.depend") # path
 set(CUDA_make2cmake "/usr/share/cmake-3.17/Modules/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/usr/share/cmake-3.17/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
 set(CUDA_HOST_COMPILER "/usr/bin/gcc-8") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
-set(generated_file_path "/home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/.") # path
-set(generated_file_internal "/home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/./ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o") # path
-set(generated_cubin_file_internal "/home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/./ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o.cubin.txt") # path
+set(generated_file_path "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/.") # path
+set(generated_file_internal "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/./ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o") # path
+set(generated_cubin_file_internal "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/./ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/opt/cuda/bin/nvcc") # path
 set(CUDA_NVCC_FLAGS  -std c++14 -Xcompiler -std=c++14;--compiler-options;-fPIC;-gencode;arch=compute_61,code=sm_61 ;; ) # list
@@ -79,7 +79,7 @@ set(CUDA_NVCC_FLAGS_DEBUG  ; )
 set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64;-DChronoEngine_fsi_EXPORTS) # list
-set(CUDA_NVCC_INCLUDE_DIRS [==[/opt/cuda/include;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src;/home/jason/Desktop/FileTransfer/chrono_fsi_release;/usr/include/eigen3;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD;/opt/cuda/include]==]) # list (needs to be in lua quotes to address backslashes)
+set(CUDA_NVCC_INCLUDE_DIRS [==[/opt/cuda/include;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src;//home/jason/Desktop/FileTransfer/chrono_fsi_release;/usr/include/eigen3;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact;//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD;/opt/cuda/include]==]) # list (needs to be in lua quotes to address backslashes)
 string(REPLACE "\\" "/" CUDA_NVCC_INCLUDE_DIRS "${CUDA_NVCC_INCLUDE_DIRS}")
 set(CUDA_NVCC_COMPILE_DEFINITIONS [==[CH_API_COMPILE_FSI;CH_IGNORE_DEPRECATED;BP_USE_FIXEDPOINT_INT_32]==]) # list (needs to be in lua quotes see #16510 ).
 set(format_flag "-c") # string

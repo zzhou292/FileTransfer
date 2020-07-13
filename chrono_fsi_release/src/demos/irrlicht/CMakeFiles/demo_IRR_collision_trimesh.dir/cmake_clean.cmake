@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_collision_trimesh"
-  "../../../bin/demo_IRR_collision_trimesh.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_collision_trimesh"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_collision_trimesh.pdb"
   "CMakeFiles/demo_IRR_collision_trimesh.dir/demo_IRR_collision_trimesh.cpp.o"
 )
 

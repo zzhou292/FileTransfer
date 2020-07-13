@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../../bin/demo_VEH_WheeledJSON"
-  "../../../../bin/demo_VEH_WheeledJSON.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_WheeledJSON"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_WheeledJSON.pdb"
   "CMakeFiles/demo_VEH_WheeledJSON.dir/demo_VEH_WheeledJSON.cpp.o"
 )
 

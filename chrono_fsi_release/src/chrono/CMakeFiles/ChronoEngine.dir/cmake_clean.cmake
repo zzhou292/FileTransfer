@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../lib/libChronoEngine.pdb"
-  "../../lib/libChronoEngine.so"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine.so"
   "CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/tinyobjloader/tiny_obj_loader.cc.o"
   "CMakeFiles/ChronoEngine.dir/assets/ChAsset.cpp.o"
   "CMakeFiles/ChronoEngine.dir/assets/ChAssetLevel.cpp.o"

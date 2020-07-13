@@ -6,5 +6,5 @@ CXX_FLAGS =  -pthread -fopenmp  -std=c++14 -pthread -fopenmp  -march=native -mss
 
 CXX_DEFINES = -DBP_USE_FIXEDPOINT_INT_32 -DCH_API_COMPILE_IRRLICHT -DCH_IGNORE_DEPRECATED -DChronoEngine_irrlicht_EXPORTS -DIGNORE_DEPRECATED_WARNING
 
-CXX_INCLUDES = -I/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src -I/home/jason/Desktop/FileTransfer/chrono_fsi_release -I/usr/include/eigen3 -I/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono -I/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet -I/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact -I/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD -I/usr/include/irrlicht 
+CXX_INCLUDES = -I//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src -I//home/jason/Desktop/FileTransfer/chrono_fsi_release -I/usr/include/eigen3 -I//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono -I//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet -I//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact -I//home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD -I/usr/include/irrlicht 
 

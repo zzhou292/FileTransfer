@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_debugDrawer_collisionModels"
-  "../../../bin/demo_IRR_debugDrawer_collisionModels.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_debugDrawer_collisionModels"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_debugDrawer_collisionModels.pdb"
   "CMakeFiles/demo_IRR_debugDrawer_collisionModels.dir/demo_IRR_debugDrawer_collisionModels.cpp.o"
 )
 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_FSI_DamBreak"
-  "../../../bin/demo_FSI_DamBreak.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_DamBreak"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_DamBreak.pdb"
   "CMakeFiles/demo_FSI_DamBreak.dir/demo_FSI_DamBreak.cpp.o"
 )
 

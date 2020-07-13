@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_soilbin"
-  "../../../bin/demo_IRR_soilbin.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_soilbin"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_soilbin.pdb"
   "CMakeFiles/demo_IRR_soilbin.dir/demo_IRR_soilbin.cpp.o"
 )
 

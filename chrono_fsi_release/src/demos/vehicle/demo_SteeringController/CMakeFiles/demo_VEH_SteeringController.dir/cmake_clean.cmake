@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../../bin/demo_VEH_SteeringController"
-  "../../../../bin/demo_VEH_SteeringController.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SteeringController"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_SteeringController.pdb"
   "CMakeFiles/demo_VEH_SteeringController.dir/demo_VEH_SteeringController.cpp.o"
 )
 

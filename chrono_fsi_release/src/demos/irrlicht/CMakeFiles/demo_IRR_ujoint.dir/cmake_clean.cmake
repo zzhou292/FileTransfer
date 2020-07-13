@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_ujoint"
-  "../../../bin/demo_IRR_ujoint.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_ujoint"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_ujoint.pdb"
   "CMakeFiles/demo_IRR_ujoint.dir/demo_IRR_ujoint.cpp.o"
 )
 

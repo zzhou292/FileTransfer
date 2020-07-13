@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../../bin/demo_VEH_HMMWV_DoubleLaneChange"
-  "../../../../bin/demo_VEH_HMMWV_DoubleLaneChange.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_HMMWV_DoubleLaneChange"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_VEH_HMMWV_DoubleLaneChange.pdb"
   "CMakeFiles/demo_VEH_HMMWV_DoubleLaneChange.dir/demo_VEH_HMMWV_DoubleLaneChange.cpp.o"
 )
 

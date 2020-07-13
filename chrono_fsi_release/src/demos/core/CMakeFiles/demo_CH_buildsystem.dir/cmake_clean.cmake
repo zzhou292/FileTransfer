@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_CH_buildsystem"
-  "../../../bin/demo_CH_buildsystem.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_CH_buildsystem"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_CH_buildsystem.pdb"
   "CMakeFiles/demo_CH_buildsystem.dir/demo_CH_buildsystem.cpp.o"
 )
 

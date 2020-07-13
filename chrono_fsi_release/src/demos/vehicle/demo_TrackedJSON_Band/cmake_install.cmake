@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_TrackedJSON_Band
+# Install script for directory: //home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_TrackedJSON_Band
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

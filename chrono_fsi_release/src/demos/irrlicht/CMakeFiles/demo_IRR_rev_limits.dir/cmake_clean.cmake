@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_IRR_rev_limits"
-  "../../../bin/demo_IRR_rev_limits.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_rev_limits"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_IRR_rev_limits.pdb"
   "CMakeFiles/demo_IRR_rev_limits.dir/demo_IRR_rev_limits.cpp.o"
 )
 

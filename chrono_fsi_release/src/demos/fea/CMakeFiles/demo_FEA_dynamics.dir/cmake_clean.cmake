@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_FEA_dynamics"
-  "../../../bin/demo_FEA_dynamics.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_dynamics"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_dynamics.pdb"
   "CMakeFiles/demo_FEA_dynamics.dir/demo_FEA_dynamics.cpp.o"
 )
 

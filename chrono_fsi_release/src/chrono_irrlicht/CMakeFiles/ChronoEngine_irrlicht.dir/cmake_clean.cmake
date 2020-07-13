@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../lib/libChronoEngine_irrlicht.pdb"
-  "../../lib/libChronoEngine_irrlicht.so"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine_irrlicht.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine_irrlicht.so"
   "CMakeFiles/ChronoEngine_irrlicht.dir/ChBodySceneNode.cpp.o"
   "CMakeFiles/ChronoEngine_irrlicht.dir/ChBodySceneNodeTools.cpp.o"
   "CMakeFiles/ChronoEngine_irrlicht.dir/ChIrrApp.cpp.o"

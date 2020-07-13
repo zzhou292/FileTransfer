@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea
+# Install script for directory: //home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/fea
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_basic"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_basic")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_basic")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_basic" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_basic")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_basic"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_basic")
@@ -64,12 +64,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_dynamics"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_dynamics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_dynamics")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_dynamics" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_dynamics")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_dynamics"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_dynamics")
@@ -84,12 +84,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_statics"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_loads_statics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_loads_statics")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_statics" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_statics")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_statics"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_statics")
@@ -104,12 +104,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_thermal"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_thermal")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_thermal")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_thermal" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_thermal")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_thermal"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_thermal")
@@ -124,12 +124,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_electrostatics"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_electrostatics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_electrostatics")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_electrostatics" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_electrostatics")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_electrostatics"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_electrostatics")
@@ -144,12 +144,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_visualize"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_visualize")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_visualize")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_visualize" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_visualize")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_visualize"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_visualize")
@@ -164,12 +164,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_contacts"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_contacts")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_contacts")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_contacts" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_contacts")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_contacts"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_contacts")
@@ -184,12 +184,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cables"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_cables")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_cables")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cables" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cables")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cables"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cables")
@@ -204,12 +204,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_ancfShell")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_ancfShell")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell")
@@ -224,12 +224,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell_8"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_ancfShell_8")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_ancfShell_8")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell_8" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell_8")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell_8"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_ancfShell_8")
@@ -244,12 +244,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_brick"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_brick")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_brick")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_brick" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_brick")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_brick"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_brick")
@@ -264,12 +264,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cosimulate_load"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_cosimulate_load")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_cosimulate_load")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cosimulate_load" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cosimulate_load")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cosimulate_load"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_cosimulate_load")
@@ -284,12 +284,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_dynamics"
          RPATH "/usr/local/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_loads_dynamics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FEA_loads_dynamics")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_dynamics" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_dynamics")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_dynamics"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
+         OLD_RPATH "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_FEA_loads_dynamics")

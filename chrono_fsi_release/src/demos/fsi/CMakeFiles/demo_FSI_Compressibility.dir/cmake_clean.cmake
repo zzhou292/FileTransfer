@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_FSI_Compressibility"
-  "../../../bin/demo_FSI_Compressibility.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_Compressibility"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_Compressibility.pdb"
   "CMakeFiles/demo_FSI_Compressibility.dir/demo_FSI_Compressibility.cpp.o"
 )
 

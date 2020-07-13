@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../lib/libChronoEngine_vehicle.pdb"
-  "../../lib/libChronoEngine_vehicle.so"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine_vehicle.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine_vehicle.so"
   "CMakeFiles/ChronoEngine_vehicle.dir/ChChassis.cpp.o"
   "CMakeFiles/ChronoEngine_vehicle.dir/ChDriveline.cpp.o"
   "CMakeFiles/ChronoEngine_vehicle.dir/ChDriver.cpp.o"

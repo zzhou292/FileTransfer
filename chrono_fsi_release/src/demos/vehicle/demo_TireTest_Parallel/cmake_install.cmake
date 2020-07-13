@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_TireTest_Parallel
+# Install script for directory: //home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_TireTest_Parallel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

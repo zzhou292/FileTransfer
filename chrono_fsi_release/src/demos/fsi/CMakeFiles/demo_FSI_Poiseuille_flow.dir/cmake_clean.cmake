@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../../bin/demo_FSI_Poiseuille_flow"
-  "../../../bin/demo_FSI_Poiseuille_flow.pdb"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_Poiseuille_flow"
+  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/bin/demo_FSI_Poiseuille_flow.pdb"
   "CMakeFiles/demo_FSI_Poiseuille_flow.dir/demo_FSI_Poiseuille_flow.cpp.o"
 )
 
