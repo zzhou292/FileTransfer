@@ -196,14 +196,14 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     mphysicalSystem.AddBody(cylinder_2);
 
     /// Create the first falling sphere
-    ChVector<> sphere_pos = ChVector<>((0.5, 0.5, fzDim + sphere_radius + 2 * initSpace0);//paramsH->bodyIniPosZ
+    ChVector<> sphere_pos = ChVector<>(0.5, 0.5, fzDim + sphere_radius + 2 * initSpace0);//paramsH->bodyIniPosZ
     ChQuaternion<> sphere_rot = QUNIT;
    
     auto sphere = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
     sphere->SetPos(sphere_pos);
     double volume_3 = utils::CalcSphereVolume(sphere_radius);
     ChVector<> gyration_3 = utils::CalcSphereGyration(sphere_radius).diagonal();
-    double density_3 = paramsH->bodyDensity;//paramsH->rho0 * 0.5;
+    double density_3 = paramsH->rho0 * 0.4;//paramsH->rho0 * 0.5;
     double mass_3 = density_3 * volume_3;
     sphere->SetCollide(true);
     sphere->SetBodyFixed(false);
@@ -213,7 +213,7 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     sphere->GetCollisionModel()->SetSafeMargin(initSpace0);
     utils::AddSphereGeometry(sphere.get(), sphere_radius, ChVector<>(0.0, 0.0, 0.0), ChQuaternion<>(1, 0, 0, 0));
     sphere->GetCollisionModel()->BuildModel();
-    size_t numRigidObjects = mphysicalSystem.Get_bodylist().size();
+    size_t numRigidObjects_3 = mphysicalSystem.Get_bodylist().size();
     mphysicalSystem.AddBody(sphere);
 
 
@@ -329,7 +329,7 @@ int main(int argc, char* argv[]) {
     auto Cylinder = FSI_Bodies[0];
     auto Cylinder_2 = FSI_Bodies[1];
     auto Sphere = FSI_Bodies[2];
-    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder, Cylinder_2,Sphere);
+    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder, Cylinder_2, Sphere);
 
     Real time = 0;
     Real Global_max_dT = paramsH->dT_Max;
