@@ -173,9 +173,6 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     /// Create the second falling cylinder
     ChVector<> cyl_pos_2 = ChVector<>(1, 0, fzDim + cyl_radius + 2 * initSpace0);
     ChQuaternion<> cyl_rot_2 = QUNIT;
-    ChQuaternion<> qA_1 = Q_from_AngAxis(0 * CH_C_DEG_TO_RAD, VECT_Y);
-    ChQuaternion<> qB_1 = Q_from_AngAxis(90 * CH_C_DEG_TO_RAD, VECT_Z);
-    cyl_rot_2 = cyl_rot_2 >> qA_1 >> qB_1;
 
     auto cylinder_2 = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
     cylinder_2->SetPos(cyl_pos_2);

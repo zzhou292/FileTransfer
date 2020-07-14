@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine_fsi.pdb"
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/lib/libChronoEngine_fsi.so"
-  "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/ChronoEngine_fsi_generated_ChFsiDataManager.cu.o"
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChBce.cu.o"
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChCollisionSystemFsi.cu.o"
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFluidDynamics.cu.o"
@@ -13,6 +12,7 @@ file(REMOVE_RECURSE
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChSphGeneral.cu.o"
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/utils/ChronoEngine_fsi_generated_ChUtilsDevice.cu.o"
   "//home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/utils/ChronoEngine_fsi_generated_ChUtilsPrintSph.cu.o"
+  "/home/jason/Desktop/FileTransfer/chrono_fsi_release/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/ChronoEngine_fsi_generated_ChFsiDataManager.cu.o"
   "CMakeFiles/ChronoEngine_fsi.dir/ChFsiInterface.cpp.o"
   "CMakeFiles/ChronoEngine_fsi.dir/ChSystemFsi.cpp.o"
   "CMakeFiles/ChronoEngine_fsi.dir/math/ChFsiLinearSolverBiCGStab.cpp.o"
