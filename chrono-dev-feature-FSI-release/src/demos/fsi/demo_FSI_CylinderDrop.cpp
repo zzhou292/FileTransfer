@@ -327,7 +327,8 @@ int main(int argc, char* argv[]) {
     std::vector<std::shared_ptr<ChBody>>& FSI_Bodies = myFsiSystem.GetFsiBodies();
     auto Cylinder = FSI_Bodies[0];
     auto Cylinder_2 = FSI_Bodies[1];
-    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder, Cylinder_2,sphere);
+    auto Sphere = FSI_Bodies[2];
+    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder, Cylinder_2,Sphere);
 
     Real time = 0;
     Real Global_max_dT = paramsH->dT_Max;
@@ -354,7 +355,7 @@ int main(int argc, char* argv[]) {
         printf("bin=%f,%f,%f\n", bin->GetPos().x(), bin->GetPos().y(), bin->GetPos().z());
         printf("cyl_1=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
         printf("cyl_2=%f,%f,%f\n", cyl_2->GetPos().x(), cyl_2->GetPos().y(), cyl_2->GetPos().z());
-        printf("sphere=%f,%f,%f\n", sphere->GetPos().x(), sphere->GetPos().y(), sphere->GetPos().z())
+        printf("sphere=%f,%f,%f\n", Sphere->GetPos().x(), Sphere->GetPos().y(), Sphere->GetPos().z());
 
         if (time > paramsH->tFinal)
             break;
@@ -373,7 +374,7 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                        double mTime,
                        std::shared_ptr<ChBody> Cylinder,
                        std::shared_ptr<ChBody> Cylinder_2,
-                       std::shared_ptr<ChBody> sphere) {
+                       std::shared_ptr<ChBody> Sphere) {
     int out_steps = (int)ceil((1.0 / paramsH->dT) / paramsH->out_fps);
     int num_contacts = mphysicalSystem.GetNcontacts();
     double frame_time = 1.0 / paramsH->out_fps;
@@ -409,7 +410,7 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
         out_frame++;
 
         snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Sphere.%d.vtk").c_str(), RigidCounter);
-        WriteSphereVTK(Cylinder_2, cyl_radius_2, 100, SaveAsRigidObjVTK);
+        WriteSphereVTK(Sphere, sphere_radius, 100, SaveAsRigidObjVTK);
             cout << "             Saving Sphere        \n" << endl;
             cout << "-------------------------------------\n" << endl;
             cout << "             Output frame:   " << next_frame << endl;
