@@ -346,7 +346,7 @@ int main(int argc, char* argv[]) {
 
         myFsiSystem.DoStepDynamics_FSI();
         time += paramsH->dT;
-        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder, Cylinder_2);
+        SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, next_frame, time, Cylinder, Cylinder_2, Sphere);
 
         auto bin = mphysicalSystem.Get_bodylist()[0];
         auto cyl = mphysicalSystem.Get_bodylist()[1];
