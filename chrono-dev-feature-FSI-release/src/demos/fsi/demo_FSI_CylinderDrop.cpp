@@ -60,6 +60,8 @@ double cyl_radius = .20;
 
 double cyl_length_2 = 0.250;
 double cyl_radius_2 = .20;
+
+double sphere_radius = 0.250;
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 /// Forward declaration of helper functions
@@ -192,15 +194,41 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     size_t numRigidObjects_2 = mphysicalSystem.Get_bodylist().size();
     mphysicalSystem.AddBody(cylinder_2);
 
+    /// Create the first falling sphere
+    ChVector<> sphere_pos = ChVector<>((0.5, 0.5, fzDim + sphere_radius + 2 * initSpace0);//paramsH->bodyIniPosZ
+    ChQuaternion<> sphere_rot = QUNIT;
+   
+    auto sphere = chrono_types::make_shared<ChBody>(ChMaterialSurface::SMC);
+    sphere->SetPos(sphere_pos);
+    double volume_3 = utils::CalcSphereVolume(sphere_radius);
+    ChVector<> gyration_3 = utils::CalcSphereGyration(sphere_radius).diagonal();
+    double density_3 = paramsH->bodyDensity;//paramsH->rho0 * 0.5;
+    double mass_3 = density_3 * volume_3;
+    sphere->SetCollide(true);
+    sphere->SetBodyFixed(false);
+
+    sphere->SetMaterialSurface(mysurfmaterial);
+    sphere->GetCollisionModel()->ClearModel();
+    sphere->GetCollisionModel()->SetSafeMargin(initSpace0);
+    utils::AddSphereGeometry(sphere.get(), sphere_radius, ChVector<>(0.0, 0.0, 0.0), ChQuaternion<>(1, 0, 0, 0));
+    sphere->GetCollisionModel()->BuildModel();
+    size_t numRigidObjects = mphysicalSystem.Get_bodylist().size();
+    mphysicalSystem.AddBody(sphere);
+
+
     /// Add this body to the FSI system
     myFsiSystem.AddFsiBody(cylinder);
     myFsiSystem.AddFsiBody(cylinder_2);
+    myFsiSystem.AddFsiBody(sphere);
     /// Fluid-Solid Coupling of the cylinder via Condition Enforcement (BCE) Markers
     fsi::utils::AddCylinderBce(myFsiSystem.GetDataManager(), paramsH, cylinder, ChVector<>(0, 0, 0),
                                ChQuaternion<>(1, 0, 0, 0), cyl_radius, cyl_length + initSpace0, paramsH->HSML, false);
 
     fsi::utils::AddCylinderBce(myFsiSystem.GetDataManager(), paramsH, cylinder_2, ChVector<>(0, 0, 0),
                                 ChQuaternion<>(1, 0, 0, 0), cyl_radius_2, cyl_length_2 + initSpace0, paramsH->HSML, false);
+
+    fsi::utils::AddCylinderBce(myFsiSystem.GetDataManager(), paramsH, sphere, ChVector<>(0, 0, 0),
+                                ChQuaternion<>(1, 0, 0, 0), sphere_radius, sphere_radius + initSpace0, paramsH->HSML, false);
 
     double FSI_MASS = myFsiSystem.GetDataManager()->numObjects->numRigid_SphMarkers * paramsH->markerMass;
     //    cylinder->SetMass(FSI_MASS);
@@ -211,9 +239,14 @@ void CreateSolidPhase(ChSystemSMC& mphysicalSystem,
     printf("\nreal mass=%f, FSI_MASS=%f\n\n", mass, FSI_MASS);
 
     cylinder_2->SetMass(mass_2);
-    cylinder->SetInertiaXX(mass_2*gyration_2);
-    printf("2 inertia=%f,%f,%f\n", mass * gyration.x(), mass * gyration.y(), mass * gyration.z());
+    cylinder_2->SetInertiaXX(mass_2*gyration_2);
+    printf("2 inertia=%f,%f,%f\n", mass_2 * gyration_2.x(), mass_2 * gyration_2.y(), mass_2 * gyration_2.z());
     printf("\n2 real mass=%f, FSI_MASS=%f\n\n", mass_2, FSI_MASS);
+
+    sphere->SetMass(mass_3);
+    sphere->SetInertiaXX(mass_3*gyration_3);
+    printf("2 inertia=%f,%f,%f\n", mass_3 * gyration_3.x(), mass_3 * gyration_3.y(), mass_3 * gyration_3.z());
+    printf("\n2 real mass=%f, FSI_MASS=%f\n\n", mass_3, FSI_MASS);
 }
 
 // =============================================================================
@@ -294,7 +327,7 @@ int main(int argc, char* argv[]) {
     std::vector<std::shared_ptr<ChBody>>& FSI_Bodies = myFsiSystem.GetFsiBodies();
     auto Cylinder = FSI_Bodies[0];
     auto Cylinder_2 = FSI_Bodies[1];
-    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder, Cylinder_2);
+    SaveParaViewFiles(myFsiSystem, mphysicalSystem, paramsH, 0, 0, Cylinder, Cylinder_2,sphere);
 
     Real time = 0;
     Real Global_max_dT = paramsH->dT_Max;
@@ -316,10 +349,12 @@ int main(int argc, char* argv[]) {
         auto bin = mphysicalSystem.Get_bodylist()[0];
         auto cyl = mphysicalSystem.Get_bodylist()[1];
         auto cyl_2 = mphysicalSystem.Get_bodylist()[2];
+        auto sphere = mphysicalSystem.Get_bodylist()[3];
 
         printf("bin=%f,%f,%f\n", bin->GetPos().x(), bin->GetPos().y(), bin->GetPos().z());
         printf("cyl_1=%f,%f,%f\n", cyl->GetPos().x(), cyl->GetPos().y(), cyl->GetPos().z());
         printf("cyl_2=%f,%f,%f\n", cyl_2->GetPos().x(), cyl_2->GetPos().y(), cyl_2->GetPos().z());
+        printf("sphere=%f,%f,%f\n", sphere->GetPos().x(), sphere->GetPos().y(), sphere->GetPos().z())
 
         if (time > paramsH->tFinal)
             break;
@@ -337,7 +372,8 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                        int next_frame,
                        double mTime,
                        std::shared_ptr<ChBody> Cylinder,
-                       std::shared_ptr<ChBody> Cylinder_2) {
+                       std::shared_ptr<ChBody> Cylinder_2,
+                       std::shared_ptr<ChBody> sphere) {
     int out_steps = (int)ceil((1.0 / paramsH->dT) / paramsH->out_fps);
     int num_contacts = mphysicalSystem.GetNcontacts();
     double frame_time = 1.0 / paramsH->out_fps;
@@ -371,6 +407,16 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
             cout << "-------------------------------------\n" << endl;
         RigidCounter++;
         out_frame++;
+
+        snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Sphere.%d.vtk").c_str(), RigidCounter);
+        WriteSphereVTK(Cylinder_2, cyl_radius_2, 100, SaveAsRigidObjVTK);
+            cout << "             Saving Sphere        \n" << endl;
+            cout << "-------------------------------------\n" << endl;
+            cout << "             Output frame:   " << next_frame << endl;
+            cout << "             Time:           " << mTime << endl;
+            cout << "-------------------------------------\n" << endl;
+        RigidCounter++;
+        out_frame++;
     }
 }
 void WriteCylinderVTK(std::shared_ptr<ChBody> Body, double radius, double length, int res, char SaveAsBuffer[256]) {
@@ -397,6 +443,72 @@ void WriteCylinderVTK(std::shared_ptr<ChBody> Body, double radius, double length
         ChVector<double> thisNode;
         thisNode.x() = radius * cos(2 * i * 3.1415 / res);
         thisNode.y() = +1 * length / 2;
+        thisNode.z() = radius * sin(2 * i * 3.1415 / res);
+        vertex = Rotation * thisNode + center;  // rotate/scale, if needed
+        output << vertex.x() << " " << vertex.y() << " " << vertex.z() << "\n";
+    }
+
+    output << "\n\nCELLS " << (unsigned int)res + res << "\t" << (unsigned int)5 * (res + res) << "\n";
+
+    for (int i = 0; i < res - 1; i++) {
+        output << "4 " << i << " " << i + 1 << " " << i + res + 1 << " " << i + res << "\n";
+    }
+    output << "4 " << res - 1 << " " << 0 << " " << res << " " << 2 * res - 1 << "\n";
+
+    for (int i = 0; i < res / 4; i++) {
+        output << "4 " << i << " " << i + 1 << " " << +res / 2 - i - 1 << " " << +res / 2 - i << "\n";
+    }
+
+    for (int i = 0; i < res / 4; i++) {
+        output << "4 " << i + res << " " << i + 1 + res << " " << +res / 2 - i - 1 + res << " " << +res / 2 - i + res
+               << "\n";
+    }
+
+    output << "4 " << +res / 2 << " " << 1 + res / 2 << " " << +res - 1 << " " << 0 << "\n";
+
+    for (int i = 1; i < res / 4; i++) {
+        output << "4 " << i + res / 2 << " " << i + 1 + res / 2 << " " << +res / 2 - i - 1 + res / 2 << " "
+               << +res / 2 - i + res / 2 << "\n";
+    }
+
+    output << "4 " << 3 * res / 2 << " " << 1 + 3 * res / 2 << " " << +2 * res - 1 << " " << +res << "\n";
+
+    for (int i = 1; i < res / 4; i++) {
+        output << "4 " << i + 3 * res / 2 << " " << i + 1 + 3 * res / 2 << " " << +2 * res - i - 1 << " "
+               << +2 * res - i << "\n";
+    }
+
+    output << "\nCELL_TYPES " << res + res << "\n";
+
+    for (int iele = 0; iele < (res + res); iele++) {
+        output << "9\n";
+    }
+}
+
+void WriteSphereVTK(std::shared_ptr<ChBody> Body, double radius, int res, char SaveAsBuffer[256]) {
+    std::ofstream output;
+    output.open(SaveAsBuffer, std::ios::app);
+    output << "# vtk DataFile Version 1.0\nUnstructured Grid Example\nASCII\n\n" << std::endl;
+    output << "DATASET UNSTRUCTURED_GRID\nPOINTS " << 2 * res << " float\n";
+
+    ChVector<> center = Body->GetPos();
+    printf("POS=%f,%f,%f", center.x(), center.y(), center.z());
+
+    ChMatrix33<> Rotation = Body->GetRot();
+    ChVector<double> vertex;
+    for (int i = 0; i < res; i++) {
+        ChVector<double> thisNode;
+        thisNode.x() = radius * cos(2 * i * 3.1415 / res);
+        thisNode.y() = radius * cos(2 * i * 3.1415 / res);
+        thisNode.z() = radius * sin(2 * i * 3.1415 / res);
+        vertex = Rotation * thisNode + center;  // rotate/scale, if needed
+        output << vertex.x() << " " << vertex.y() << " " << vertex.z() << "\n";
+    }
+
+    for (int i = 0; i < res; i++) {
+        ChVector<double> thisNode;
+        thisNode.x() = radius * cos(2 * i * 3.1415 / res);
+        thisNode.y() = radius * cos(2 * i * 3.1415 / res);
         thisNode.z() = radius * sin(2 * i * 3.1415 / res);
         vertex = Rotation * thisNode + center;  // rotate/scale, if needed
         output << vertex.x() << " " << vertex.y() << " " << vertex.z() << "\n";
