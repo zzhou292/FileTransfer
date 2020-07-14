@@ -407,8 +407,7 @@ void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
             cout << "             Output frame:   " << next_frame << endl;
             cout << "             Time:           " << mTime << endl;
             cout << "-------------------------------------\n" << endl;
-        RigidCounter++;
-        out_frame++;
+
 
         snprintf(SaveAsRigidObjVTK, sizeof(char) * 256, (demo_dir + "/Sphere.%d.vtk").c_str(), RigidCounter);
         WriteSphereVTK(Sphere, sphere_radius, 100, SaveAsRigidObjVTK);
