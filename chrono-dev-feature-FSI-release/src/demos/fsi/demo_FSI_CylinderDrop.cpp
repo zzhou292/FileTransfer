@@ -501,7 +501,7 @@ void WriteSphereVTK(std::shared_ptr<ChBody> Body, double radius, int res, char S
         ChVector<double> thisNode;
         thisNode.x() = radius * cos(2 * i * 3.1415 / res);
         thisNode.y() = radius * sin(2 * i * 3.1415 / res);
-        thisNode.z() = 0);
+        thisNode.z() = 0;
         vertex = Rotation * thisNode + center;  // rotate/scale, if needed
         output << vertex.x() << " " << vertex.y() << " " << vertex.z() << "\n";
     }
