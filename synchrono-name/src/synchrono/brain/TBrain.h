@@ -10,17 +10,7 @@
 #include "chrono/core/ChVector.h"
 #include "chrono_thirdparty/filesystem/path.h"
 
-#ifdef SENSOR
-#include "chrono_sensor/ChSensorManager.h"
-#include "chrono_sensor/ChLidarSensor.h"
-#include "chrono_sensor/ChCameraSensor.h"
-#include "chrono_sensor/filters/ChFilterAccess.h"
-#include "chrono_sensor/filters/ChFilterVisualize.h"
-#include "chrono_sensor/filters/ChFilterVisualizePointCloud.h"
-#include "chrono_sensor/filters/ChFilterPCfromDepth.h"
-#include "chrono_sensor/filters/ChFilterSave.h"
-using namespace chrono::sensor;
-#endif
+#include "synchrono/flatbuffer/message/SynVehicleMessage.h"
 
 using namespace synchrono;
 
@@ -32,30 +22,41 @@ namespace agent {
 class SYN_API TBrain : public SynVehicleBrain {
   public:
     TBrain(int rank, std::shared_ptr<ChDriver> driver, ChVehicle& vehicle);
-#ifdef SENSOR
-    TBrain(int rank, std::shared_ptr<ChDriver> driver, ChVehicle& vehicle, std::shared_ptr<ChLidarSensor> lidar);
-#endif
     ~TBrain();
 
     virtual void Synchronize(double time);
     virtual void Advance(double step);
-    virtual void ProcessMessage(SynMessage* msg);
+    virtual void ProcessMessage(SynMessage* msg, int sender_rank);
 
+    void setLane(int lane) { m_lane = lane; }
+    void trackLoc(SynMessage* msg, int sender_rank,chrono::Vector Sen);
+
+    virtual void updateMyLoc(chrono::Vector);
+
+    
+    void checkDistanceCircle(ChVector<> pos1,ChVector<> pos2);
+    void checkDistanceCircleCollision(double distance);
+    void checkDistanceRecCollision(ChVector<> pos1,ChVector<> pos2);
+    
+    
   private:
-  
 
-#ifdef SENSOR
-    std::shared_ptr<ChSensorManager> m_manager;
-    std::shared_ptr<ChLidarSensor> m_lidar;
-    std::shared_ptr<ChCameraSensor> m_camera;
 
-    bool m_save_data;
-    std::string m_cam_data_path;
-    std::string m_intersection_cam_data_path;
 
-    double m_lidar_intensity_epsilon;
-    UserDIBufferPtr m_recent_lidar_data;
-#endif
+
+    int m_lane = 0;
+    int m_light_color = 0;      // Starts red (0: green, 1: yellow, 2: yellow)
+    bool m_inside_box = false;  // Is vehicle inside stopping box area
+    double m_dist = 1000;       // Distance to point to stop at light
+    chrono::Vector myLoc;
+
+    int m_nearest_vehicle;
+
+    double DistanceToLine(ChVector<> p, ChVector<> l1, ChVector<> l2);
+    bool IsInsideBox(ChVector<> pos, ChVector<> sp, ChVector<> op, double w);
+
+
+
 };
 
 }  // namespace agent

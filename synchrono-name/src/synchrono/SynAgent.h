@@ -55,7 +55,7 @@ class SYN_API SynAgent {
     void AttachVisManager(std::shared_ptr<SynVisManager> vis_manager) { m_vis_manager = vis_manager; }
 
     /// Process incoming message. Forwards message to underlying agent brain.
-    virtual void ProcessMessage(SynMessage* msg) { m_brain->ProcessMessage(msg); }
+    virtual void ProcessMessage(SynMessage* msg, int sender_rank) { m_brain->ProcessMessage(msg,sender_rank); }
 
     /// Set this agent's brain
     void SetBrain(std::shared_ptr<SynBrain> brain) { m_brain = brain; }

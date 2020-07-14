@@ -39,13 +39,15 @@ class SYN_API ACCBrain : public SynVehicleBrain {
 
     virtual void Synchronize(double time);
     virtual void Advance(double step);
-    virtual void ProcessMessage(SynMessage* msg);
+    virtual void ProcessMessage(SynMessage* msg, int sender_rank);
 
     void setLane(int lane) { m_lane = lane; }
 
     bool m_sen_init_called;
 
     void SetNearestVehicleDistance(float dist) { m_nearest_vehicle = dist; }
+
+    virtual void updateMyLoc(chrono::Vector){};
 
   private:
     // Hard coded current lane. Change later?

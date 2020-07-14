@@ -112,13 +112,13 @@ std::shared_ptr<SynMessage::State> SynVehicleAgent::GetState() {
     return m_msg->GetState();
 }
 
-void SynVehicleAgent::ProcessMessage(SynMessage* msg) {
+void SynVehicleAgent::ProcessMessage(SynMessage* msg, int sender_rank) {
     switch (msg->GetType()) {
         case SynMessage::TERRAIN:
             m_terrain->SyncTerrain(msg);
             break;
         default:
-            m_brain->ProcessMessage(msg);
+            m_brain->ProcessMessage(msg,sender_rank);
             break;
     }
 }
@@ -127,6 +127,10 @@ void SynVehicleAgent::GenerateMessagesToSend(std::vector<SynMessage*>& messages)
     m_terrain->GenerateMessagesToSend(messages);
     m_brain->GenerateMessagesToSend(messages);
     messages.push_back(new SynVehicleMessage(m_rank, GetState()));
+}
+
+void SynVehicleAgent::UpdateMyLoc(chrono::Vector Loc){
+    m_brain->UpdateMyLoc(Loc);
 }
 
 }  // namespace agent

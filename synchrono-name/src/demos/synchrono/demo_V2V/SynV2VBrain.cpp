@@ -10,7 +10,7 @@ SynV2VBrain::SynV2VBrain(int rank,
                          std::shared_ptr<ChIMUSensor> imu)
     : SynVehicleBrain(rank, driver, vehicle), m_gps(gps), m_imu(imu) {}
 
-void SynV2VBrain::ProcessMessage(SynMessage* msg) {
+void SynV2VBrain::ProcessMessage(SynMessage* msg,int sender_rank) {
     if (msg->GetType() == SynMessage::SENS) {
         auto sensor_state = std::static_pointer_cast<SynSensorMessage::State>(msg->GetState());
         if (sensor_state->type == SynSensorMessage::State::GPS) {

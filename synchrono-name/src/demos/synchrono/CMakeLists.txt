@@ -30,8 +30,8 @@ endif()
 
 message(STATUS "Demo programs for Park St...")
 
-add_subdirectory(demo_parkst)
-add_subdirectory(demo_parkst_citybus)
+#add_subdirectory(demo_parkst)
+#add_subdirectory(demo_parkst_citybus)
 add_subdirectory(demo_vehicles)
 add_subdirectory(demo_platoon)
 add_subdirectory(demo_chrono_platoon)

@@ -121,6 +121,14 @@ void SynMPIManager::Broadcast() {
         m_flatbuffers_manager.GetBuffer().resize(size);
         MPI_Bcast(m_flatbuffers_manager.GetBuffer().data(), size, MPI_BYTE, 0, MPI_COMM_WORLD);
     }
+//-------------------------------------------------------------
+//--------------------------------------------------------------
+//------------------------------------------------------------
+    //if(m_rank == 1){
+    //     MPI_Bcast(&location_1, 1, MPI_INT, 0, MPI_COMM_WORLD);
+    //}else if(m_rank == 2){
+    //     MPI_Bcast(&location_2, 1, MPI_INT, 0, MPI_COMM_WORLD);
+    //}
 }
 
 // Update the zombie agents
@@ -138,19 +146,58 @@ void SynMPIManager::Update() {
             auto buffer = flatbuffers::GetRoot<SynFlatBuffers::Buffer>(pointer->pointer()->Data());
             for (auto message : (*buffer->buffer())) {
                 SynMessage* msg = SynMessageFactory::GenerateMessage(message);
-
                 // advance the agent to a specific time where we will synchronize
                 // Only synchronize zombie if this rank's agent has a ChSystem
                 // Must do this because otherwise, the underlying zombie agents won't have a system either
                 // Would still like to process message at some point
                 if (m_agent_list[m_rank]->GetSystem())
                     m_agent_list[i]->SynchronizeZombie(msg);
-                m_agent_list[m_rank]->ProcessMessage(msg);
+                m_agent_list[m_rank]->ProcessMessage(msg, i);
                 delete msg;
             }
         }
     }
 }
+
+
+
+
+void SynMPIManager::Track(chrono::Vector Sen){
+    myLoc = Sen;
+    //std::cout<<myLoc<<std::endl;
+    m_agent_list[m_rank]->GetBrain()->UpdateMyLoc(Sen);
+}
+
+/*
+chrono::Vector SynMPIManager::ReturnTrackingData(int rank){
+    if(rank==1){
+        return location_1;
+        
+    }else if(rank==2){
+        return location_2;
+    }
+}
+*/
+
+//void SynMPIManager::PrintLocData(){
+    //std::cout<<"loc1: "<<location_1<<std::endl;
+    //std::cout<<"loc2: "<<location_2<<std::endl;
+//}
+
+//void SynMPIManager::PrintDistance(){
+    //std::cout<<"list"<<&m_agent_list<<std::endl;
+   // std::cout<<"loc1: "<<location_1<<std::endl;
+    //std::cout<<"loc2: "<<location_2<<std::endl;
+    //std::shared_ptr<double> a1 = location_1[0];
+    //std::shared_ptr<double> a2 = location_1[1];
+    //std::shared_ptr<double> a3 = location_1[2];
+    //std::shared_ptr<double> b1 = location_2[0];
+    //std::shared_ptr<double> b2 = location_2[1];
+    //std::shared_ptr<double> b3 = location_2[2];
+    //std::shared_ptr<double> dis = (b1-a1) + (b2-a2) + (b3-a3);
+    //std::cout<<"dis: "<<location_1<<std::endl;
+//}
+
 
 }  // namespace mpi
 }  // namespace synchrono

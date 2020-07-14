@@ -10,13 +10,13 @@ ACCBrain::ACCBrain(int rank, std::shared_ptr<ChDriver> driver, ChVehicle& vehicl
     m_rank = rank;
 }
 
-#ifdef SENSOR
-ACCBrain::ACCBrain(int rank, std::shared_ptr<ChDriver> driver, ChVehicle& vehicle, std::shared_ptr<ChLidarSensor> lidar)
-    : SynVehicleBrain(rank, driver, vehicle) {
-    ACCBrain(rank, driver, vehicle);
-    m_lidar = lidar;
-}
-#endif
+//#ifdef SENSOR
+//ACCBrain::ACCBrain(int rank, std::shared_ptr<ChDriver> driver, ChVehicle& vehicle, std::shared_ptr<ChLidarSensor> lidar)
+//    : SynVehicleBrain(rank, driver, vehicle) {
+ //   ACCBrain(rank, driver, vehicle);
+ //   m_lidar = lidar;
+//}
+//#endif
 
 ACCBrain::~ACCBrain() {}
 
@@ -90,17 +90,18 @@ void ACCBrain::Advance(double step) {
     m_driver->Advance(step);
 }
 
-void ACCBrain::ProcessMessage(SynMessage* msg) {
+void ACCBrain::ProcessMessage(SynMessage* msg, int sender_rank) {
+     //std::cout<<"pos"<<m_vehicle.GetChassisBody()->GetPos()<<std::endl;
     switch (msg->GetType()) {
         case SynMessage::TRAFFIC_LIGHT: {
             // jht - Doesn't seem like we ever call delete, is this a memory leak?
             auto spat = std::static_pointer_cast<SynTrafficLightMessage::State>(msg->GetState())->spat;
             SynSPATMessage* spat_msg =
                 new SynSPATMessage(m_rank, chrono_types::make_shared<SynSPATMessage::State>(spat));
-            ProcessMessage(spat_msg);
+            ProcessMessage(spat_msg,sender_rank);
             auto map = std::static_pointer_cast<SynTrafficLightMessage::State>(msg->GetState())->map;
             SynMAPMessage* map_msg = new SynMAPMessage(m_rank, chrono_types::make_shared<SynMAPMessage::State>(map));
-            ProcessMessage(map_msg);
+            ProcessMessage(map_msg,sender_rank);
             break;
         }
         case SynMessage::SPAT: {
@@ -122,6 +123,7 @@ void ACCBrain::ProcessMessage(SynMessage* msg) {
             // MAP Processing
             auto map_lanes = std::static_pointer_cast<SynMAPMessage::State>(msg->GetState())->lanes;
             ChVector<> pos = m_vehicle.GetChassisBody()->GetPos();
+           
 
             if (IsInsideBox(pos, map_lanes[m_lane].stopPos, map_lanes[m_lane].offsetPos, map_lanes[m_lane].width)) {
                 m_inside_box = true;

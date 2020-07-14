@@ -29,7 +29,7 @@ class SYN_API SynV2VBrain : public SynVehicleBrain {
     ~SynV2VBrain() {}
 
     /// Process an incoming message
-    virtual void ProcessMessage(SynMessage* msg) override;
+    virtual void ProcessMessage(SynMessage* msg,int sender_rank) override;
 
     /// Generate vector of SynMessage's to send
     virtual void GenerateMessagesToSend(std::vector<SynMessage*>& messages) override;

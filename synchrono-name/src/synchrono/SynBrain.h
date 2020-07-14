@@ -23,13 +23,15 @@ class SYN_API SynBrain {
     virtual void Synchronize(double time) = 0;
 
     /// Process an incoming message
-    virtual void ProcessMessage(SynMessage* msg) = 0;
+    virtual void ProcessMessage(SynMessage* msg,int sender_rank) = 0;
 
     /// Generate vector of SynMessage's to send
     virtual void GenerateMessagesToSend(std::vector<SynMessage*>& messages) {}
 
     /// Get this brains rank
     int GetRank() { return m_rank; }
+
+    virtual void UpdateMyLoc(chrono::Vector Sen) = 0;
 
   protected:
     int m_rank;  ///< rank of this brain

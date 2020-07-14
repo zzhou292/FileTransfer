@@ -30,7 +30,9 @@ class SYN_API SynVehicleBrain : public SynBrain {
     virtual void Synchronize(double time) { m_driver->Synchronize(time);};
 
     /// Process an incoming message
-    virtual void ProcessMessage(SynMessage* msg) {}
+    virtual void ProcessMessage(SynMessage* msg, int sender_rank) {};
+
+    virtual void UpdateMyLoc(chrono::Vector Sen){};
 
     /// Get the driver inputs from the attached driver
     ChDriver::Inputs GetDriverInputs() { return m_driver->GetInputs(); }

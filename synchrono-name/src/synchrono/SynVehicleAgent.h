@@ -50,7 +50,7 @@ class SYN_API SynVehicleAgent : public SynAgent {
     virtual void InitializeZombie(ChSystem* system = 0);
 
     /// Process incoming message. Forwards message to underlying agent brain.
-    virtual void ProcessMessage(SynMessage* msg);
+    virtual void ProcessMessage(SynMessage* msg, int sender_rank);
 
     /// Synchronoize this agents zombie with the rest of the simulation.
     /// Updates agent based on specified message.
@@ -85,6 +85,8 @@ class SYN_API SynVehicleAgent : public SynAgent {
 
     /// Get zombie body
     std::shared_ptr<ChBodyAuxRef> GetZombieBody() { return m_zombie_body; }
+
+    virtual void UpdateMyLoc(chrono::Vector);
 
   protected:
     double m_step_size = 1e-3;  ///< default simulation step size

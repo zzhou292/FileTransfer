@@ -62,15 +62,29 @@ class SYN_API SynMPIManager {
     /// Get the agent list
     std::map<int, std::shared_ptr<SynAgent>> GetAgentList() { return m_agent_list; }
 
+    void Track(chrono::Vector);
+
+    //std::shared_ptr<chrono::Vector> ReturnTrackingData(int rank);
+
+    //void PrintLocData();
+
+    //void PrintDistance();
+
   private:
     int m_rank;       ///< rank which this manager controls
     int m_num_ranks;  ///< total number of ranks in this simulation
+
+    //chrono::Vector buffer1 = ChVector<>(0.00,160.00,0.00);
+    //chrono::Vector buffer2 = ChVector<>(0.00,160.00,0.00);
+    chrono::Vector myLoc;
 
     std::map<int, std::shared_ptr<SynAgent>> m_agent_list;  ///< id to agent map on this rank
 
     std::shared_ptr<SynMessage::State> m_agent_state;  ///< handle to agents state info on this rank
 
     SynFlatBuffersManager m_flatbuffers_manager;  ///< flatbuffer manager for this rank
+
+    
 };
 }  // namespace mpi
 }  // namespace synchrono

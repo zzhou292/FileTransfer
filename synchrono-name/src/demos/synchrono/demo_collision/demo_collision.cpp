@@ -199,13 +199,15 @@ int main(int argc, char* argv[]) {
                 driver->GetSteeringController().SetGains(turn_Kp, turn_Ki, turn_Kd);
                 driver->GetSteeringController().SetLookAheadDistance(5);
 
-                std::shared_ptr<ACCBrain> brain =
-                    chrono_types::make_shared<ACCBrain>(rank, driver, agent->GetVehicle());
+                std::shared_ptr<TBrain> brain =
+                    chrono_types::make_shared<TBrain>(rank, driver, agent->GetVehicle());
+                    //-------------------------------
+                std::cout<<&brain<<std::endl;
                 brain->setLane(lane);
                 agent->SetBrain(brain);
 
-                std::shared_ptr<TBrain> Tbrain =
-                    chrono_types::make_shared<TBrain>(rank, driver, agent->GetVehicle());
+                //std::shared_ptr<TBrain> Tbrain =
+                //    chrono_types::make_shared<TBrain>(rank, driver, agent->GetVehicle());
 
                 std::shared_ptr<SynVisManager> vis_manager = chrono_types::make_shared<SynVisManager>();
                 agent->AttachVisManager(vis_manager);
@@ -282,19 +284,28 @@ int main(int argc, char* argv[]) {
 
     // Simulation Loop
     while (step * HEARTBEAT < T_END) {
-
+        
         if(rank == 1)
         {
             resultVec1 = driver->GetVEHSentinel();
-            std::cout<<"Location = "<<resultVec1<<std::endl;
+            
+            mpi_manager.Track(resultVec1);
+            //std::cout<<"Location = "<<resultVec1<<std::endl;
             //std::cout<<"Location 2 = " << resultVec2<<std::endl;
         }
         else if(rank == 2)
         {
             resultVec2 = driver->GetVEHSentinel();
-            std::cout<<"Location 2 = " << resultVec2<<std::endl;
+            
+            mpi_manager.Track(resultVec2);
+            //std::cout<<"Location 2 = " << resultVec2<<std::endl;
         }
+     //std::cout<<"MPI STORED Location - " << 1 << " - "<< mpi_manager.ReturnTrackingData(1)<<std::endl;
+        //std::cout<<"MPI STORED Location - " << 2 << " - "<< mpi_manager.ReturnTrackingData(2)<<std::endl;
+        //std::cout<<"MPI STORED Location 2 = " << mpi_manager.ReturnTrackingData(2)<<std::endl;
 
+        
+        
         if(rank==2 && (step * HEARTBEAT == 5))
         {
             driver->ChangeVEHPath(path_3, false);
@@ -332,6 +343,7 @@ int main(int argc, char* argv[]) {
         if (verbose && inc > 1e-4) {
             std::cout << step << "." << rank << " bro: " << inc << std::endl;
         }
+
 
         // Update
         mpi_manager.Update();
