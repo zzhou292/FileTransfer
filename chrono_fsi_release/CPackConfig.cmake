@@ -31,7 +31,7 @@ set(CPACK_OUTPUT_CONFIG_FILE "//home/jason/Desktop/FileTransfer/chrono_fsi_relea
 set(CPACK_PACKAGE_DEFAULT_LOCATION "/")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "/usr/share/cmake-3.17/Templates/CPack.GenericDescription.txt")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "ChronoEngine is a multibody-dynamics package")
-set(CPACK_PACKAGE_FILE_NAME "ChronoEngine-Linux-x86_64-Release-2020_07_13")
+set(CPACK_PACKAGE_FILE_NAME "ChronoEngine-Linux-x86_64-Release-2020_07_14")
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "ChronoEngine")
 set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "ChronoEngine")
 set(CPACK_PACKAGE_NAME "ChronoEngine")
