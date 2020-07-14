@@ -66,7 +66,7 @@ double sphere_radius = 0.250;
 // -----------------------------------------------------------------------------
 /// Forward declaration of helper functions
 void WriteCylinderVTK(std::shared_ptr<ChBody> Body, double radius, double length, int res, char SaveAsBuffer[256]);
-
+void WriteSphereVTK(std::shared_ptr<ChBody> Body, double radius, int res, char SaveAsBuffer[256]);
 void SaveParaViewFiles(fsi::ChSystemFsi& myFsiSystem,
                        ChSystemSMC& mphysicalSystem,
                        std::shared_ptr<fsi::SimParams> paramsH,
