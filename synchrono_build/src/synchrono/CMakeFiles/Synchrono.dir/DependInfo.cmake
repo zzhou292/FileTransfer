@@ -35,14 +35,16 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/terrain/SynRigidTerrain.cpp" "/home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono/CMakeFiles/Synchrono.dir/terrain/SynRigidTerrain.cpp.o"
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/terrain/SynSCMTerrain.cpp" "/home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono/CMakeFiles/Synchrono.dir/terrain/SynSCMTerrain.cpp.o"
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynIrrVehicleVis.cpp" "/home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o"
+  "/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynSenVehicleVis.cpp" "/home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "CHRONO_DATA_DIR=\"/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/\""
-  "CHRONO_VEHICLE_DATA_DIR=\"/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/vehicle/\""
+  "CHRONO_DATA_DIR=\"/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/\""
+  "CHRONO_VEHICLE_DATA_DIR=\"/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/vehicle/\""
   "IRRLICHT"
+  "SENSOR"
   "SYN_API_COMPILE"
   "SYN_SCM"
   "Synchrono_EXPORTS"
@@ -51,14 +53,19 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/jason/Desktop/FileTransfer/synchrono-name/src"
-  "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src"
-  "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono"
-  "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet"
-  "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact"
-  "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD"
+  "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src"
+  "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono"
+  "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/bullet"
+  "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/gimpact"
+  "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACD"
+  "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty/HACDv2"
   "/home/jason/Desktop/FileTransfer/chrono_build_SCM"
   "/usr/include/eigen3"
   "/usr/include/irrlicht"
+  "/usr/include/GLFW"
+  "/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/include/optixu"
+  "/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/include"
+  "/opt/cuda/include"
   "/home/jason/Desktop/FileTransfer/synchrono-name/flatbuffers/include"
   )
 

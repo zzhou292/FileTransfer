@@ -472,6 +472,10 @@ SYN_IRRLICHT:BOOL=ON
 // been built from the branch sandbox/SCM-sync)
 SYN_SCM:BOOL=ON
 
+//Enable Chrono::Sensor-related Synchrono features (requires Chrono
+// to have been built with Sensor)
+SYN_SENSOR:BOOL=ON
+
 //Value Computed by CMake
 Synchrono_BINARY_DIR:STATIC=/home/jason/Desktop/FileTransfer/synchrono_build
 
@@ -479,22 +483,37 @@ Synchrono_BINARY_DIR:STATIC=/home/jason/Desktop/FileTransfer/synchrono_build
 Synchrono_Interface_LIB_DEPENDS:STATIC=general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;
 
 //Dependencies for the target
-Synchrono_LIB_DEPENDS:STATIC=general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;general;/usr/local/lib/libmpi.so;
+Synchrono_LIB_DEPENDS:STATIC=general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so;general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;/opt/cuda/lib64/libnppc.so;general;/opt/cuda/lib64/libnppial.so;general;/opt/cuda/lib64/libnppicc.so;general;/opt/cuda/lib64/libnppicom.so;general;/opt/cuda/lib64/libnppidei.so;general;/opt/cuda/lib64/libnppif.so;general;/opt/cuda/lib64/libnppig.so;general;/opt/cuda/lib64/libnppim.so;general;/opt/cuda/lib64/libnppist.so;general;/opt/cuda/lib64/libnppisu.so;general;/opt/cuda/lib64/libnppitc.so;general;/opt/cuda/lib64/libnpps.so;general;/usr/lib/libglfw.so;general;/usr/lib/libGLEW.so;general;/usr/lib/libGL.so;general;/usr/lib/libGLU.so;general;/opt/cuda/lib64/libnvrtc.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so;general;/usr/local/lib/libmpi.so;
 
 //Dependencies for the target
-Synchrono_R_LIB_DEPENDS:STATIC=general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;
+Synchrono_R_LIB_DEPENDS:STATIC=general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so;general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;/opt/cuda/lib64/libnppc.so;general;/opt/cuda/lib64/libnppial.so;general;/opt/cuda/lib64/libnppicc.so;general;/opt/cuda/lib64/libnppicom.so;general;/opt/cuda/lib64/libnppidei.so;general;/opt/cuda/lib64/libnppif.so;general;/opt/cuda/lib64/libnppig.so;general;/opt/cuda/lib64/libnppim.so;general;/opt/cuda/lib64/libnppist.so;general;/opt/cuda/lib64/libnppisu.so;general;/opt/cuda/lib64/libnppitc.so;general;/opt/cuda/lib64/libnpps.so;general;/usr/lib/libglfw.so;general;/usr/lib/libGLEW.so;general;/usr/lib/libGL.so;general;/usr/lib/libGLU.so;general;/opt/cuda/lib64/libnvrtc.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so;
 
 //Value Computed by CMake
 Synchrono_SOURCE_DIR:STATIC=/home/jason/Desktop/FileTransfer/synchrono-name
 
+//Path to TensorRT includes
+TENSOR_RT_INCLUDE_PATH:PATH=
+
+//Path to TensorRT
+TENSOR_RT_INSTALL_DIR:PATH=
+
+//Path to a library.
+TENSOR_RT_NVINFER:FILEPATH=TENSOR_RT_NVINFER-NOTFOUND
+
+//Path to a library.
+TENSOR_RT_ONNXPARSER:FILEPATH=TENSOR_RT_ONNXPARSER-NOTFOUND
+
+//Path to a library.
+TENSOR_RT_PARSERS:FILEPATH=TENSOR_RT_PARSERS-NOTFOUND
+
 //Enable the use of TensorRT
-USE_TENSOR_RT:BOOL=ON
+USE_TENSOR_RT:BOOL=OFF
 
 //The directory containing a CMake configuration file for boost_headers.
 boost_headers_DIR:PATH=/usr/lib64/cmake/boost_headers-1.72.0
 
 //Path to a library.
-onelib:FILEPATH=/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
+onelib:FILEPATH=/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
 
 
 ########################
@@ -617,7 +636,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

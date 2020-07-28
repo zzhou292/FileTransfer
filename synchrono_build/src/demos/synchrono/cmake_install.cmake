@@ -47,6 +47,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_collision/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_SCM/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_V2V/cmake_install.cmake")
 
 endif()
 

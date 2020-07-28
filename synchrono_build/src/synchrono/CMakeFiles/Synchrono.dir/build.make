@@ -467,9 +467,22 @@ src/synchrono/CMakeFiles/Synchrono.dir/SynVisManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Synchrono.dir/SynVisManager.cpp.s"
 	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/SynVisManager.cpp -o CMakeFiles/Synchrono.dir/SynVisManager.cpp.s
 
+src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o: src/synchrono/CMakeFiles/Synchrono.dir/flags.make
+src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o: /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynSenVehicleVis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o"
+	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynSenVehicleVis.cpp
+
+src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.i"
+	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynSenVehicleVis.cpp > CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.i
+
+src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.s"
+	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynSenVehicleVis.cpp -o CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.s
+
 src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o: src/synchrono/CMakeFiles/Synchrono.dir/flags.make
 src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o: /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynIrrVehicleVis.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o"
 	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/visualization/SynIrrVehicleVis.cpp
 
 src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.i: cmake_force
@@ -512,6 +525,7 @@ Synchrono_OBJECTS = \
 "CMakeFiles/Synchrono.dir/terrain/SynSCMTerrain.cpp.o" \
 "CMakeFiles/Synchrono.dir/SynVis.cpp.o" \
 "CMakeFiles/Synchrono.dir/SynVisManager.cpp.o" \
+"CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o" \
 "CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o"
 
 # External object files for target Synchrono
@@ -547,16 +561,39 @@ lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/terrain/SynRigidTerr
 lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/terrain/SynSCMTerrain.cpp.o
 lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/SynVis.cpp.o
 lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/SynVisManager.cpp.o
+lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o
 lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o
 lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/build.make
 lib/libSynchrono.so: /usr/local/lib/libIrrlicht.so
+lib/libSynchrono.so: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
+lib/libSynchrono.so: /opt/cuda/lib64/libcudart_static.a
+lib/libSynchrono.so: /usr/lib/librt.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppc.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppial.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppicc.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppicom.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppidei.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppif.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppig.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppim.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppist.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppisu.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnppitc.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnpps.so
+lib/libSynchrono.so: /usr/lib/libglfw.so
+lib/libSynchrono.so: /usr/lib/libGLEW.so
+lib/libSynchrono.so: /usr/lib/libGL.so
+lib/libSynchrono.so: /usr/lib/libGLU.so
+lib/libSynchrono.so: /opt/cuda/lib64/libnvrtc.so
 lib/libSynchrono.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 lib/libSynchrono.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 lib/libSynchrono.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 lib/libSynchrono.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
+lib/libSynchrono.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
+lib/libSynchrono.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
 lib/libSynchrono.so: /usr/local/lib/libmpi.so
 lib/libSynchrono.so: src/synchrono/CMakeFiles/Synchrono.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX shared library ../../lib/libSynchrono.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX shared library ../../lib/libSynchrono.so"
 	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Synchrono.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

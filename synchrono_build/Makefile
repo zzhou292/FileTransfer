@@ -282,6 +282,19 @@ demo_chrono_SCM/fast:
 	$(MAKE) $(MAKESILENT) -f src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/build.make src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/build
 .PHONY : demo_chrono_SCM/fast
 
+#=============================================================================
+# Target rules for targets named demo_SYN_v2v
+
+# Build rule for target.
+demo_SYN_v2v: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SYN_v2v
+.PHONY : demo_SYN_v2v
+
+# fast build rule for target.
+demo_SYN_v2v/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/synchrono/demo_V2V/CMakeFiles/demo_SYN_v2v.dir/build.make src/demos/synchrono/demo_V2V/CMakeFiles/demo_SYN_v2v.dir/build
+.PHONY : demo_SYN_v2v/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -296,6 +309,7 @@ help:
 	@echo "... Synchrono_R"
 	@echo "... demo_SCM"
 	@echo "... demo_SYN_platoon"
+	@echo "... demo_SYN_v2v"
 	@echo "... demo_SYN_vehicles"
 	@echo "... demo_chrono_SCM"
 	@echo "... demo_chrono_platoon"

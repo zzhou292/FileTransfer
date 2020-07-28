@@ -68,3 +68,8 @@
 /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM/CMakeFiles/rebuild_cache.dir
 /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM/CMakeFiles/package.dir
 /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir
+/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_V2V/CMakeFiles/edit_cache.dir
+/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_V2V/CMakeFiles/package_source.dir
+/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_V2V/CMakeFiles/rebuild_cache.dir
+/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_V2V/CMakeFiles/package.dir
+/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_V2V/CMakeFiles/demo_SYN_v2v.dir

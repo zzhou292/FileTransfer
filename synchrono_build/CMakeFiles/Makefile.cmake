@@ -19,6 +19,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/demos/CMakeLists.txt"
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/CMakeLists.txt"
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_SCM/CMakeLists.txt"
+  "/home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_V2V/CMakeLists.txt"
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_chrono_SCM/CMakeLists.txt"
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_chrono_platoon/CMakeLists.txt"
   "/home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_collision/CMakeLists.txt"
@@ -105,6 +106,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/demos/synchrono/demo_collision/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/demos/synchrono/demo_SCM/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/demos/synchrono/demo_chrono_SCM/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/demos/synchrono/demo_V2V/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -119,4 +121,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/demos/synchrono/demo_collision/CMakeFiles/demo_collision.dir/DependInfo.cmake"
   "src/demos/synchrono/demo_SCM/CMakeFiles/demo_SCM.dir/DependInfo.cmake"
   "src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/DependInfo.cmake"
+  "src/demos/synchrono/demo_V2V/CMakeFiles/demo_SYN_v2v.dir/DependInfo.cmake"
   )
