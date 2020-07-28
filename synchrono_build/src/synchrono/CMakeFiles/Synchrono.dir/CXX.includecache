@@ -3290,16 +3290,6 @@ synchrono/SynApi.h
 synchrono/flatbuffer/SynMessage.h
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/synchrono/flatbuffer/SynMessage.h
 
-/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/SynCLI.cpp
-synchrono/SynCLI.h
-/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/synchrono/SynCLI.h
-
-/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/SynCLI.h
-synchrono/SynApi.h
-/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/synchrono/SynApi.h
-synchrono/cli/cxxopts.hpp
-/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/synchrono/cli/cxxopts.hpp
-
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/SynFlatBuffersManager.cpp
 synchrono/SynFlatBuffersManager.h
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/synchrono/SynFlatBuffersManager.h
@@ -3409,8 +3399,6 @@ synchrono/flatbuffer/SynMessage.h
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/synchrono/flatbuffer/SynMessage.h
 chrono_vehicle/ChDriver.h
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/chrono_vehicle/ChDriver.h
-
-/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/SynVis.cpp
 
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/SynVis.h
 synchrono/SynApi.h
@@ -3623,38 +3611,6 @@ chrono_sensor/filters/ChFilterPCfromDepth.h
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/brain/chrono_sensor/filters/ChFilterPCfromDepth.h
 chrono_sensor/filters/ChFilterSave.h
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/brain/chrono_sensor/filters/ChFilterSave.h
-
-/home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/cli/cxxopts.hpp
-cstring
--
-cctype
--
-exception
--
-iostream
--
-limits
--
-map
--
-memory
--
-regex
--
-sstream
--
-string
--
-unordered_map
--
-unordered_set
--
-vector
--
-optional
--
-unicode/unistr.h
--
 
 /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono/flatbuffer/SynFlatBuffers_generated.h
 flatbuffers/flatbuffers.h

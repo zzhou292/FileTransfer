@@ -1,1 +1,0 @@
-/usr/bin/cc  -pthread -fopenmp -v    -rdynamic CMakeFiles/cmTC_df375.dir/OpenMPTryFlag.c.o  -o cmTC_df375  -v 

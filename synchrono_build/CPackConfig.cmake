@@ -32,7 +32,7 @@ set(CPACK_OUTPUT_CONFIG_FILE "/home/jason/Desktop/FileTransfer/synchrono_build/C
 set(CPACK_PACKAGE_DEFAULT_LOCATION "/")
 set(CPACK_PACKAGE_DESCRIPTION_FILE "/usr/share/cmake-3.17/Templates/CPack.GenericDescription.txt")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "ChronoEngine is a multibody-dynamics package")
-set(CPACK_PACKAGE_FILE_NAME "Synchrono-Linux-x86_64-Release-2020_07_23")
+set(CPACK_PACKAGE_FILE_NAME "Synchrono-Linux-x86_64-Release-2020_07_28")
 set(CPACK_PACKAGE_INSTALL_DIRECTORY "Synchrono")
 set(CPACK_PACKAGE_INSTALL_REGISTRY_KEY "Synchrono")
 set(CPACK_PACKAGE_NAME "Synchrono")
