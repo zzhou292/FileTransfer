@@ -80,7 +80,7 @@ include src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/flags
 src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.o: src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/flags.make
 src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.o: /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_chrono_SCM/demo_chrono_SCM.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_chrono_SCM/demo_chrono_SCM.cpp
+	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_chrono_SCM/demo_chrono_SCM.cpp
 
 src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.i"
@@ -99,65 +99,19 @@ demo_chrono_SCM_EXTERNAL_OBJECTS =
 
 bin/demo_chrono_SCM: src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/demo_chrono_SCM.cpp.o
 bin/demo_chrono_SCM: src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/build.make
-bin/demo_chrono_SCM: /usr/lib/libIrrlicht.so
-bin/demo_chrono_SCM: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libcudart_static.a
-bin/demo_chrono_SCM: /usr/lib/librt.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppc.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppial.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppicc.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppicom.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppidei.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppif.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppig.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppim.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppist.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppisu.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppitc.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnpps.so
-bin/demo_chrono_SCM: /usr/lib/libglfw.so
-bin/demo_chrono_SCM: /usr/lib/libGLEW.so
-bin/demo_chrono_SCM: /usr/lib/libGL.so
-bin/demo_chrono_SCM: /usr/lib/libGLU.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnvrtc.so
+bin/demo_chrono_SCM: /usr/local/lib/libIrrlicht.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
-bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
-bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
 bin/demo_chrono_SCM: lib/libSynchrono.so
-bin/demo_chrono_SCM: /usr/lib/openmpi/libmpi_cxx.so
-bin/demo_chrono_SCM: /usr/lib/openmpi/libmpi.so
-bin/demo_chrono_SCM: /usr/lib/libIrrlicht.so
-bin/demo_chrono_SCM: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libcudart_static.a
-bin/demo_chrono_SCM: /usr/lib/librt.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppc.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppial.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppicc.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppicom.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppidei.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppif.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppig.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppim.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppist.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppisu.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnppitc.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnpps.so
-bin/demo_chrono_SCM: /usr/lib/libglfw.so
-bin/demo_chrono_SCM: /usr/lib/libGLEW.so
-bin/demo_chrono_SCM: /usr/lib/libGL.so
-bin/demo_chrono_SCM: /usr/lib/libGLU.so
-bin/demo_chrono_SCM: /opt/cuda/lib64/libnvrtc.so
+bin/demo_chrono_SCM: /usr/local/lib/libmpi.so
+bin/demo_chrono_SCM: /usr/local/lib/libIrrlicht.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
-bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
-bin/demo_chrono_SCM: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
-bin/demo_chrono_SCM: /usr/lib/openmpi/libmpi_cxx.so
-bin/demo_chrono_SCM: /usr/lib/openmpi/libmpi.so
+bin/demo_chrono_SCM: /usr/local/lib/libmpi.so
 bin/demo_chrono_SCM: src/demos/synchrono/demo_chrono_SCM/CMakeFiles/demo_chrono_SCM.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../../bin/demo_chrono_SCM"
 	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_chrono_SCM.dir/link.txt --verbose=$(VERBOSE)

@@ -16,12 +16,12 @@
 #define CORE_VERSION_H_
 
 // Chrono version (string)
-#define CHRONO_VERSION "5.0.0"
-#define CHRONO_VERSION_MAJOR "5"
+#define CHRONO_VERSION "4.0.0"
+#define CHRONO_VERSION_MAJOR "4"
 #define CHRONO_VERSION_MINOR "0"
 #define CHRONO_VERSION_PATCH "0"
 
 // Chrono version (hexadecimal, 0x00MMmmpp)
-#define CH_VERSION 0x00050000
+#define CH_VERSION 0x00040000
 
 #endif

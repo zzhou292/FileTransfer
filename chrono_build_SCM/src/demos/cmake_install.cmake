@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos
+# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -42,10 +42,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/core/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/fea/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/irrlicht/cmake_install.cmake")
-  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/parallel/cmake_install.cmake")
-  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/opengl/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/granular/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/cmake_install.cmake")
-  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/sensor/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/fsi/cmake_install.cmake")
 
 endif()
 

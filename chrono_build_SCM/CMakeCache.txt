@@ -14,15 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Path to a file.
-BLAZE_DIR:PATH=/usr/include
-
-//Path to a file.
-BLAZE_VERSION_FILENAME:FILEPATH=/usr/include/blaze/system/Version.h
-
-//Where is Boost located?
-BOOST_ROOT:PATH=
-
 //Build benchmark tests
 BUILD_BENCHMARKING:BOOL=OFF
 
@@ -35,17 +26,14 @@ BUILD_DEMOS_BASE:BOOL=ON
 //Build demo programs for FEA
 BUILD_DEMOS_FEA:BOOL=ON
 
+//Build demo programs for FSI module
+BUILD_DEMOS_FSI:BOOL=ON
+
+//Build demo programs for Granular module
+BUILD_DEMOS_GRANULAR:BOOL=ON
+
 //Build demo programs for Irrlicht module
 BUILD_DEMOS_IRRLICHT:BOOL=ON
-
-//Build demo programs for OpenGL module
-BUILD_DEMOS_OPENGL:BOOL=ON
-
-//Build demo programs for Parallel module
-BUILD_DEMOS_PARALLEL:BOOL=ON
-
-//Build demo programs for Sensor module
-BUILD_DEMOS_SENSOR:BOOL=ON
 
 //Build demo programs for Vehicle module
 BUILD_DEMOS_VEHICLE:BOOL=ON
@@ -53,20 +41,11 @@ BUILD_DEMOS_VEHICLE:BOOL=ON
 //Build the testing tree.
 BUILD_TESTING:BOOL=OFF
 
-//The directory containing a CMake configuration file for Boost.
-Boost_DIR:PATH=/usr/lib64/cmake/Boost-1.72.0
-
-//Path to a file.
-Boost_INCLUDE_DIR:PATH=/usr/include
-
 //Path to a program.
-CCACHE_EXE:FILEPATH=/usr/bin/ccache
+CCACHE_EXE:FILEPATH=CCACHE_EXE-NOTFOUND
 
 //Compiler Type
 CH_COMPILER:STRING=COMPILER_GCC_X64
-
-//Enforce strict C++11 standard
-CH_ENFORCE_CXX11:BOOL=OFF
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -76,7 +55,7 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+CMAKE_BUILD_TYPE:STRING=Release
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -161,7 +140,7 @@ CMAKE_INSTALL_PREFIX:PATH=/usr/local
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
 //Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -202,10 +181,10 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Chrono
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=5.0.0
+CMAKE_PROJECT_VERSION:STATIC=4.0.0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MAJOR:STATIC=5
+CMAKE_PROJECT_VERSION_MAJOR:STATIC=4
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MINOR:STATIC=0
@@ -329,12 +308,6 @@ CUDA_NVCC_FLAGS_RELEASE:STRING=
 // builds.
 CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
 
-//NVRTC flags as list.
-CUDA_NVRTC_FLAGS:STRING=-use_fast_math;-default-device;-rdc;true;-D__x86_64
-
-//NVRTC include dirs as list.
-CUDA_NVRTC_INCLUDE_DIRS:STRING=/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/include;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/include/optixu;/opt/cuda/include;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_sensor/rtkernels;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src
-
 //"OpenCL" library
 CUDA_OpenCL_LIBRARY:FILEPATH=/opt/cuda/lib64/libOpenCL.so
 
@@ -430,40 +403,31 @@ CUDA_npps_LIBRARY:FILEPATH=/opt/cuda/lib64/libnpps.so
 CUDA_nvToolsExt_LIBRARY:FILEPATH=/opt/cuda/lib64/libnvToolsExt.so
 
 //Path to a library.
-CUDA_nvrtc_LIBRARY:FILEPATH=/opt/cuda/lib64/libnvrtc.so
-
-//Path to a library.
 CUDA_rt_LIBRARY:FILEPATH=/usr/lib/librt.so
 
 //Dependencies for the target
 ChronoEngine_LIB_DEPENDS:STATIC=general;pthread;
 
 //Dependencies for the target
-ChronoEngine_irrlicht_LIB_DEPENDS:STATIC=general;ChronoEngine;general;/usr/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;
+ChronoEngine_fsi_LIB_DEPENDS:STATIC=general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;/opt/cuda/lib64/libcudart.so;general;/opt/cuda/lib64/libcusparse.so;general;/opt/cuda/lib64/libcublas.so;general;/opt/cuda/lib64/libcudart_static.a;general;ChronoEngine;general;ChronoEngine_vehicle;
 
 //Dependencies for the target
-ChronoEngine_opengl_LIB_DEPENDS:STATIC=general;/usr/lib/libGLEW.so;general;/usr/lib/libglfw.so;general;/usr/lib/libGL.so;general;/usr/lib/libGLU.so;general;ChronoEngine;general;ChronoEngine_parallel;
+ChronoEngine_granular_LIB_DEPENDS:STATIC=general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;ChronoEngine;
 
 //Dependencies for the target
-ChronoEngine_parallel_LIB_DEPENDS:STATIC=general;ChronoEngine;
+ChronoEngine_irrlicht_LIB_DEPENDS:STATIC=general;ChronoEngine;general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;
 
 //Dependencies for the target
-ChronoEngine_sensor_LIB_DEPENDS:STATIC=general;ChronoEngine;general;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so;general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;/opt/cuda/lib64/libnppc.so;general;/opt/cuda/lib64/libnppial.so;general;/opt/cuda/lib64/libnppicc.so;general;/opt/cuda/lib64/libnppicom.so;general;/opt/cuda/lib64/libnppidei.so;general;/opt/cuda/lib64/libnppif.so;general;/opt/cuda/lib64/libnppig.so;general;/opt/cuda/lib64/libnppim.so;general;/opt/cuda/lib64/libnppist.so;general;/opt/cuda/lib64/libnppisu.so;general;/opt/cuda/lib64/libnppitc.so;general;/opt/cuda/lib64/libnpps.so;general;/usr/lib/libglfw.so;general;/usr/lib/libGLEW.so;general;/usr/lib/libGL.so;general;/usr/lib/libGLU.so;general;/opt/cuda/lib64/libnvrtc.so;
+ChronoEngine_vehicle_LIB_DEPENDS:STATIC=general;ChronoEngine;general;ChronoEngine_irrlicht;general;/usr/local/lib/libmpi.so;
 
 //Dependencies for the target
-ChronoEngine_vehicle_LIB_DEPENDS:STATIC=general;ChronoEngine;general;/usr/lib/openmpi/libmpi_cxx.so;general;/usr/lib/openmpi/libmpi.so;
-
-//Dependencies for the target
-ChronoEngine_vehicle_irrlicht_LIB_DEPENDS:STATIC=general;ChronoEngine;general;/usr/lib/openmpi/libmpi_cxx.so;general;/usr/lib/openmpi/libmpi.so;general;ChronoEngine_vehicle;general;ChronoEngine_irrlicht;
-
-//Dependencies for the target
-ChronoModels_vehicle_LIB_DEPENDS:STATIC=general;ChronoEngine;general;ChronoEngine_vehicle;
+ChronoModels_vehicle_LIB_DEPENDS:STATIC=general;ChronoEngine;general;ChronoEngine_vehicle;general;ChronoEngine_irrlicht;
 
 //Value Computed by CMake
 Chrono_BINARY_DIR:STATIC=/home/jason/Desktop/FileTransfer/chrono_build_SCM
 
 //Value Computed by CMake
-Chrono_SOURCE_DIR:STATIC=/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
+Chrono_SOURCE_DIR:STATIC=/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
 
 //Enable HDF5 support
 ENABLE_HDF5:BOOL=OFF
@@ -481,10 +445,10 @@ ENABLE_MODULE_COSIMULATION:BOOL=OFF
 ENABLE_MODULE_DISTRIBUTED:BOOL=OFF
 
 //Enable the Chrono FSI module
-ENABLE_MODULE_FSI:BOOL=OFF
+ENABLE_MODULE_FSI:BOOL=ON
 
 //Enable the Chrono Granular module
-ENABLE_MODULE_GRANULAR:BOOL=OFF
+ENABLE_MODULE_GRANULAR:BOOL=ON
 
 //Enable the Chrono Irrlicht module
 ENABLE_MODULE_IRRLICHT:BOOL=ON
@@ -499,19 +463,16 @@ ENABLE_MODULE_MKL:BOOL=OFF
 ENABLE_MODULE_MUMPS:BOOL=OFF
 
 //Enable the Chrono OpenGL module
-ENABLE_MODULE_OPENGL:BOOL=ON
+ENABLE_MODULE_OPENGL:BOOL=OFF
 
 //Enable the Chrono Parallel module
-ENABLE_MODULE_PARALLEL:BOOL=ON
+ENABLE_MODULE_PARALLEL:BOOL=OFF
 
 //Enable the Chrono Postprocess module
 ENABLE_MODULE_POSTPROCESS:BOOL=OFF
 
 //Enable the Chrono Python module
 ENABLE_MODULE_PYTHON:BOOL=OFF
-
-//Enable the Chrono Sensor module
-ENABLE_MODULE_SENSOR:BOOL=ON
 
 //Enable the Chrono Vehicle module
 ENABLE_MODULE_VEHICLE:BOOL=ON
@@ -525,32 +486,20 @@ ENABLE_OPENMP:BOOL=ON
 //The directory containing a CMake configuration file for Eigen3.
 Eigen3_DIR:PATH=/usr/share/eigen3/cmake
 
-//The directory where GL/glew.h resides
-GLEW_INCLUDE_DIR:PATH=/usr/include
-
-//The GLEW library
-GLEW_LIBRARY:FILEPATH=/usr/lib/libGLEW.so
-
-//Path to GLFW include directory.
-GLFW_INCLUDE_DIR:PATH=/usr/include/GLFW
-
-//Absolute path to GLFW library.
-GLFW_LIBRARY:FILEPATH=/usr/lib/libglfw.so
-
-//Path to a file.
-GLM_INCLUDE_DIR:PATH=/usr/include
+//Enable verbose output from ptxas during compilation
+GRANULAR_VERBOSE_PTXAS:BOOL=OFF
 
 //Path to a library.
-IRRLICHT_LIBRARY:FILEPATH=/usr/lib/libIrrlicht.so
+IRRLICHT_LIBRARY:FILEPATH=/usr/local/lib/libIrrlicht.so
 
 //Path to a file.
 IRRLICHT_ROOT:PATH=/usr/include/irrlicht
 
 //Executable for running MPI programs.
-MPIEXEC_EXECUTABLE:FILEPATH=/usr/bin/mpiexec
+MPIEXEC_EXECUTABLE:FILEPATH=/usr/local/bin/mpiexec
 
 //Maximum number of processors available to run MPI applications.
-MPIEXEC_MAX_NUMPROCS:STRING=6
+MPIEXEC_MAX_NUMPROCS:STRING=4
 
 //Flag used by MPI to specify the number of processes for mpiexec;
 // the next option will be the number of processes.
@@ -567,10 +516,10 @@ MPIEXEC_PREFLAGS:STRING=
 MPI_CXX_ADDITIONAL_INCLUDE_DIRS:STRING=
 
 //MPI compiler for CXX
-MPI_CXX_COMPILER:FILEPATH=/usr/bin/mpicxx
+MPI_CXX_COMPILER:FILEPATH=/usr/local/bin/mpicxx
 
 //MPI CXX compiler wrapper include directories
-MPI_CXX_COMPILER_INCLUDE_DIRS:STRING=
+MPI_CXX_COMPILER_INCLUDE_DIRS:STRING=/usr/local/include
 
 //MPI CXX compilation definitions
 MPI_CXX_COMPILE_DEFINITIONS:STRING=
@@ -579,13 +528,13 @@ MPI_CXX_COMPILE_DEFINITIONS:STRING=
 MPI_CXX_COMPILE_OPTIONS:STRING=-pthread
 
 //Path to a file.
-MPI_CXX_HEADER_DIR:PATH=/usr/include
+MPI_CXX_HEADER_DIR:PATH=/usr/local/include
 
 //MPI CXX libraries to link against
-MPI_CXX_LIB_NAMES:STRING=mpi_cxx;mpi
+MPI_CXX_LIB_NAMES:STRING=mpi
 
 //MPI CXX linker flags
-MPI_CXX_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/lib/openmpi -Wl,--enable-new-dtags -pthread
+MPI_CXX_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/local/lib -Wl,--enable-new-dtags -pthread
 
 //If true, the MPI-2 C++ bindings are disabled using definitions.
 MPI_CXX_SKIP_MPICXX:BOOL=FALSE
@@ -594,10 +543,10 @@ MPI_CXX_SKIP_MPICXX:BOOL=FALSE
 MPI_C_ADDITIONAL_INCLUDE_DIRS:STRING=
 
 //MPI compiler for C
-MPI_C_COMPILER:FILEPATH=/usr/bin/mpicc
+MPI_C_COMPILER:FILEPATH=/usr/local/bin/mpicc
 
 //MPI C compiler wrapper include directories
-MPI_C_COMPILER_INCLUDE_DIRS:STRING=
+MPI_C_COMPILER_INCLUDE_DIRS:STRING=/usr/local/include
 
 //MPI C compilation definitions
 MPI_C_COMPILE_DEFINITIONS:STRING=
@@ -606,46 +555,16 @@ MPI_C_COMPILE_DEFINITIONS:STRING=
 MPI_C_COMPILE_OPTIONS:STRING=-pthread
 
 //Path to a file.
-MPI_C_HEADER_DIR:PATH=/usr/include
+MPI_C_HEADER_DIR:PATH=/usr/local/include
 
 //MPI C libraries to link against
 MPI_C_LIB_NAMES:STRING=mpi
 
 //MPI C linker flags
-MPI_C_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/lib/openmpi -Wl,--enable-new-dtags -pthread
+MPI_C_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/local/lib -Wl,--enable-new-dtags -pthread
 
 //Location of the mpi library for MPI
-MPI_mpi_LIBRARY:FILEPATH=/usr/lib/openmpi/libmpi.so
-
-//Location of the mpi_cxx library for MPI
-MPI_mpi_cxx_LIBRARY:FILEPATH=/usr/lib/openmpi/libmpi_cxx.so
-
-//Path to a file.
-OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a file.
-OPENGL_GLX_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a file.
-OPENGL_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a library.
-OPENGL_egl_LIBRARY:FILEPATH=/usr/lib/libEGL.so
-
-//Path to a library.
-OPENGL_gl_LIBRARY:FILEPATH=/usr/lib/libGL.so
-
-//Path to a library.
-OPENGL_glu_LIBRARY:FILEPATH=/usr/lib/libGLU.so
-
-//Path to a library.
-OPENGL_glx_LIBRARY:FILEPATH=/usr/lib/libGLX.so
-
-//Path to a library.
-OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/libOpenGL.so
-
-//Path to a file.
-OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
+MPI_mpi_LIBRARY:FILEPATH=/usr/local/lib/libmpi.so
 
 //CXX compiler flags for OpenMP parallelization
 OpenMP_CXX_FLAGS:STRING=-fopenmp
@@ -665,77 +584,34 @@ OpenMP_gomp_LIBRARY:FILEPATH=/usr/lib/libgomp.so
 //Path to the pthread library for OpenMP
 OpenMP_pthread_LIBRARY:FILEPATH=/usr/lib/libpthread.so
 
-//Path to a file.
-OptiX_INCLUDE:PATH=/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/include
-
-//Path to OptiX installed location.
-OptiX_INSTALL_DIR:PATH=/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/SDK
-
-//Thrust headers
-THRUST_INCLUDE_DIR:PATH=/usr/local/cuda/include
-
 //Compile Chrono::Engine with double precision support in Bullet
 USE_BULLET_DOUBLE:BOOL=OFF
-
-//Compile shader code at run-time with NVRTC rather than NVCC at
-// build time to PTX
-USE_CUDA_NVRTC:BOOL=ON
-
-//Enable CUDA support in Chrono::Parallel
-USE_PARALLEL_CUDA:BOOL=OFF
-
-//Compile Chrono::Parallel with double precision math
-USE_PARALLEL_DOUBLE:BOOL=ON
-
-//Enable SIMD support in Chrono::Parallel (if available)
-USE_PARALLEL_SIMD:BOOL=ON
-
-//Enable the TensorRT for Sensor Module
-USE_TENSOR_RT:BOOL=OFF
-
-//The directory containing a CMake configuration file for boost_headers.
-boost_headers_DIR:PATH=/usr/lib64/cmake/boost_headers-1.72.0
-
-//Path to a library.
-optix_LIBRARY:FILEPATH=/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-
-//Path to a library.
-optix_prime_LIBRARY:FILEPATH=/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix_prime.so
-
-//Path to a library.
-optixu_LIBRARY:FILEPATH=/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptixu.so
 
 
 ########################
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: BLAZE_DIR
-BLAZE_DIR-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: BLAZE_VERSION_FILENAME
-BLAZE_VERSION_FILENAME-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BUILD_DEMOS_BASE
 BUILD_DEMOS_BASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BUILD_DEMOS_FEA
 BUILD_DEMOS_FEA-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BUILD_DEMOS_FSI
+BUILD_DEMOS_FSI-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BUILD_DEMOS_GRANULAR
+BUILD_DEMOS_GRANULAR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BUILD_DEMOS_IRRLICHT
 BUILD_DEMOS_IRRLICHT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: BUILD_DEMOS_OPENGL
-BUILD_DEMOS_OPENGL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: BUILD_DEMOS_PARALLEL
-BUILD_DEMOS_PARALLEL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: BUILD_DEMOS_SENSOR
-BUILD_DEMOS_SENSOR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BUILD_DEMOS_VEHICLE
 BUILD_DEMOS_VEHICLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_DIR
-Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CH_COMPILER
 CH_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
+//MODIFIED property for variable: CMAKE_BUILD_TYPE
+CMAKE_BUILD_TYPE-MODIFIED:INTERNAL=ON
 //STRINGS property for variable: CMAKE_BUILD_TYPE
 CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release;MinSizeRel;RelWithDebInfo
 //This is the directory where this CMakeCache.txt was created
@@ -820,7 +696,7 @@ CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=0
 //ADVANCED property for variable: CMAKE_LINKER
@@ -840,7 +716,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=62
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=55
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -887,7 +763,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
 //List of intermediate files that are part of the cuda dependency
 // scanning.
-CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_grayscale.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_pointcloud.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_lidar_reduce.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_camera_noise.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_lidar_noise.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_curand_utils.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_image_ops.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/cuda/ChronoEngine_sensor_generated_nn_prep.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_box.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_sphere.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_cylinder.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_camera.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_lidar.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_miss.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_triangle_mesh.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_camera_shaders.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_lidar_shaders.cu.ptx.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/rtkernels/ChronoEngine_sensor_generated_shadow_shaders.cu.ptx.depend
+CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_granular/CMakeFiles/ChronoEngine_granular.dir/physics/ChronoEngine_granular_generated_ChGranularGPU_SMC.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_granular/CMakeFiles/ChronoEngine_granular.dir/physics/ChronoEngine_granular_generated_ChGranularGPU_SMC_trimesh.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir//ChronoEngine_fsi_generated_ChFsiDataManager.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/utils/ChronoEngine_fsi_generated_ChUtilsDevice.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChBce.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFluidDynamics.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChCollisionSystemFsi.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForce.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForceExplicitSPH.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForceI2SPH.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiForceIISPH.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChFsiGeneral.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/physics/ChronoEngine_fsi_generated_ChSphGeneral.cu.o.depend;/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/utils/ChronoEngine_fsi_generated_ChUtilsPrintSph.cu.o.depend
 //ADVANCED property for variable: CUDA_ARCH_NAME
 CUDA_ARCH_NAME-ADVANCED:INTERNAL=1
 //STRINGS property for variable: CUDA_ARCH_NAME
@@ -904,6 +780,8 @@ CUDA_CUDART_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_CUDA_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_GENERATED_OUTPUT_DIR
 CUDA_GENERATED_OUTPUT_DIR-ADVANCED:INTERNAL=1
+//Returned GPU architectures from detect_gpus tool
+CUDA_GPU_DETECT_OUTPUT:INTERNAL=6.1
 //ADVANCED property for variable: CUDA_HOST_COMPILATION_CPP
 CUDA_HOST_COMPILATION_CPP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_HOST_COMPILER
@@ -920,10 +798,6 @@ CUDA_NVCC_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CUDA_NVCC_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_NVCC_FLAGS_RELWITHDEBINFO
 CUDA_NVCC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVRTC_FLAGS
-CUDA_NVRTC_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_NVRTC_INCLUDE_DIRS
-CUDA_NVRTC_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_OpenCL_LIBRARY
 CUDA_OpenCL_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_PROPAGATE_HOST_FLAGS
@@ -995,8 +869,6 @@ CUDA_nppitc_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_npps_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_nvToolsExt_LIBRARY
 CUDA_nvToolsExt_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CUDA_nvrtc_LIBRARY
-CUDA_nvrtc_LIBRARY-ADVANCED:INTERNAL=1
 //Location of parse_cubin.cmake
 CUDA_parse_cubin:INTERNAL=/usr/share/cmake-3.17/Modules/FindCUDA/parse_cubin.cmake
 //ADVANCED property for variable: CUDA_rt_LIBRARY
@@ -1057,32 +929,24 @@ DETECTED_SSE_42_COMPILED:INTERNAL=TRUE
 DETECTED_SSE_42_EXITCODE:INTERNAL=0
 //ADVANCED property for variable: ENABLE_IRRKLANG
 ENABLE_IRRKLANG-ADVANCED:INTERNAL=0
+//MODIFIED property for variable: ENABLE_MODULE_FSI
+ENABLE_MODULE_FSI-MODIFIED:INTERNAL=ON
+//MODIFIED property for variable: ENABLE_MODULE_GRANULAR
+ENABLE_MODULE_GRANULAR-MODIFIED:INTERNAL=ON
 //MODIFIED property for variable: ENABLE_MODULE_IRRLICHT
 ENABLE_MODULE_IRRLICHT-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: ENABLE_MODULE_OPENGL
-ENABLE_MODULE_OPENGL-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: ENABLE_MODULE_PARALLEL
-ENABLE_MODULE_PARALLEL-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: ENABLE_MODULE_SENSOR
-ENABLE_MODULE_SENSOR-MODIFIED:INTERNAL=ON
 //MODIFIED property for variable: ENABLE_MODULE_VEHICLE
 ENABLE_MODULE_VEHICLE-MODIFIED:INTERNAL=ON
 //ADVANCED property for variable: ENABLE_OPENCRG
 ENABLE_OPENCRG-ADVANCED:INTERNAL=0
-//Details about finding Boost
-FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib64/cmake/Boost-1.72.0/BoostConfig.cmake][c ][v1.72.0()]
 //Details about finding Eigen3
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen3:INTERNAL=[/usr/include/eigen3][TRUE][v(3.3.0)]
-//Details about finding GLM
-FIND_PACKAGE_MESSAGE_DETAILS_GLM:INTERNAL=[/usr/include][v()]
 //Details about finding MPI
 FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][TRUE][c ][v3.1()]
 //Details about finding MPI_C
-FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/usr/lib/openmpi/libmpi.so][mpi][/usr/include][TRUE][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/usr/local/lib/libmpi.so][mpi][/usr/local/include][TRUE][v3.1()]
 //Details about finding MPI_CXX
-FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/usr/lib/openmpi/libmpi_cxx.so][/usr/lib/openmpi/libmpi.so][mpi_cxx;mpi][/usr/include][TRUE][v3.1()]
-//Details about finding OpenGL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/libOpenGL.so][/usr/lib/libGLX.so][/usr/include][c ][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/usr/local/lib/libmpi.so][mpi][/usr/local/include][TRUE][v3.1()]
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
 //Details about finding OpenMP_C
@@ -1091,18 +955,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/usr/lib/libgomp.so][/
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/usr/lib/libgomp.so][/usr/lib/libpthread.so][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//Details about finding Thrust
-FIND_PACKAGE_MESSAGE_DETAILS_Thrust:INTERNAL=[/usr/local/cuda/include][v1.9.7()]
-//ADVANCED property for variable: GLEW_INCLUDE_DIR
-GLEW_INCLUDE_DIR-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: GLEW_LIBRARY
-GLEW_LIBRARY-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: GLFW_INCLUDE_DIR
-GLFW_INCLUDE_DIR-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: GLFW_LIBRARY
-GLFW_LIBRARY-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: GLM_INCLUDE_DIR
-GLM_INCLUDE_DIR-ADVANCED:INTERNAL=0
+//ADVANCED property for variable: GRANULAR_VERBOSE_PTXAS
+GRANULAR_VERBOSE_PTXAS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: IRRLICHT_LIBRARY
 IRRLICHT_LIBRARY-ADVANCED:INTERNAL=0
 //ADVANCED property for variable: IRRLICHT_ROOT
@@ -1159,30 +1013,10 @@ MPI_RESULT_CXX_test_mpi_normal:INTERNAL=TRUE
 MPI_RESULT_C_test_mpi_normal:INTERNAL=TRUE
 //ADVANCED property for variable: MPI_mpi_LIBRARY
 MPI_mpi_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MPI_mpi_cxx_LIBRARY
-MPI_mpi_cxx_LIBRARY-ADVANCED:INTERNAL=1
 //Test OMP_30_DETECTED
 OMP_30_DETECTED:INTERNAL=1
 //Test OMP_40_DETECTED
 OMP_40_DETECTED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
-OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR
-OPENGL_GLX_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_INCLUDE_DIR
-OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_egl_LIBRARY
-OPENGL_egl_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_gl_LIBRARY
-OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_glu_LIBRARY
-OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_glx_LIBRARY
-OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_opengl_LIBRARY
-OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
-OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Result of TRY_COMPILE
 OpenMP_COMPILE_RESULT_CXX_fopenmp:INTERNAL=TRUE
 //Result of TRY_COMPILE
@@ -1207,28 +1041,6 @@ OpenMP_SPECTEST_C_:INTERNAL=TRUE
 OpenMP_gomp_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenMP_pthread_LIBRARY
 OpenMP_pthread_LIBRARY-ADVANCED:INTERNAL=1
-//MODIFIED property for variable: OptiX_INCLUDE
-OptiX_INCLUDE-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: OptiX_INSTALL_DIR
-OptiX_INSTALL_DIR-MODIFIED:INTERNAL=ON
 //Result of TRY_COMPILE
 THREADS_HAVE_PTHREAD_ARG:INTERNAL=TRUE
-//ADVANCED property for variable: THRUST_INCLUDE_DIR
-THRUST_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//MODIFIED property for variable: USE_CUDA_NVRTC
-USE_CUDA_NVRTC-MODIFIED:INTERNAL=ON
-//ADVANCED property for variable: USE_PARALLEL_CUDA
-USE_PARALLEL_CUDA-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: USE_PARALLEL_DOUBLE
-USE_PARALLEL_DOUBLE-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: USE_PARALLEL_SIMD
-USE_PARALLEL_SIMD-ADVANCED:INTERNAL=0
-//ADVANCED property for variable: boost_headers_DIR
-boost_headers_DIR-ADVANCED:INTERNAL=1
-//MODIFIED property for variable: optix_LIBRARY
-optix_LIBRARY-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: optix_prime_LIBRARY
-optix_prime_LIBRARY-MODIFIED:INTERNAL=ON
-//MODIFIED property for variable: optixu_LIBRARY
-optixu_LIBRARY-MODIFIED:INTERNAL=ON
 

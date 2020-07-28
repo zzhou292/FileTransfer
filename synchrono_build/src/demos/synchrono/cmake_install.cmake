@@ -39,8 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_parkst/cmake_install.cmake")
-  include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_parkst_citybus/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_vehicles/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_platoon/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_platoon/cmake_install.cmake")
@@ -49,7 +47,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_collision/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_SCM/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_chrono_SCM/cmake_install.cmake")
-  include("/home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_V2V/cmake_install.cmake")
 
 endif()
 

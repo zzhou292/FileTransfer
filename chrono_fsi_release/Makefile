@@ -1200,6 +1200,19 @@ demo_IRR_rev_trans/fast:
 .PHONY : demo_IRR_rev_trans/fast
 
 #=============================================================================
+# Target rules for targets named demo_GRAN_pythonDecompTest
+
+# Build rule for target.
+demo_GRAN_pythonDecompTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_GRAN_pythonDecompTest
+.PHONY : demo_GRAN_pythonDecompTest
+
+# fast build rule for target.
+demo_GRAN_pythonDecompTest/fast:
+	$(MAKE) $(MAKESILENT) -f //home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/granular/CMakeFiles/demo_GRAN_pythonDecompTest.dir/build.make //home/jason/Desktop/FileTransfer/chrono_fsi_release/src/demos/granular/CMakeFiles/demo_GRAN_pythonDecompTest.dir/build
+.PHONY : demo_GRAN_pythonDecompTest/fast
+
+#=============================================================================
 # Target rules for targets named demo_GRAN_fixedterrain
 
 # Build rule for target.
@@ -1719,6 +1732,7 @@ help:
 	@echo "... demo_GRAN_ShearBand"
 	@echo "... demo_GRAN_ballcosim"
 	@echo "... demo_GRAN_fixedterrain"
+	@echo "... demo_GRAN_pythonDecompTest"
 	@echo "... demo_GRAN_terrainBox_SMC"
 	@echo "... demo_IRR_Adams_parser"
 	@echo "... demo_IRR_OpenSim_parser"

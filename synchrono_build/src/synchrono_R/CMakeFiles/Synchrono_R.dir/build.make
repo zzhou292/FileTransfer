@@ -80,7 +80,7 @@ include src/synchrono_R/CMakeFiles/Synchrono_R.dir/flags.make
 src/synchrono_R/CMakeFiles/Synchrono_R.dir/testFunctions.cpp.o: src/synchrono_R/CMakeFiles/Synchrono_R.dir/flags.make
 src/synchrono_R/CMakeFiles/Synchrono_R.dir/testFunctions.cpp.o: /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono_R/testFunctions.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/synchrono_R/CMakeFiles/Synchrono_R.dir/testFunctions.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono_R && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Synchrono_R.dir/testFunctions.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono_R/testFunctions.cpp
+	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono_R && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Synchrono_R.dir/testFunctions.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/synchrono_R/testFunctions.cpp
 
 src/synchrono_R/CMakeFiles/Synchrono_R.dir/testFunctions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Synchrono_R.dir/testFunctions.cpp.i"
@@ -99,33 +99,11 @@ Synchrono_R_EXTERNAL_OBJECTS =
 
 lib/libSynchrono_R.so: src/synchrono_R/CMakeFiles/Synchrono_R.dir/testFunctions.cpp.o
 lib/libSynchrono_R.so: src/synchrono_R/CMakeFiles/Synchrono_R.dir/build.make
-lib/libSynchrono_R.so: /usr/lib/libIrrlicht.so
-lib/libSynchrono_R.so: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libcudart_static.a
-lib/libSynchrono_R.so: /usr/lib/librt.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppc.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppial.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppicc.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppicom.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppidei.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppif.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppig.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppim.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppist.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppisu.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnppitc.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnpps.so
-lib/libSynchrono_R.so: /usr/lib/libglfw.so
-lib/libSynchrono_R.so: /usr/lib/libGLEW.so
-lib/libSynchrono_R.so: /usr/lib/libGL.so
-lib/libSynchrono_R.so: /usr/lib/libGLU.so
-lib/libSynchrono_R.so: /opt/cuda/lib64/libnvrtc.so
+lib/libSynchrono_R.so: /usr/local/lib/libIrrlicht.so
 lib/libSynchrono_R.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 lib/libSynchrono_R.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 lib/libSynchrono_R.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 lib/libSynchrono_R.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
-lib/libSynchrono_R.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
-lib/libSynchrono_R.so: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
 lib/libSynchrono_R.so: src/synchrono_R/CMakeFiles/Synchrono_R.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library ../../lib/libSynchrono_R.so"
 	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/synchrono_R && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Synchrono_R.dir/link.txt --verbose=$(VERBOSE)

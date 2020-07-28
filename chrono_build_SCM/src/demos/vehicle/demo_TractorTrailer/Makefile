@@ -68,7 +68,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
+CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jason/Desktop/FileTransfer/chrono_build_SCM

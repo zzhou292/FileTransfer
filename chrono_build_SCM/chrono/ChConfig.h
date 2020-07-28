@@ -44,10 +44,10 @@
 #undef CHRONO_MUMPS
 
 // If module OPENGL was enabled, define CHRONO_OPENGL
-#define CHRONO_OPENGL
+#undef CHRONO_OPENGL
 
 // If module PARALLEL was enabled, define CHRONO_PARALLEL
-#define CHRONO_PARALLEL
+#undef CHRONO_PARALLEL
 
 // If module POSTPROCESS was enabled, define CHRONO_POSTPROCESS
 #undef CHRONO_POSTPROCESS
@@ -59,7 +59,7 @@
 #define CHRONO_VEHICLE
 
 // If module FSI was enabled, define CHRONO_FSI
-#undef CHRONO_FSI
+#define CHRONO_FSI
 
 // -----------------------------------------------------------------------------
 // OpenMP settings

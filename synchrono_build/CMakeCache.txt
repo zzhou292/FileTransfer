@@ -18,7 +18,7 @@
 BUILD_TESTING:BOOL=OFF
 
 //Path to a program.
-CCACHE_EXE:FILEPATH=/usr/bin/ccache
+CCACHE_EXE:FILEPATH=CCACHE_EXE-NOTFOUND
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -113,7 +113,7 @@ CMAKE_INSTALL_PREFIX:PATH=/usr/local
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
 //Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/gmake
+CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -373,10 +373,10 @@ ENABLE_MODULE_INTERFACE:BOOL=OFF
 Flatbuffers_DIR:PATH=/usr/local/lib/cmake/flatbuffers
 
 //Executable for running MPI programs.
-MPIEXEC_EXECUTABLE:FILEPATH=/usr/bin/mpiexec
+MPIEXEC_EXECUTABLE:FILEPATH=/usr/local/bin/mpiexec
 
 //Maximum number of processors available to run MPI applications.
-MPIEXEC_MAX_NUMPROCS:STRING=6
+MPIEXEC_MAX_NUMPROCS:STRING=4
 
 //Flag used by MPI to specify the number of processes for mpiexec;
 // the next option will be the number of processes.
@@ -393,10 +393,10 @@ MPIEXEC_PREFLAGS:STRING=
 MPI_CXX_ADDITIONAL_INCLUDE_DIRS:STRING=
 
 //MPI compiler for CXX
-MPI_CXX_COMPILER:FILEPATH=/usr/bin/mpicxx
+MPI_CXX_COMPILER:FILEPATH=/usr/local/bin/mpicxx
 
 //MPI CXX compiler wrapper include directories
-MPI_CXX_COMPILER_INCLUDE_DIRS:STRING=
+MPI_CXX_COMPILER_INCLUDE_DIRS:STRING=/usr/local/include
 
 //MPI CXX compilation definitions
 MPI_CXX_COMPILE_DEFINITIONS:STRING=
@@ -405,13 +405,13 @@ MPI_CXX_COMPILE_DEFINITIONS:STRING=
 MPI_CXX_COMPILE_OPTIONS:STRING=-pthread
 
 //Path to a file.
-MPI_CXX_HEADER_DIR:PATH=/usr/include
+MPI_CXX_HEADER_DIR:PATH=/usr/local/include
 
 //MPI CXX libraries to link against
-MPI_CXX_LIB_NAMES:STRING=mpi_cxx;mpi
+MPI_CXX_LIB_NAMES:STRING=mpi
 
 //MPI CXX linker flags
-MPI_CXX_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/lib/openmpi -Wl,--enable-new-dtags -pthread
+MPI_CXX_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/local/lib -Wl,--enable-new-dtags -pthread
 
 //If true, the MPI-2 C++ bindings are disabled using definitions.
 MPI_CXX_SKIP_MPICXX:BOOL=FALSE
@@ -420,10 +420,10 @@ MPI_CXX_SKIP_MPICXX:BOOL=FALSE
 MPI_C_ADDITIONAL_INCLUDE_DIRS:STRING=
 
 //MPI compiler for C
-MPI_C_COMPILER:FILEPATH=/usr/bin/mpicc
+MPI_C_COMPILER:FILEPATH=/usr/local/bin/mpicc
 
 //MPI C compiler wrapper include directories
-MPI_C_COMPILER_INCLUDE_DIRS:STRING=
+MPI_C_COMPILER_INCLUDE_DIRS:STRING=/usr/local/include
 
 //MPI C compilation definitions
 MPI_C_COMPILE_DEFINITIONS:STRING=
@@ -432,19 +432,16 @@ MPI_C_COMPILE_DEFINITIONS:STRING=
 MPI_C_COMPILE_OPTIONS:STRING=-pthread
 
 //Path to a file.
-MPI_C_HEADER_DIR:PATH=/usr/include
+MPI_C_HEADER_DIR:PATH=/usr/local/include
 
 //MPI C libraries to link against
 MPI_C_LIB_NAMES:STRING=mpi
 
 //MPI C linker flags
-MPI_C_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/lib/openmpi -Wl,--enable-new-dtags -pthread
+MPI_C_LINK_FLAGS:STRING=-Wl,-rpath -Wl,/usr/local/lib -Wl,--enable-new-dtags -pthread
 
 //Location of the mpi library for MPI
-MPI_mpi_LIBRARY:FILEPATH=/usr/lib/openmpi/libmpi.so
-
-//Location of the mpi_cxx library for MPI
-MPI_mpi_cxx_LIBRARY:FILEPATH=/usr/lib/openmpi/libmpi_cxx.so
+MPI_mpi_LIBRARY:FILEPATH=/usr/local/lib/libmpi.so
 
 //Location on disk of the Park St. collision mesh
 PARKST_COL_MESH_PATH:FILEPATH=/home/jason/Continental/MeshExport/park_street_col_2.obj
@@ -463,18 +460,14 @@ SYN_IRRLICHT:BOOL=ON
 // been built from the branch sandbox/SCM-sync)
 SYN_SCM:BOOL=ON
 
-//Enable Chrono::Sensor-related Synchrono features (requires Chrono
-// to have been built with Sensor)
-SYN_SENSOR:BOOL=ON
-
 //Value Computed by CMake
 Synchrono_BINARY_DIR:STATIC=/home/jason/Desktop/FileTransfer/synchrono_build
 
 //Dependencies for the target
-Synchrono_LIB_DEPENDS:STATIC=general;/usr/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so;general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;/opt/cuda/lib64/libnppc.so;general;/opt/cuda/lib64/libnppial.so;general;/opt/cuda/lib64/libnppicc.so;general;/opt/cuda/lib64/libnppicom.so;general;/opt/cuda/lib64/libnppidei.so;general;/opt/cuda/lib64/libnppif.so;general;/opt/cuda/lib64/libnppig.so;general;/opt/cuda/lib64/libnppim.so;general;/opt/cuda/lib64/libnppist.so;general;/opt/cuda/lib64/libnppisu.so;general;/opt/cuda/lib64/libnppitc.so;general;/opt/cuda/lib64/libnpps.so;general;/usr/lib/libglfw.so;general;/usr/lib/libGLEW.so;general;/usr/lib/libGL.so;general;/usr/lib/libGLU.so;general;/opt/cuda/lib64/libnvrtc.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so;general;/usr/lib/openmpi/libmpi_cxx.so;general;/usr/lib/openmpi/libmpi.so;
+Synchrono_LIB_DEPENDS:STATIC=general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;general;/usr/local/lib/libmpi.so;
 
 //Dependencies for the target
-Synchrono_R_LIB_DEPENDS:STATIC=general;/usr/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so;general;/opt/cuda/lib64/libcudart_static.a;general;dl;general;/usr/lib/librt.so;general;/opt/cuda/lib64/libnppc.so;general;/opt/cuda/lib64/libnppial.so;general;/opt/cuda/lib64/libnppicc.so;general;/opt/cuda/lib64/libnppicom.so;general;/opt/cuda/lib64/libnppidei.so;general;/opt/cuda/lib64/libnppif.so;general;/opt/cuda/lib64/libnppig.so;general;/opt/cuda/lib64/libnppim.so;general;/opt/cuda/lib64/libnppist.so;general;/opt/cuda/lib64/libnppisu.so;general;/opt/cuda/lib64/libnppitc.so;general;/opt/cuda/lib64/libnpps.so;general;/usr/lib/libglfw.so;general;/usr/lib/libGLEW.so;general;/usr/lib/libGL.so;general;/usr/lib/libGLU.so;general;/opt/cuda/lib64/libnvrtc.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so;
+Synchrono_R_LIB_DEPENDS:STATIC=general;/usr/local/lib/libIrrlicht.so;general;-lXxf86vm;general;-lglut;general;-lX11;general;-lGL;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so;general;/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so;
 
 //Value Computed by CMake
 Synchrono_SOURCE_DIR:STATIC=/home/jason/Desktop/FileTransfer/synchrono-name
@@ -483,7 +476,7 @@ Synchrono_SOURCE_DIR:STATIC=/home/jason/Desktop/FileTransfer/synchrono-name
 USE_TENSOR_RT:BOOL=OFF
 
 //Path to a library.
-onelib:FILEPATH=/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
+onelib:FILEPATH=/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
 
 
 ########################
@@ -604,7 +597,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -765,9 +758,9 @@ Chrono_DIR-MODIFIED:INTERNAL=ON
 //Details about finding MPI
 FIND_PACKAGE_MESSAGE_DETAILS_MPI:INTERNAL=[TRUE][TRUE][c ][v3.1()]
 //Details about finding MPI_C
-FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/usr/lib/openmpi/libmpi.so][mpi][/usr/include][TRUE][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_C:INTERNAL=[/usr/local/lib/libmpi.so][mpi][/usr/local/include][TRUE][v3.1()]
 //Details about finding MPI_CXX
-FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/usr/lib/openmpi/libmpi_cxx.so][/usr/lib/openmpi/libmpi.so][mpi_cxx;mpi][/usr/include][TRUE][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_MPI_CXX:INTERNAL=[/usr/local/lib/libmpi.so][mpi][/usr/local/include][TRUE][v3.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: MPIEXEC_EXECUTABLE
@@ -822,8 +815,6 @@ MPI_RESULT_CXX_test_mpi_normal:INTERNAL=TRUE
 MPI_RESULT_C_test_mpi_normal:INTERNAL=TRUE
 //ADVANCED property for variable: MPI_mpi_LIBRARY
 MPI_mpi_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MPI_mpi_cxx_LIBRARY
-MPI_mpi_cxx_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SYN_COMPILER
 SYN_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: onelib

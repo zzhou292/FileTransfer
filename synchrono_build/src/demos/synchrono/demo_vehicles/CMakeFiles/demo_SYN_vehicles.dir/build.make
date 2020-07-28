@@ -80,7 +80,7 @@ include src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/flags
 src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.o: src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/flags.make
 src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.o: /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_vehicles/demo_SYN_vehicles.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_vehicles && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_vehicles/demo_SYN_vehicles.cpp
+	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_vehicles && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_vehicles/demo_SYN_vehicles.cpp
 
 src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.i"
@@ -99,65 +99,19 @@ demo_SYN_vehicles_EXTERNAL_OBJECTS =
 
 bin/demo_SYN_vehicles: src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/demo_SYN_vehicles.cpp.o
 bin/demo_SYN_vehicles: src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/build.make
-bin/demo_SYN_vehicles: /usr/lib/libIrrlicht.so
-bin/demo_SYN_vehicles: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libcudart_static.a
-bin/demo_SYN_vehicles: /usr/lib/librt.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppc.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppial.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppicc.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppicom.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppidei.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppif.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppig.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppim.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppist.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppisu.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppitc.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnpps.so
-bin/demo_SYN_vehicles: /usr/lib/libglfw.so
-bin/demo_SYN_vehicles: /usr/lib/libGLEW.so
-bin/demo_SYN_vehicles: /usr/lib/libGL.so
-bin/demo_SYN_vehicles: /usr/lib/libGLU.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnvrtc.so
+bin/demo_SYN_vehicles: /usr/local/lib/libIrrlicht.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
-bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
-bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
 bin/demo_SYN_vehicles: lib/libSynchrono.so
-bin/demo_SYN_vehicles: /usr/lib/openmpi/libmpi_cxx.so
-bin/demo_SYN_vehicles: /usr/lib/openmpi/libmpi.so
-bin/demo_SYN_vehicles: /usr/lib/libIrrlicht.so
-bin/demo_SYN_vehicles: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libcudart_static.a
-bin/demo_SYN_vehicles: /usr/lib/librt.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppc.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppial.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppicc.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppicom.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppidei.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppif.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppig.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppim.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppist.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppisu.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnppitc.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnpps.so
-bin/demo_SYN_vehicles: /usr/lib/libglfw.so
-bin/demo_SYN_vehicles: /usr/lib/libGLEW.so
-bin/demo_SYN_vehicles: /usr/lib/libGL.so
-bin/demo_SYN_vehicles: /usr/lib/libGLU.so
-bin/demo_SYN_vehicles: /opt/cuda/lib64/libnvrtc.so
+bin/demo_SYN_vehicles: /usr/local/lib/libmpi.so
+bin/demo_SYN_vehicles: /usr/local/lib/libIrrlicht.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
-bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
-bin/demo_SYN_vehicles: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
-bin/demo_SYN_vehicles: /usr/lib/openmpi/libmpi_cxx.so
-bin/demo_SYN_vehicles: /usr/lib/openmpi/libmpi.so
+bin/demo_SYN_vehicles: /usr/local/lib/libmpi.so
 bin/demo_SYN_vehicles: src/demos/synchrono/demo_vehicles/CMakeFiles/demo_SYN_vehicles.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../../bin/demo_SYN_vehicles"
 	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_vehicles && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_SYN_vehicles.dir/link.txt --verbose=$(VERBOSE)

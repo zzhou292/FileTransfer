@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src
+# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,7 +38,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_thirdparty" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.cuh$" REGEX "/[^/]*\\.hpp$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_thirdparty" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/[^/]*\\.cuh$" REGEX "/[^/]*\\.hpp$")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -70,7 +70,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_distributed/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_vehicle/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_fsi/cmake_install.cmake")
-  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_sensor/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_models/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/cmake_install.cmake")
 

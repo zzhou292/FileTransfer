@@ -320,6 +320,8 @@ void SCMDeformableSoil::Initialize(double height, double sizeX, double sizeY, in
             idx_vertices[it] = ChVector<int>(v0, v0 + 1, v0 + nvx + 1);
             idx_normals[it] = ChVector<int>(v0, v0 + 1, v0 + nvx + 1);
             ++it;
+
+
         }
     }
 
@@ -546,6 +548,10 @@ void SCMDeformableSoil::ComputeInternalForces() {
         p_area[idx_normals[it][0]] += triangle_area /3.0;
         p_area[idx_normals[it][1]] += triangle_area /3.0;
         p_area[idx_normals[it][2]] += triangle_area /3.0;
+
+        std::cout<<"idx_vertices: "<<idx_vertices[it]<<std::endl;
+        std::cout<<"idx_normalsces: "<<idx_normals[it]<<std::endl;
+        std::cout<<"it: "<<it<<std::endl;
     }
 
     m_timer_calc_areas.stop();
@@ -1210,7 +1216,7 @@ void SCMDeformableSoil::ComputeInternalForces() {
     //
     
     // Use the SCM soil contact model as described in the paper:
-    // "Parameter Identification of a Planetary Rover Wheel–Soil
+    // "Parameter Identification of a Planetary Rover Wheelï¿½Soil
     // Contact Model via a Bayesian Approach", A.Gallina, R. Krenn et al.
 
     // 

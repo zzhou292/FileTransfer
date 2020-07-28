@@ -32,7 +32,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Synchrono.dir/terrain/SynRigidTerrain.cpp.o"
   "CMakeFiles/Synchrono.dir/terrain/SynSCMTerrain.cpp.o"
   "CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.o"
-  "CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

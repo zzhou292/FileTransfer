@@ -80,7 +80,7 @@ include src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/flags.m
 src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.o: src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/flags.make
 src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.o: /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_platoon/demo_SYN_platoon.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_platoon && /usr/bin/ccache /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_platoon/demo_SYN_platoon.cpp
+	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_platoon && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.o -c /home/jason/Desktop/FileTransfer/synchrono-name/src/demos/synchrono/demo_platoon/demo_SYN_platoon.cpp
 
 src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.i"
@@ -99,65 +99,19 @@ demo_SYN_platoon_EXTERNAL_OBJECTS =
 
 bin/demo_SYN_platoon: src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/demo_SYN_platoon.cpp.o
 bin/demo_SYN_platoon: src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/build.make
-bin/demo_SYN_platoon: /usr/lib/libIrrlicht.so
-bin/demo_SYN_platoon: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libcudart_static.a
-bin/demo_SYN_platoon: /usr/lib/librt.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppc.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppial.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppicc.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppicom.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppidei.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppif.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppig.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppim.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppist.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppisu.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppitc.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnpps.so
-bin/demo_SYN_platoon: /usr/lib/libglfw.so
-bin/demo_SYN_platoon: /usr/lib/libGLEW.so
-bin/demo_SYN_platoon: /usr/lib/libGL.so
-bin/demo_SYN_platoon: /usr/lib/libGLU.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnvrtc.so
+bin/demo_SYN_platoon: /usr/local/lib/libIrrlicht.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
-bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
-bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
 bin/demo_SYN_platoon: lib/libSynchrono.so
-bin/demo_SYN_platoon: /usr/lib/openmpi/libmpi_cxx.so
-bin/demo_SYN_platoon: /usr/lib/openmpi/libmpi.so
-bin/demo_SYN_platoon: /usr/lib/libIrrlicht.so
-bin/demo_SYN_platoon: /home/jason/Desktop/NVIDIA-OptiX-SDK-6.0.0-linux64/lib64/liboptix.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libcudart_static.a
-bin/demo_SYN_platoon: /usr/lib/librt.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppc.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppial.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppicc.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppicom.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppidei.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppif.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppig.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppim.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppist.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppisu.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnppitc.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnpps.so
-bin/demo_SYN_platoon: /usr/lib/libglfw.so
-bin/demo_SYN_platoon: /usr/lib/libGLEW.so
-bin/demo_SYN_platoon: /usr/lib/libGL.so
-bin/demo_SYN_platoon: /usr/lib/libGLU.so
-bin/demo_SYN_platoon: /opt/cuda/lib64/libnvrtc.so
+bin/demo_SYN_platoon: /usr/local/lib/libmpi.so
+bin/demo_SYN_platoon: /usr/local/lib/libIrrlicht.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_irrlicht.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle.so
 bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoModels_vehicle.so
-bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_vehicle_irrlicht.so
-bin/demo_SYN_platoon: /home/jason/Desktop/FileTransfer/chrono_build_SCM/lib/libChronoEngine_sensor.so
-bin/demo_SYN_platoon: /usr/lib/openmpi/libmpi_cxx.so
-bin/demo_SYN_platoon: /usr/lib/openmpi/libmpi.so
+bin/demo_SYN_platoon: /usr/local/lib/libmpi.so
 bin/demo_SYN_platoon: src/demos/synchrono/demo_platoon/CMakeFiles/demo_SYN_platoon.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/synchrono_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../../bin/demo_SYN_platoon"
 	cd /home/jason/Desktop/FileTransfer/synchrono_build/src/demos/synchrono/demo_platoon && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_SYN_platoon.dir/link.txt --verbose=$(VERBOSE)

@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/irrlicht
+# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/irrlicht
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collisionNSC")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collisionNSC"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collisionNSC")
@@ -69,7 +69,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_bricks")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_bricks"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_bricks")
@@ -89,7 +89,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_cohesion")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_cohesion"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_cohesion")
@@ -109,7 +109,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_conveyor")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_conveyor"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_conveyor")
@@ -129,7 +129,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_crank")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_crank"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_crank")
@@ -149,7 +149,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_decomposition")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_decomposition"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_decomposition")
@@ -169,7 +169,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_forklift")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_forklift"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_forklift")
@@ -189,7 +189,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_fourbar")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_fourbar"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_fourbar")
@@ -209,7 +209,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_friction")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_friction"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_friction")
@@ -229,7 +229,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_gears")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_gears"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_gears")
@@ -249,7 +249,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_mecanum")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_mecanum"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_mecanum")
@@ -269,7 +269,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_pendulum")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_pendulum"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_pendulum")
@@ -289,7 +289,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_sph")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_sph"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_sph")
@@ -309,7 +309,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_suspension")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_suspension"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_suspension")
@@ -329,7 +329,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_tire")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_tire"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_tire")
@@ -349,7 +349,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_tracks")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_tracks"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_tracks")
@@ -369,7 +369,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_convergence")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_convergence"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_convergence")
@@ -389,7 +389,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_assets")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_assets"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_assets")
@@ -409,7 +409,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_soilbin")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_soilbin"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_soilbin")
@@ -429,7 +429,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_ballSMC")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_ballSMC"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_ballSMC")
@@ -449,7 +449,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collisionSMC")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collisionSMC"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collisionSMC")
@@ -469,7 +469,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emitter")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emitter"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emitter")
@@ -489,7 +489,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emit_cluster")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emit_cluster"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emit_cluster")
@@ -509,7 +509,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emit_processor")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emit_processor"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_emit_processor")
@@ -529,7 +529,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_aux_ref")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_aux_ref"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_aux_ref")
@@ -549,7 +549,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_sph")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_sph"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_sph")
@@ -569,7 +569,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_trans")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_trans"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_trans")
@@ -589,7 +589,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_limits")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_limits"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rev_limits")
@@ -609,7 +609,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rot_spring")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rot_spring"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_rot_spring")
@@ -629,7 +629,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_spring")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_spring"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_spring")
@@ -649,7 +649,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_ujoint")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_ujoint"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_ujoint")
@@ -669,7 +669,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_earthquake")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_earthquake"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_earthquake")
@@ -689,7 +689,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_paths")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_paths"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_paths")
@@ -709,7 +709,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collision_2d")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collision_2d"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collision_2d")
@@ -729,7 +729,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collision_trimesh")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collision_trimesh"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_collision_trimesh")
@@ -749,7 +749,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_plane_plane")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_plane_plane"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_plane_plane")
@@ -769,7 +769,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_link_bushing")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_link_bushing"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_link_bushing")
@@ -789,7 +789,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_prismatic_limits")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_prismatic_limits"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_prismatic_limits")
@@ -809,7 +809,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_prismatic_force")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_prismatic_force"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_prismatic_force")
@@ -829,7 +829,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_callbackNSC")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_callbackNSC"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_callbackNSC")
@@ -849,7 +849,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_callbackSMC")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_callbackSMC"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_callbackSMC")
@@ -869,7 +869,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_motors")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_motors"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_motors")
@@ -889,7 +889,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_OpenSim_parser")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_OpenSim_parser"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_OpenSim_parser")
@@ -909,7 +909,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_report_collisions")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_report_collisions"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_report_collisions")
@@ -929,7 +929,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_Adams_parser")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_Adams_parser"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_Adams_parser")
@@ -949,7 +949,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_debugDrawer_collisionModels")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_debugDrawer_collisionModels"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_debugDrawer_collisionModels")
@@ -969,30 +969,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_imposed_motion")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_imposed_motion"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
+         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:/usr/local/lib:"
          NEW_RPATH "/usr/local/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_imposed_motion")
-    endif()
-  endif()
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_custom_contact" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_custom_contact")
-    file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_custom_contact"
-         RPATH "/usr/local/lib")
-  endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/bin" TYPE EXECUTABLE FILES "/home/jason/Desktop/FileTransfer/chrono_build_SCM/bin/demo_IRR_custom_contact")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_custom_contact" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_custom_contact")
-    file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_custom_contact"
-         OLD_RPATH "/home/jason/Desktop/FileTransfer/chrono_build_SCM/lib:"
-         NEW_RPATH "/usr/local/lib")
-    if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/chrono/bin/demo_IRR_custom_contact")
     endif()
   endif()
 endif()

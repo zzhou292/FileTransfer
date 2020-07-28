@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_63cce/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_63cce.dir/build.make CMakeFiles/cmTC_63cce.dir/build
-gmake[1]: Entering directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_63cce.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_63cce.dir/src.c.o   -c /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_63cce
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63cce.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_63cce.dir/src.c.o  -o cmTC_63cce 
-/usr/bin/ld: CMakeFiles/cmTC_63cce.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_830c1/fast && /usr/bin/make  -f CMakeFiles/cmTC_830c1.dir/build.make CMakeFiles/cmTC_830c1.dir/build
+make[1]: Entering directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_830c1.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_830c1.dir/src.c.o   -c /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_830c1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_830c1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_830c1.dir/src.c.o  -o cmTC_830c1 
+/usr/bin/ld: CMakeFiles/cmTC_830c1.dir/src.c.o: in function `main':
 src.c:(.text+0x3e): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_63cce.dir/build.make:107: cmTC_63cce] Error 1
-gmake[1]: Leaving directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:141: cmTC_63cce/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_830c1.dir/build.make:107: cmTC_830c1] Error 1
+make[1]: Leaving directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_830c1/fast] Error 2
 
 
 Source file was:
@@ -43,17 +43,98 @@ int main(void)
 Performing C++ SOURCE FILE Test DETECTED_NEON failed with the following output:
 Change Dir: /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_8a927/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8a927.dir/build.make CMakeFiles/cmTC_8a927.dir/build
-gmake[1]: Entering directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8a927.dir/src.cxx.o
-/usr/bin/c++    -pthread -fopenmp -DDETECTED_NEON   -o CMakeFiles/cmTC_8a927.dir/src.cxx.o -c /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx
+Run Build Command(s):/usr/bin/make cmTC_22cf3/fast && /usr/bin/make  -f CMakeFiles/cmTC_22cf3.dir/build.make CMakeFiles/cmTC_22cf3.dir/build
+make[1]: Entering directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_22cf3.dir/src.cxx.o
+/usr/bin/c++    -pthread -fopenmp -DDETECTED_NEON   -o CMakeFiles/cmTC_22cf3.dir/src.cxx.o -c /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx
 /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: arm_neon.h: No such file or directory
     2 | #include <arm_neon.h>
       |          ^~~~~~~~~~~~
 compilation terminated.
-gmake[1]: *** [CMakeFiles/cmTC_8a927.dir/build.make:86: CMakeFiles/cmTC_8a927.dir/src.cxx.o] Error 1
-gmake[1]: Leaving directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:141: cmTC_8a927/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_22cf3.dir/build.make:86: CMakeFiles/cmTC_22cf3.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_22cf3/fast] Error 2
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+#include <arm_neon.h>
+int main()
+{
+  float64_t a[2] = {  1., 2. };
+  float64_t b[2] = { -1., 3. };
+  float64_t c[2];
+
+  float64x2_t va = vld1q_f64(&a[0]);
+  float64x2_t vb = vld1q_f64(&b[0]);
+  float64x2_t vc = vaddq_f64(va, vb);
+  vst1q_f64(&c[0], vc);
+
+  if (c[0] == 0. && c[1] == 5.)
+    return 0;
+  else
+    return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4bb19/fast && /usr/bin/make  -f CMakeFiles/cmTC_4bb19.dir/build.make CMakeFiles/cmTC_4bb19.dir/build
+make[1]: Entering directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4bb19.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4bb19.dir/src.c.o   -c /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4bb19
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bb19.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_4bb19.dir/src.c.o  -o cmTC_4bb19 
+/usr/bin/ld: CMakeFiles/cmTC_4bb19.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4bb19.dir/build.make:107: cmTC_4bb19] Error 1
+make[1]: Leaving directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_4bb19/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test DETECTED_NEON failed with the following output:
+Change Dir: /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cb338/fast && /usr/bin/make  -f CMakeFiles/cmTC_cb338.dir/build.make CMakeFiles/cmTC_cb338.dir/build
+make[1]: Entering directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cb338.dir/src.cxx.o
+/usr/bin/c++    -pthread -fopenmp -DDETECTED_NEON   -o CMakeFiles/cmTC_cb338.dir/src.cxx.o -c /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx
+/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: arm_neon.h: No such file or directory
+    2 | #include <arm_neon.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_cb338.dir/build.make:86: CMakeFiles/cmTC_cb338.dir/src.cxx.o] Error 1
+make[1]: Leaving directory '/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_cb338/fast] Error 2
 
 
 ...and run output:

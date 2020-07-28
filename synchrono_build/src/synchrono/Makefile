@@ -1004,33 +1004,6 @@ visualization/SynIrrVehicleVis.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/synchrono_build && $(MAKE) $(MAKESILENT) -f src/synchrono/CMakeFiles/Synchrono.dir/build.make src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynIrrVehicleVis.cpp.s
 .PHONY : visualization/SynIrrVehicleVis.cpp.s
 
-visualization/SynSenVehicleVis.o: visualization/SynSenVehicleVis.cpp.o
-
-.PHONY : visualization/SynSenVehicleVis.o
-
-# target to build an object file
-visualization/SynSenVehicleVis.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/synchrono_build && $(MAKE) $(MAKESILENT) -f src/synchrono/CMakeFiles/Synchrono.dir/build.make src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.o
-.PHONY : visualization/SynSenVehicleVis.cpp.o
-
-visualization/SynSenVehicleVis.i: visualization/SynSenVehicleVis.cpp.i
-
-.PHONY : visualization/SynSenVehicleVis.i
-
-# target to preprocess a source file
-visualization/SynSenVehicleVis.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/synchrono_build && $(MAKE) $(MAKESILENT) -f src/synchrono/CMakeFiles/Synchrono.dir/build.make src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.i
-.PHONY : visualization/SynSenVehicleVis.cpp.i
-
-visualization/SynSenVehicleVis.s: visualization/SynSenVehicleVis.cpp.s
-
-.PHONY : visualization/SynSenVehicleVis.s
-
-# target to generate assembly for a file
-visualization/SynSenVehicleVis.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/synchrono_build && $(MAKE) $(MAKESILENT) -f src/synchrono/CMakeFiles/Synchrono.dir/build.make src/synchrono/CMakeFiles/Synchrono.dir/visualization/SynSenVehicleVis.cpp.s
-.PHONY : visualization/SynSenVehicleVis.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1135,9 +1108,6 @@ help:
 	@echo "... visualization/SynIrrVehicleVis.o"
 	@echo "... visualization/SynIrrVehicleVis.i"
 	@echo "... visualization/SynIrrVehicleVis.s"
-	@echo "... visualization/SynSenVehicleVis.o"
-	@echo "... visualization/SynSenVehicleVis.i"
-	@echo "... visualization/SynSenVehicleVis.s"
 .PHONY : help
 
 

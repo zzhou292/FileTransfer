@@ -427,6 +427,10 @@ void SCMDeformableSoil::Initialize(const std::string& heightmap_file,
             idx_vertices[it] = ChVector<int>(v0, v0 + 1, v0 + nv_x + 1);
             idx_normals[it] = ChVector<int>(v0, v0 + 1, v0 + nv_x + 1);
             ++it;
+
+            std::cout<<"idx_vertices: "<<idx_vertices[it]<<std::endl;
+            
+            std::cout<<"it: "<<std::endl;
         }
     }
 
@@ -1210,7 +1214,7 @@ void SCMDeformableSoil::ComputeInternalForces() {
     //
     
     // Use the SCM soil contact model as described in the paper:
-    // "Parameter Identification of a Planetary Rover Wheel–Soil
+    // "Parameter Identification of a Planetary Rover Wheelï¿½Soil
     // Contact Model via a Bayesian Approach", A.Gallina, R. Krenn et al.
 
     // 
