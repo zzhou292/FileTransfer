@@ -68,7 +68,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
+CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jason/Desktop/FileTransfer/chrono_build_SCM
@@ -213,6 +213,627 @@ ChronoEngine/fast:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/build
 .PHONY : ChronoEngine/fast
 
+__/chrono_thirdparty/HACD/hacdGraph.o: __/chrono_thirdparty/HACD/hacdGraph.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACD/hacdGraph.o
+
+# target to build an object file
+__/chrono_thirdparty/HACD/hacdGraph.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdGraph.cpp.o
+.PHONY : __/chrono_thirdparty/HACD/hacdGraph.cpp.o
+
+__/chrono_thirdparty/HACD/hacdGraph.i: __/chrono_thirdparty/HACD/hacdGraph.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACD/hacdGraph.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACD/hacdGraph.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdGraph.cpp.i
+.PHONY : __/chrono_thirdparty/HACD/hacdGraph.cpp.i
+
+__/chrono_thirdparty/HACD/hacdGraph.s: __/chrono_thirdparty/HACD/hacdGraph.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACD/hacdGraph.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACD/hacdGraph.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdGraph.cpp.s
+.PHONY : __/chrono_thirdparty/HACD/hacdGraph.cpp.s
+
+__/chrono_thirdparty/HACD/hacdHACD.o: __/chrono_thirdparty/HACD/hacdHACD.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACD/hacdHACD.o
+
+# target to build an object file
+__/chrono_thirdparty/HACD/hacdHACD.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdHACD.cpp.o
+.PHONY : __/chrono_thirdparty/HACD/hacdHACD.cpp.o
+
+__/chrono_thirdparty/HACD/hacdHACD.i: __/chrono_thirdparty/HACD/hacdHACD.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACD/hacdHACD.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACD/hacdHACD.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdHACD.cpp.i
+.PHONY : __/chrono_thirdparty/HACD/hacdHACD.cpp.i
+
+__/chrono_thirdparty/HACD/hacdHACD.s: __/chrono_thirdparty/HACD/hacdHACD.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACD/hacdHACD.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACD/hacdHACD.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdHACD.cpp.s
+.PHONY : __/chrono_thirdparty/HACD/hacdHACD.cpp.s
+
+__/chrono_thirdparty/HACD/hacdICHull.o: __/chrono_thirdparty/HACD/hacdICHull.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACD/hacdICHull.o
+
+# target to build an object file
+__/chrono_thirdparty/HACD/hacdICHull.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdICHull.cpp.o
+.PHONY : __/chrono_thirdparty/HACD/hacdICHull.cpp.o
+
+__/chrono_thirdparty/HACD/hacdICHull.i: __/chrono_thirdparty/HACD/hacdICHull.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACD/hacdICHull.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACD/hacdICHull.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdICHull.cpp.i
+.PHONY : __/chrono_thirdparty/HACD/hacdICHull.cpp.i
+
+__/chrono_thirdparty/HACD/hacdICHull.s: __/chrono_thirdparty/HACD/hacdICHull.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACD/hacdICHull.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACD/hacdICHull.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdICHull.cpp.s
+.PHONY : __/chrono_thirdparty/HACD/hacdICHull.cpp.s
+
+__/chrono_thirdparty/HACD/hacdManifoldMesh.o: __/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACD/hacdManifoldMesh.o
+
+# target to build an object file
+__/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.o
+.PHONY : __/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.o
+
+__/chrono_thirdparty/HACD/hacdManifoldMesh.i: __/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACD/hacdManifoldMesh.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.i
+.PHONY : __/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.i
+
+__/chrono_thirdparty/HACD/hacdManifoldMesh.s: __/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACD/hacdManifoldMesh.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.s
+.PHONY : __/chrono_thirdparty/HACD/hacdManifoldMesh.cpp.s
+
+__/chrono_thirdparty/HACD/hacdMeshDecimator.o: __/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACD/hacdMeshDecimator.o
+
+# target to build an object file
+__/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.o
+.PHONY : __/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.o
+
+__/chrono_thirdparty/HACD/hacdMeshDecimator.i: __/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACD/hacdMeshDecimator.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.i
+.PHONY : __/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.i
+
+__/chrono_thirdparty/HACD/hacdMeshDecimator.s: __/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACD/hacdMeshDecimator.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.s
+.PHONY : __/chrono_thirdparty/HACD/hacdMeshDecimator.cpp.s
+
+__/chrono_thirdparty/HACD/hacdMicroAllocator.o: __/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACD/hacdMicroAllocator.o
+
+# target to build an object file
+__/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.o
+.PHONY : __/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.o
+
+__/chrono_thirdparty/HACD/hacdMicroAllocator.i: __/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACD/hacdMicroAllocator.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.i
+.PHONY : __/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.i
+
+__/chrono_thirdparty/HACD/hacdMicroAllocator.s: __/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACD/hacdMicroAllocator.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.s
+.PHONY : __/chrono_thirdparty/HACD/hacdMicroAllocator.cpp.s
+
+__/chrono_thirdparty/HACD/hacdRaycastMesh.o: __/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACD/hacdRaycastMesh.o
+
+# target to build an object file
+__/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.o
+.PHONY : __/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.o
+
+__/chrono_thirdparty/HACD/hacdRaycastMesh.i: __/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACD/hacdRaycastMesh.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.i
+.PHONY : __/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.i
+
+__/chrono_thirdparty/HACD/hacdRaycastMesh.s: __/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACD/hacdRaycastMesh.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.s
+.PHONY : __/chrono_thirdparty/HACD/hacdRaycastMesh.cpp.s
+
+__/chrono_thirdparty/HACDv2/AutoGeometry.o: __/chrono_thirdparty/HACDv2/AutoGeometry.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/AutoGeometry.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/AutoGeometry.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/AutoGeometry.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/AutoGeometry.cpp.o
+
+__/chrono_thirdparty/HACDv2/AutoGeometry.i: __/chrono_thirdparty/HACDv2/AutoGeometry.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/AutoGeometry.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/AutoGeometry.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/AutoGeometry.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/AutoGeometry.cpp.i
+
+__/chrono_thirdparty/HACDv2/AutoGeometry.s: __/chrono_thirdparty/HACDv2/AutoGeometry.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/AutoGeometry.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/AutoGeometry.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/AutoGeometry.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/AutoGeometry.cpp.s
+
+__/chrono_thirdparty/HACDv2/ConvexHull.o: __/chrono_thirdparty/HACDv2/ConvexHull.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/ConvexHull.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/ConvexHull.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/ConvexHull.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/ConvexHull.cpp.o
+
+__/chrono_thirdparty/HACDv2/ConvexHull.i: __/chrono_thirdparty/HACDv2/ConvexHull.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/ConvexHull.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/ConvexHull.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/ConvexHull.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/ConvexHull.cpp.i
+
+__/chrono_thirdparty/HACDv2/ConvexHull.s: __/chrono_thirdparty/HACDv2/ConvexHull.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/ConvexHull.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/ConvexHull.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/ConvexHull.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/ConvexHull.cpp.s
+
+__/chrono_thirdparty/HACDv2/HACD.o: __/chrono_thirdparty/HACDv2/HACD.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/HACD.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/HACD.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/HACD.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/HACD.cpp.o
+
+__/chrono_thirdparty/HACDv2/HACD.i: __/chrono_thirdparty/HACDv2/HACD.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/HACD.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/HACD.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/HACD.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/HACD.cpp.i
+
+__/chrono_thirdparty/HACDv2/HACD.s: __/chrono_thirdparty/HACDv2/HACD.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/HACD.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/HACD.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/HACD.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/HACD.cpp.s
+
+__/chrono_thirdparty/HACDv2/MergeHulls.o: __/chrono_thirdparty/HACDv2/MergeHulls.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/MergeHulls.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/MergeHulls.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/MergeHulls.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/MergeHulls.cpp.o
+
+__/chrono_thirdparty/HACDv2/MergeHulls.i: __/chrono_thirdparty/HACDv2/MergeHulls.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/MergeHulls.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/MergeHulls.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/MergeHulls.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/MergeHulls.cpp.i
+
+__/chrono_thirdparty/HACDv2/MergeHulls.s: __/chrono_thirdparty/HACDv2/MergeHulls.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/MergeHulls.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/MergeHulls.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/MergeHulls.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/MergeHulls.cpp.s
+
+__/chrono_thirdparty/HACDv2/WuQuantizer.o: __/chrono_thirdparty/HACDv2/WuQuantizer.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/WuQuantizer.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/WuQuantizer.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/WuQuantizer.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/WuQuantizer.cpp.o
+
+__/chrono_thirdparty/HACDv2/WuQuantizer.i: __/chrono_thirdparty/HACDv2/WuQuantizer.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/WuQuantizer.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/WuQuantizer.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/WuQuantizer.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/WuQuantizer.cpp.i
+
+__/chrono_thirdparty/HACDv2/WuQuantizer.s: __/chrono_thirdparty/HACDv2/WuQuantizer.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/WuQuantizer.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/WuQuantizer.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/WuQuantizer.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/WuQuantizer.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgConvexHull3d.o: __/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgConvexHull3d.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgConvexHull3d.i: __/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgConvexHull3d.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgConvexHull3d.s: __/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgConvexHull3d.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgConvexHull3d.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgGoogol.o: __/chrono_thirdparty/HACDv2/dgGoogol.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgGoogol.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgGoogol.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgGoogol.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgGoogol.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgGoogol.i: __/chrono_thirdparty/HACDv2/dgGoogol.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgGoogol.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgGoogol.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgGoogol.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgGoogol.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgGoogol.s: __/chrono_thirdparty/HACDv2/dgGoogol.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgGoogol.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgGoogol.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgGoogol.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgGoogol.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgMatrix.o: __/chrono_thirdparty/HACDv2/dgMatrix.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgMatrix.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgMatrix.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgMatrix.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgMatrix.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgMatrix.i: __/chrono_thirdparty/HACDv2/dgMatrix.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgMatrix.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgMatrix.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgMatrix.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgMatrix.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgMatrix.s: __/chrono_thirdparty/HACDv2/dgMatrix.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgMatrix.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgMatrix.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgMatrix.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgMatrix.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgMeshEffect.o: __/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgMeshEffect.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgMeshEffect.i: __/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgMeshEffect.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgMeshEffect.s: __/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgMeshEffect.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgMeshEffect.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgPolyhedra.o: __/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgPolyhedra.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgPolyhedra.i: __/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgPolyhedra.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgPolyhedra.s: __/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgPolyhedra.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgPolyhedra.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgQuaternion.o: __/chrono_thirdparty/HACDv2/dgQuaternion.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgQuaternion.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgQuaternion.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgQuaternion.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgQuaternion.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgQuaternion.i: __/chrono_thirdparty/HACDv2/dgQuaternion.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgQuaternion.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgQuaternion.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgQuaternion.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgQuaternion.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgQuaternion.s: __/chrono_thirdparty/HACDv2/dgQuaternion.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgQuaternion.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgQuaternion.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgQuaternion.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgQuaternion.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgSmallDeterminant.o: __/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgSmallDeterminant.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgSmallDeterminant.i: __/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgSmallDeterminant.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgSmallDeterminant.s: __/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgSmallDeterminant.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgSmallDeterminant.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgSphere.o: __/chrono_thirdparty/HACDv2/dgSphere.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgSphere.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgSphere.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgSphere.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgSphere.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgSphere.i: __/chrono_thirdparty/HACDv2/dgSphere.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgSphere.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgSphere.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgSphere.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgSphere.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgSphere.s: __/chrono_thirdparty/HACDv2/dgSphere.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgSphere.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgSphere.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgSphere.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgSphere.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgTree.o: __/chrono_thirdparty/HACDv2/dgTree.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgTree.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgTree.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgTree.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgTree.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgTree.i: __/chrono_thirdparty/HACDv2/dgTree.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgTree.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgTree.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgTree.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgTree.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgTree.s: __/chrono_thirdparty/HACDv2/dgTree.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgTree.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgTree.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgTree.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgTree.cpp.s
+
+__/chrono_thirdparty/HACDv2/dgTypes.o: __/chrono_thirdparty/HACDv2/dgTypes.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgTypes.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/dgTypes.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgTypes.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/dgTypes.cpp.o
+
+__/chrono_thirdparty/HACDv2/dgTypes.i: __/chrono_thirdparty/HACDv2/dgTypes.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgTypes.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/dgTypes.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgTypes.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/dgTypes.cpp.i
+
+__/chrono_thirdparty/HACDv2/dgTypes.s: __/chrono_thirdparty/HACDv2/dgTypes.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/dgTypes.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/dgTypes.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/dgTypes.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/dgTypes.cpp.s
+
+__/chrono_thirdparty/HACDv2/wavefront.o: __/chrono_thirdparty/HACDv2/wavefront.cpp.o
+
+.PHONY : __/chrono_thirdparty/HACDv2/wavefront.o
+
+# target to build an object file
+__/chrono_thirdparty/HACDv2/wavefront.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/wavefront.cpp.o
+.PHONY : __/chrono_thirdparty/HACDv2/wavefront.cpp.o
+
+__/chrono_thirdparty/HACDv2/wavefront.i: __/chrono_thirdparty/HACDv2/wavefront.cpp.i
+
+.PHONY : __/chrono_thirdparty/HACDv2/wavefront.i
+
+# target to preprocess a source file
+__/chrono_thirdparty/HACDv2/wavefront.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/wavefront.cpp.i
+.PHONY : __/chrono_thirdparty/HACDv2/wavefront.cpp.i
+
+__/chrono_thirdparty/HACDv2/wavefront.s: __/chrono_thirdparty/HACDv2/wavefront.cpp.s
+
+.PHONY : __/chrono_thirdparty/HACDv2/wavefront.s
+
+# target to generate assembly for a file
+__/chrono_thirdparty/HACDv2/wavefront.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/__/chrono_thirdparty/HACDv2/wavefront.cpp.s
+.PHONY : __/chrono_thirdparty/HACDv2/wavefront.cpp.s
+
 __/chrono_thirdparty/tinyobjloader/tiny_obj_loader.o: __/chrono_thirdparty/tinyobjloader/tiny_obj_loader.cc.o
 
 .PHONY : __/chrono_thirdparty/tinyobjloader/tiny_obj_loader.o
@@ -293,6 +914,33 @@ assets/ChAssetLevel.s: assets/ChAssetLevel.cpp.s
 assets/ChAssetLevel.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChAssetLevel.cpp.s
 .PHONY : assets/ChAssetLevel.cpp.s
+
+assets/ChBarrelShape.o: assets/ChBarrelShape.cpp.o
+
+.PHONY : assets/ChBarrelShape.o
+
+# target to build an object file
+assets/ChBarrelShape.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChBarrelShape.cpp.o
+.PHONY : assets/ChBarrelShape.cpp.o
+
+assets/ChBarrelShape.i: assets/ChBarrelShape.cpp.i
+
+.PHONY : assets/ChBarrelShape.i
+
+# target to preprocess a source file
+assets/ChBarrelShape.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChBarrelShape.cpp.i
+.PHONY : assets/ChBarrelShape.cpp.i
+
+assets/ChBarrelShape.s: assets/ChBarrelShape.cpp.s
+
+.PHONY : assets/ChBarrelShape.s
+
+# target to generate assembly for a file
+assets/ChBarrelShape.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChBarrelShape.cpp.s
+.PHONY : assets/ChBarrelShape.cpp.s
 
 assets/ChBoxShape.o: assets/ChBoxShape.cpp.o
 
@@ -861,6 +1509,33 @@ assets/ChTriangleMeshShape.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChTriangleMeshShape.cpp.s
 .PHONY : assets/ChTriangleMeshShape.cpp.s
 
+assets/ChVisualMaterial.o: assets/ChVisualMaterial.cpp.o
+
+.PHONY : assets/ChVisualMaterial.o
+
+# target to build an object file
+assets/ChVisualMaterial.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChVisualMaterial.cpp.o
+.PHONY : assets/ChVisualMaterial.cpp.o
+
+assets/ChVisualMaterial.i: assets/ChVisualMaterial.cpp.i
+
+.PHONY : assets/ChVisualMaterial.i
+
+# target to preprocess a source file
+assets/ChVisualMaterial.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChVisualMaterial.cpp.i
+.PHONY : assets/ChVisualMaterial.cpp.i
+
+assets/ChVisualMaterial.s: assets/ChVisualMaterial.cpp.s
+
+.PHONY : assets/ChVisualMaterial.s
+
+# target to generate assembly for a file
+assets/ChVisualMaterial.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChVisualMaterial.cpp.s
+.PHONY : assets/ChVisualMaterial.cpp.s
+
 assets/ChVisualization.o: assets/ChVisualization.cpp.o
 
 .PHONY : assets/ChVisualization.o
@@ -888,167 +1563,194 @@ assets/ChVisualization.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/assets/ChVisualization.cpp.s
 .PHONY : assets/ChVisualization.cpp.s
 
-collision/ChCCollisionInfo.o: collision/ChCCollisionInfo.cpp.o
+collision/ChCollisionInfo.o: collision/ChCollisionInfo.cpp.o
 
-.PHONY : collision/ChCCollisionInfo.o
-
-# target to build an object file
-collision/ChCCollisionInfo.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionInfo.cpp.o
-.PHONY : collision/ChCCollisionInfo.cpp.o
-
-collision/ChCCollisionInfo.i: collision/ChCCollisionInfo.cpp.i
-
-.PHONY : collision/ChCCollisionInfo.i
-
-# target to preprocess a source file
-collision/ChCCollisionInfo.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionInfo.cpp.i
-.PHONY : collision/ChCCollisionInfo.cpp.i
-
-collision/ChCCollisionInfo.s: collision/ChCCollisionInfo.cpp.s
-
-.PHONY : collision/ChCCollisionInfo.s
-
-# target to generate assembly for a file
-collision/ChCCollisionInfo.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionInfo.cpp.s
-.PHONY : collision/ChCCollisionInfo.cpp.s
-
-collision/ChCCollisionModel.o: collision/ChCCollisionModel.cpp.o
-
-.PHONY : collision/ChCCollisionModel.o
+.PHONY : collision/ChCollisionInfo.o
 
 # target to build an object file
-collision/ChCCollisionModel.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionModel.cpp.o
-.PHONY : collision/ChCCollisionModel.cpp.o
+collision/ChCollisionInfo.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionInfo.cpp.o
+.PHONY : collision/ChCollisionInfo.cpp.o
 
-collision/ChCCollisionModel.i: collision/ChCCollisionModel.cpp.i
+collision/ChCollisionInfo.i: collision/ChCollisionInfo.cpp.i
 
-.PHONY : collision/ChCCollisionModel.i
+.PHONY : collision/ChCollisionInfo.i
 
 # target to preprocess a source file
-collision/ChCCollisionModel.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionModel.cpp.i
-.PHONY : collision/ChCCollisionModel.cpp.i
+collision/ChCollisionInfo.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionInfo.cpp.i
+.PHONY : collision/ChCollisionInfo.cpp.i
 
-collision/ChCCollisionModel.s: collision/ChCCollisionModel.cpp.s
+collision/ChCollisionInfo.s: collision/ChCollisionInfo.cpp.s
 
-.PHONY : collision/ChCCollisionModel.s
+.PHONY : collision/ChCollisionInfo.s
 
 # target to generate assembly for a file
-collision/ChCCollisionModel.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionModel.cpp.s
-.PHONY : collision/ChCCollisionModel.cpp.s
+collision/ChCollisionInfo.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionInfo.cpp.s
+.PHONY : collision/ChCollisionInfo.cpp.s
 
-collision/ChCCollisionSystemBullet.o: collision/ChCCollisionSystemBullet.cpp.o
+collision/ChCollisionModel.o: collision/ChCollisionModel.cpp.o
 
-.PHONY : collision/ChCCollisionSystemBullet.o
+.PHONY : collision/ChCollisionModel.o
 
 # target to build an object file
-collision/ChCCollisionSystemBullet.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionSystemBullet.cpp.o
-.PHONY : collision/ChCCollisionSystemBullet.cpp.o
+collision/ChCollisionModel.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionModel.cpp.o
+.PHONY : collision/ChCollisionModel.cpp.o
 
-collision/ChCCollisionSystemBullet.i: collision/ChCCollisionSystemBullet.cpp.i
+collision/ChCollisionModel.i: collision/ChCollisionModel.cpp.i
 
-.PHONY : collision/ChCCollisionSystemBullet.i
+.PHONY : collision/ChCollisionModel.i
 
 # target to preprocess a source file
-collision/ChCCollisionSystemBullet.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionSystemBullet.cpp.i
-.PHONY : collision/ChCCollisionSystemBullet.cpp.i
+collision/ChCollisionModel.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionModel.cpp.i
+.PHONY : collision/ChCollisionModel.cpp.i
 
-collision/ChCCollisionSystemBullet.s: collision/ChCCollisionSystemBullet.cpp.s
+collision/ChCollisionModel.s: collision/ChCollisionModel.cpp.s
 
-.PHONY : collision/ChCCollisionSystemBullet.s
+.PHONY : collision/ChCollisionModel.s
 
 # target to generate assembly for a file
-collision/ChCCollisionSystemBullet.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionSystemBullet.cpp.s
-.PHONY : collision/ChCCollisionSystemBullet.cpp.s
+collision/ChCollisionModel.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionModel.cpp.s
+.PHONY : collision/ChCollisionModel.cpp.s
 
-collision/ChCCollisionUtils.o: collision/ChCCollisionUtils.cpp.o
+collision/ChCollisionModelBullet.o: collision/ChCollisionModelBullet.cpp.o
 
-.PHONY : collision/ChCCollisionUtils.o
+.PHONY : collision/ChCollisionModelBullet.o
 
 # target to build an object file
-collision/ChCCollisionUtils.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionUtils.cpp.o
-.PHONY : collision/ChCCollisionUtils.cpp.o
+collision/ChCollisionModelBullet.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionModelBullet.cpp.o
+.PHONY : collision/ChCollisionModelBullet.cpp.o
 
-collision/ChCCollisionUtils.i: collision/ChCCollisionUtils.cpp.i
+collision/ChCollisionModelBullet.i: collision/ChCollisionModelBullet.cpp.i
 
-.PHONY : collision/ChCCollisionUtils.i
+.PHONY : collision/ChCollisionModelBullet.i
 
 # target to preprocess a source file
-collision/ChCCollisionUtils.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionUtils.cpp.i
-.PHONY : collision/ChCCollisionUtils.cpp.i
+collision/ChCollisionModelBullet.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionModelBullet.cpp.i
+.PHONY : collision/ChCollisionModelBullet.cpp.i
 
-collision/ChCCollisionUtils.s: collision/ChCCollisionUtils.cpp.s
+collision/ChCollisionModelBullet.s: collision/ChCollisionModelBullet.cpp.s
 
-.PHONY : collision/ChCCollisionUtils.s
+.PHONY : collision/ChCollisionModelBullet.s
 
 # target to generate assembly for a file
-collision/ChCCollisionUtils.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCCollisionUtils.cpp.s
-.PHONY : collision/ChCCollisionUtils.cpp.s
+collision/ChCollisionModelBullet.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionModelBullet.cpp.s
+.PHONY : collision/ChCollisionModelBullet.cpp.s
 
-collision/ChCConvexDecomposition.o: collision/ChCConvexDecomposition.cpp.o
+collision/ChCollisionShape.o: collision/ChCollisionShape.cpp.o
 
-.PHONY : collision/ChCConvexDecomposition.o
+.PHONY : collision/ChCollisionShape.o
 
 # target to build an object file
-collision/ChCConvexDecomposition.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCConvexDecomposition.cpp.o
-.PHONY : collision/ChCConvexDecomposition.cpp.o
+collision/ChCollisionShape.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionShape.cpp.o
+.PHONY : collision/ChCollisionShape.cpp.o
 
-collision/ChCConvexDecomposition.i: collision/ChCConvexDecomposition.cpp.i
+collision/ChCollisionShape.i: collision/ChCollisionShape.cpp.i
 
-.PHONY : collision/ChCConvexDecomposition.i
+.PHONY : collision/ChCollisionShape.i
 
 # target to preprocess a source file
-collision/ChCConvexDecomposition.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCConvexDecomposition.cpp.i
-.PHONY : collision/ChCConvexDecomposition.cpp.i
+collision/ChCollisionShape.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionShape.cpp.i
+.PHONY : collision/ChCollisionShape.cpp.i
 
-collision/ChCConvexDecomposition.s: collision/ChCConvexDecomposition.cpp.s
+collision/ChCollisionShape.s: collision/ChCollisionShape.cpp.s
 
-.PHONY : collision/ChCConvexDecomposition.s
+.PHONY : collision/ChCollisionShape.s
 
 # target to generate assembly for a file
-collision/ChCConvexDecomposition.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCConvexDecomposition.cpp.s
-.PHONY : collision/ChCConvexDecomposition.cpp.s
+collision/ChCollisionShape.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionShape.cpp.s
+.PHONY : collision/ChCollisionShape.cpp.s
 
-collision/ChCModelBullet.o: collision/ChCModelBullet.cpp.o
+collision/ChCollisionSystemBullet.o: collision/ChCollisionSystemBullet.cpp.o
 
-.PHONY : collision/ChCModelBullet.o
+.PHONY : collision/ChCollisionSystemBullet.o
 
 # target to build an object file
-collision/ChCModelBullet.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCModelBullet.cpp.o
-.PHONY : collision/ChCModelBullet.cpp.o
+collision/ChCollisionSystemBullet.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionSystemBullet.cpp.o
+.PHONY : collision/ChCollisionSystemBullet.cpp.o
 
-collision/ChCModelBullet.i: collision/ChCModelBullet.cpp.i
+collision/ChCollisionSystemBullet.i: collision/ChCollisionSystemBullet.cpp.i
 
-.PHONY : collision/ChCModelBullet.i
+.PHONY : collision/ChCollisionSystemBullet.i
 
 # target to preprocess a source file
-collision/ChCModelBullet.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCModelBullet.cpp.i
-.PHONY : collision/ChCModelBullet.cpp.i
+collision/ChCollisionSystemBullet.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionSystemBullet.cpp.i
+.PHONY : collision/ChCollisionSystemBullet.cpp.i
 
-collision/ChCModelBullet.s: collision/ChCModelBullet.cpp.s
+collision/ChCollisionSystemBullet.s: collision/ChCollisionSystemBullet.cpp.s
 
-.PHONY : collision/ChCModelBullet.s
+.PHONY : collision/ChCollisionSystemBullet.s
 
 # target to generate assembly for a file
-collision/ChCModelBullet.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCModelBullet.cpp.s
-.PHONY : collision/ChCModelBullet.cpp.s
+collision/ChCollisionSystemBullet.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionSystemBullet.cpp.s
+.PHONY : collision/ChCollisionSystemBullet.cpp.s
+
+collision/ChCollisionUtils.o: collision/ChCollisionUtils.cpp.o
+
+.PHONY : collision/ChCollisionUtils.o
+
+# target to build an object file
+collision/ChCollisionUtils.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionUtils.cpp.o
+.PHONY : collision/ChCollisionUtils.cpp.o
+
+collision/ChCollisionUtils.i: collision/ChCollisionUtils.cpp.i
+
+.PHONY : collision/ChCollisionUtils.i
+
+# target to preprocess a source file
+collision/ChCollisionUtils.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionUtils.cpp.i
+.PHONY : collision/ChCollisionUtils.cpp.i
+
+collision/ChCollisionUtils.s: collision/ChCollisionUtils.cpp.s
+
+.PHONY : collision/ChCollisionUtils.s
+
+# target to generate assembly for a file
+collision/ChCollisionUtils.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChCollisionUtils.cpp.s
+.PHONY : collision/ChCollisionUtils.cpp.s
+
+collision/ChConvexDecomposition.o: collision/ChConvexDecomposition.cpp.o
+
+.PHONY : collision/ChConvexDecomposition.o
+
+# target to build an object file
+collision/ChConvexDecomposition.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChConvexDecomposition.cpp.o
+.PHONY : collision/ChConvexDecomposition.cpp.o
+
+collision/ChConvexDecomposition.i: collision/ChConvexDecomposition.cpp.i
+
+.PHONY : collision/ChConvexDecomposition.i
+
+# target to preprocess a source file
+collision/ChConvexDecomposition.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChConvexDecomposition.cpp.i
+.PHONY : collision/ChConvexDecomposition.cpp.i
+
+collision/ChConvexDecomposition.s: collision/ChConvexDecomposition.cpp.s
+
+.PHONY : collision/ChConvexDecomposition.s
+
+# target to generate assembly for a file
+collision/ChConvexDecomposition.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/ChConvexDecomposition.cpp.s
+.PHONY : collision/ChConvexDecomposition.cpp.s
 
 collision/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.o: collision/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp.o
 
@@ -3533,843 +4235,6 @@ collision/bullet/LinearMath/btSerializer.s: collision/bullet/LinearMath/btSerial
 collision/bullet/LinearMath/btSerializer.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/bullet/LinearMath/btSerializer.cpp.s
 .PHONY : collision/bullet/LinearMath/btSerializer.cpp.s
-
-collision/convexdecomposition/HACD/hacdGraph.o: collision/convexdecomposition/HACD/hacdGraph.cpp.o
-
-.PHONY : collision/convexdecomposition/HACD/hacdGraph.o
-
-# target to build an object file
-collision/convexdecomposition/HACD/hacdGraph.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdGraph.cpp.o
-.PHONY : collision/convexdecomposition/HACD/hacdGraph.cpp.o
-
-collision/convexdecomposition/HACD/hacdGraph.i: collision/convexdecomposition/HACD/hacdGraph.cpp.i
-
-.PHONY : collision/convexdecomposition/HACD/hacdGraph.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACD/hacdGraph.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdGraph.cpp.i
-.PHONY : collision/convexdecomposition/HACD/hacdGraph.cpp.i
-
-collision/convexdecomposition/HACD/hacdGraph.s: collision/convexdecomposition/HACD/hacdGraph.cpp.s
-
-.PHONY : collision/convexdecomposition/HACD/hacdGraph.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACD/hacdGraph.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdGraph.cpp.s
-.PHONY : collision/convexdecomposition/HACD/hacdGraph.cpp.s
-
-collision/convexdecomposition/HACD/hacdHACD.o: collision/convexdecomposition/HACD/hacdHACD.cpp.o
-
-.PHONY : collision/convexdecomposition/HACD/hacdHACD.o
-
-# target to build an object file
-collision/convexdecomposition/HACD/hacdHACD.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdHACD.cpp.o
-.PHONY : collision/convexdecomposition/HACD/hacdHACD.cpp.o
-
-collision/convexdecomposition/HACD/hacdHACD.i: collision/convexdecomposition/HACD/hacdHACD.cpp.i
-
-.PHONY : collision/convexdecomposition/HACD/hacdHACD.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACD/hacdHACD.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdHACD.cpp.i
-.PHONY : collision/convexdecomposition/HACD/hacdHACD.cpp.i
-
-collision/convexdecomposition/HACD/hacdHACD.s: collision/convexdecomposition/HACD/hacdHACD.cpp.s
-
-.PHONY : collision/convexdecomposition/HACD/hacdHACD.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACD/hacdHACD.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdHACD.cpp.s
-.PHONY : collision/convexdecomposition/HACD/hacdHACD.cpp.s
-
-collision/convexdecomposition/HACD/hacdICHull.o: collision/convexdecomposition/HACD/hacdICHull.cpp.o
-
-.PHONY : collision/convexdecomposition/HACD/hacdICHull.o
-
-# target to build an object file
-collision/convexdecomposition/HACD/hacdICHull.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdICHull.cpp.o
-.PHONY : collision/convexdecomposition/HACD/hacdICHull.cpp.o
-
-collision/convexdecomposition/HACD/hacdICHull.i: collision/convexdecomposition/HACD/hacdICHull.cpp.i
-
-.PHONY : collision/convexdecomposition/HACD/hacdICHull.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACD/hacdICHull.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdICHull.cpp.i
-.PHONY : collision/convexdecomposition/HACD/hacdICHull.cpp.i
-
-collision/convexdecomposition/HACD/hacdICHull.s: collision/convexdecomposition/HACD/hacdICHull.cpp.s
-
-.PHONY : collision/convexdecomposition/HACD/hacdICHull.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACD/hacdICHull.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdICHull.cpp.s
-.PHONY : collision/convexdecomposition/HACD/hacdICHull.cpp.s
-
-collision/convexdecomposition/HACD/hacdManifoldMesh.o: collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.o
-
-.PHONY : collision/convexdecomposition/HACD/hacdManifoldMesh.o
-
-# target to build an object file
-collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.o
-.PHONY : collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.o
-
-collision/convexdecomposition/HACD/hacdManifoldMesh.i: collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.i
-
-.PHONY : collision/convexdecomposition/HACD/hacdManifoldMesh.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.i
-.PHONY : collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.i
-
-collision/convexdecomposition/HACD/hacdManifoldMesh.s: collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.s
-
-.PHONY : collision/convexdecomposition/HACD/hacdManifoldMesh.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.s
-.PHONY : collision/convexdecomposition/HACD/hacdManifoldMesh.cpp.s
-
-collision/convexdecomposition/HACD/hacdMeshDecimator.o: collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.o
-
-.PHONY : collision/convexdecomposition/HACD/hacdMeshDecimator.o
-
-# target to build an object file
-collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.o
-.PHONY : collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.o
-
-collision/convexdecomposition/HACD/hacdMeshDecimator.i: collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.i
-
-.PHONY : collision/convexdecomposition/HACD/hacdMeshDecimator.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.i
-.PHONY : collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.i
-
-collision/convexdecomposition/HACD/hacdMeshDecimator.s: collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.s
-
-.PHONY : collision/convexdecomposition/HACD/hacdMeshDecimator.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.s
-.PHONY : collision/convexdecomposition/HACD/hacdMeshDecimator.cpp.s
-
-collision/convexdecomposition/HACD/hacdMicroAllocator.o: collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.o
-
-.PHONY : collision/convexdecomposition/HACD/hacdMicroAllocator.o
-
-# target to build an object file
-collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.o
-.PHONY : collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.o
-
-collision/convexdecomposition/HACD/hacdMicroAllocator.i: collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.i
-
-.PHONY : collision/convexdecomposition/HACD/hacdMicroAllocator.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.i
-.PHONY : collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.i
-
-collision/convexdecomposition/HACD/hacdMicroAllocator.s: collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.s
-
-.PHONY : collision/convexdecomposition/HACD/hacdMicroAllocator.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.s
-.PHONY : collision/convexdecomposition/HACD/hacdMicroAllocator.cpp.s
-
-collision/convexdecomposition/HACD/hacdRaycastMesh.o: collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.o
-
-.PHONY : collision/convexdecomposition/HACD/hacdRaycastMesh.o
-
-# target to build an object file
-collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.o
-.PHONY : collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.o
-
-collision/convexdecomposition/HACD/hacdRaycastMesh.i: collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.i
-
-.PHONY : collision/convexdecomposition/HACD/hacdRaycastMesh.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.i
-.PHONY : collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.i
-
-collision/convexdecomposition/HACD/hacdRaycastMesh.s: collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.s
-
-.PHONY : collision/convexdecomposition/HACD/hacdRaycastMesh.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.s
-.PHONY : collision/convexdecomposition/HACD/hacdRaycastMesh.cpp.s
-
-collision/convexdecomposition/HACDv2/AutoGeometry.o: collision/convexdecomposition/HACDv2/AutoGeometry.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/AutoGeometry.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/AutoGeometry.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/AutoGeometry.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/AutoGeometry.cpp.o
-
-collision/convexdecomposition/HACDv2/AutoGeometry.i: collision/convexdecomposition/HACDv2/AutoGeometry.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/AutoGeometry.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/AutoGeometry.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/AutoGeometry.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/AutoGeometry.cpp.i
-
-collision/convexdecomposition/HACDv2/AutoGeometry.s: collision/convexdecomposition/HACDv2/AutoGeometry.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/AutoGeometry.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/AutoGeometry.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/AutoGeometry.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/AutoGeometry.cpp.s
-
-collision/convexdecomposition/HACDv2/ConvexHull.o: collision/convexdecomposition/HACDv2/ConvexHull.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/ConvexHull.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/ConvexHull.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/ConvexHull.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/ConvexHull.cpp.o
-
-collision/convexdecomposition/HACDv2/ConvexHull.i: collision/convexdecomposition/HACDv2/ConvexHull.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/ConvexHull.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/ConvexHull.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/ConvexHull.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/ConvexHull.cpp.i
-
-collision/convexdecomposition/HACDv2/ConvexHull.s: collision/convexdecomposition/HACDv2/ConvexHull.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/ConvexHull.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/ConvexHull.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/ConvexHull.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/ConvexHull.cpp.s
-
-collision/convexdecomposition/HACDv2/HACD.o: collision/convexdecomposition/HACDv2/HACD.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/HACD.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/HACD.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/HACD.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/HACD.cpp.o
-
-collision/convexdecomposition/HACDv2/HACD.i: collision/convexdecomposition/HACDv2/HACD.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/HACD.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/HACD.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/HACD.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/HACD.cpp.i
-
-collision/convexdecomposition/HACDv2/HACD.s: collision/convexdecomposition/HACDv2/HACD.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/HACD.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/HACD.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/HACD.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/HACD.cpp.s
-
-collision/convexdecomposition/HACDv2/MergeHulls.o: collision/convexdecomposition/HACDv2/MergeHulls.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/MergeHulls.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/MergeHulls.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/MergeHulls.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/MergeHulls.cpp.o
-
-collision/convexdecomposition/HACDv2/MergeHulls.i: collision/convexdecomposition/HACDv2/MergeHulls.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/MergeHulls.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/MergeHulls.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/MergeHulls.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/MergeHulls.cpp.i
-
-collision/convexdecomposition/HACDv2/MergeHulls.s: collision/convexdecomposition/HACDv2/MergeHulls.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/MergeHulls.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/MergeHulls.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/MergeHulls.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/MergeHulls.cpp.s
-
-collision/convexdecomposition/HACDv2/WuQuantizer.o: collision/convexdecomposition/HACDv2/WuQuantizer.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/WuQuantizer.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/WuQuantizer.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/WuQuantizer.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/WuQuantizer.cpp.o
-
-collision/convexdecomposition/HACDv2/WuQuantizer.i: collision/convexdecomposition/HACDv2/WuQuantizer.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/WuQuantizer.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/WuQuantizer.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/WuQuantizer.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/WuQuantizer.cpp.i
-
-collision/convexdecomposition/HACDv2/WuQuantizer.s: collision/convexdecomposition/HACDv2/WuQuantizer.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/WuQuantizer.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/WuQuantizer.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/WuQuantizer.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/WuQuantizer.cpp.s
-
-collision/convexdecomposition/HACDv2/dgConvexHull3d.o: collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgConvexHull3d.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.o
-
-collision/convexdecomposition/HACDv2/dgConvexHull3d.i: collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgConvexHull3d.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.i
-
-collision/convexdecomposition/HACDv2/dgConvexHull3d.s: collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgConvexHull3d.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgConvexHull3d.cpp.s
-
-collision/convexdecomposition/HACDv2/dgGoogol.o: collision/convexdecomposition/HACDv2/dgGoogol.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgGoogol.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgGoogol.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgGoogol.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgGoogol.cpp.o
-
-collision/convexdecomposition/HACDv2/dgGoogol.i: collision/convexdecomposition/HACDv2/dgGoogol.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgGoogol.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgGoogol.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgGoogol.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgGoogol.cpp.i
-
-collision/convexdecomposition/HACDv2/dgGoogol.s: collision/convexdecomposition/HACDv2/dgGoogol.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgGoogol.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgGoogol.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgGoogol.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgGoogol.cpp.s
-
-collision/convexdecomposition/HACDv2/dgMatrix.o: collision/convexdecomposition/HACDv2/dgMatrix.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgMatrix.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgMatrix.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgMatrix.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgMatrix.cpp.o
-
-collision/convexdecomposition/HACDv2/dgMatrix.i: collision/convexdecomposition/HACDv2/dgMatrix.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgMatrix.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgMatrix.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgMatrix.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgMatrix.cpp.i
-
-collision/convexdecomposition/HACDv2/dgMatrix.s: collision/convexdecomposition/HACDv2/dgMatrix.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgMatrix.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgMatrix.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgMatrix.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgMatrix.cpp.s
-
-collision/convexdecomposition/HACDv2/dgMeshEffect.o: collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgMeshEffect.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.o
-
-collision/convexdecomposition/HACDv2/dgMeshEffect.i: collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgMeshEffect.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.i
-
-collision/convexdecomposition/HACDv2/dgMeshEffect.s: collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgMeshEffect.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgMeshEffect.cpp.s
-
-collision/convexdecomposition/HACDv2/dgPolyhedra.o: collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgPolyhedra.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.o
-
-collision/convexdecomposition/HACDv2/dgPolyhedra.i: collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgPolyhedra.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.i
-
-collision/convexdecomposition/HACDv2/dgPolyhedra.s: collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgPolyhedra.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgPolyhedra.cpp.s
-
-collision/convexdecomposition/HACDv2/dgQuaternion.o: collision/convexdecomposition/HACDv2/dgQuaternion.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgQuaternion.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgQuaternion.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgQuaternion.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgQuaternion.cpp.o
-
-collision/convexdecomposition/HACDv2/dgQuaternion.i: collision/convexdecomposition/HACDv2/dgQuaternion.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgQuaternion.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgQuaternion.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgQuaternion.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgQuaternion.cpp.i
-
-collision/convexdecomposition/HACDv2/dgQuaternion.s: collision/convexdecomposition/HACDv2/dgQuaternion.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgQuaternion.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgQuaternion.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgQuaternion.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgQuaternion.cpp.s
-
-collision/convexdecomposition/HACDv2/dgSmallDeterminant.o: collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgSmallDeterminant.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.o
-
-collision/convexdecomposition/HACDv2/dgSmallDeterminant.i: collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgSmallDeterminant.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.i
-
-collision/convexdecomposition/HACDv2/dgSmallDeterminant.s: collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgSmallDeterminant.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgSmallDeterminant.cpp.s
-
-collision/convexdecomposition/HACDv2/dgSphere.o: collision/convexdecomposition/HACDv2/dgSphere.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgSphere.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgSphere.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgSphere.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgSphere.cpp.o
-
-collision/convexdecomposition/HACDv2/dgSphere.i: collision/convexdecomposition/HACDv2/dgSphere.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgSphere.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgSphere.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgSphere.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgSphere.cpp.i
-
-collision/convexdecomposition/HACDv2/dgSphere.s: collision/convexdecomposition/HACDv2/dgSphere.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgSphere.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgSphere.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgSphere.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgSphere.cpp.s
-
-collision/convexdecomposition/HACDv2/dgTree.o: collision/convexdecomposition/HACDv2/dgTree.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgTree.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgTree.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgTree.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgTree.cpp.o
-
-collision/convexdecomposition/HACDv2/dgTree.i: collision/convexdecomposition/HACDv2/dgTree.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgTree.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgTree.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgTree.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgTree.cpp.i
-
-collision/convexdecomposition/HACDv2/dgTree.s: collision/convexdecomposition/HACDv2/dgTree.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgTree.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgTree.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgTree.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgTree.cpp.s
-
-collision/convexdecomposition/HACDv2/dgTypes.o: collision/convexdecomposition/HACDv2/dgTypes.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/dgTypes.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/dgTypes.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgTypes.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/dgTypes.cpp.o
-
-collision/convexdecomposition/HACDv2/dgTypes.i: collision/convexdecomposition/HACDv2/dgTypes.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/dgTypes.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/dgTypes.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgTypes.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/dgTypes.cpp.i
-
-collision/convexdecomposition/HACDv2/dgTypes.s: collision/convexdecomposition/HACDv2/dgTypes.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/dgTypes.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/dgTypes.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/dgTypes.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/dgTypes.cpp.s
-
-collision/convexdecomposition/HACDv2/wavefront.o: collision/convexdecomposition/HACDv2/wavefront.cpp.o
-
-.PHONY : collision/convexdecomposition/HACDv2/wavefront.o
-
-# target to build an object file
-collision/convexdecomposition/HACDv2/wavefront.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/wavefront.cpp.o
-.PHONY : collision/convexdecomposition/HACDv2/wavefront.cpp.o
-
-collision/convexdecomposition/HACDv2/wavefront.i: collision/convexdecomposition/HACDv2/wavefront.cpp.i
-
-.PHONY : collision/convexdecomposition/HACDv2/wavefront.i
-
-# target to preprocess a source file
-collision/convexdecomposition/HACDv2/wavefront.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/wavefront.cpp.i
-.PHONY : collision/convexdecomposition/HACDv2/wavefront.cpp.i
-
-collision/convexdecomposition/HACDv2/wavefront.s: collision/convexdecomposition/HACDv2/wavefront.cpp.s
-
-.PHONY : collision/convexdecomposition/HACDv2/wavefront.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/HACDv2/wavefront.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/HACDv2/wavefront.cpp.s
-.PHONY : collision/convexdecomposition/HACDv2/wavefront.cpp.s
-
-collision/convexdecomposition/JR/NvConcavityVolume.o: collision/convexdecomposition/JR/NvConcavityVolume.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvConcavityVolume.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvConcavityVolume.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvConcavityVolume.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvConcavityVolume.cpp.o
-
-collision/convexdecomposition/JR/NvConcavityVolume.i: collision/convexdecomposition/JR/NvConcavityVolume.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvConcavityVolume.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvConcavityVolume.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvConcavityVolume.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvConcavityVolume.cpp.i
-
-collision/convexdecomposition/JR/NvConcavityVolume.s: collision/convexdecomposition/JR/NvConcavityVolume.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvConcavityVolume.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvConcavityVolume.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvConcavityVolume.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvConcavityVolume.cpp.s
-
-collision/convexdecomposition/JR/NvConvexDecomposition.o: collision/convexdecomposition/JR/NvConvexDecomposition.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvConvexDecomposition.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvConvexDecomposition.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvConvexDecomposition.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvConvexDecomposition.cpp.o
-
-collision/convexdecomposition/JR/NvConvexDecomposition.i: collision/convexdecomposition/JR/NvConvexDecomposition.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvConvexDecomposition.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvConvexDecomposition.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvConvexDecomposition.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvConvexDecomposition.cpp.i
-
-collision/convexdecomposition/JR/NvConvexDecomposition.s: collision/convexdecomposition/JR/NvConvexDecomposition.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvConvexDecomposition.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvConvexDecomposition.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvConvexDecomposition.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvConvexDecomposition.cpp.s
-
-collision/convexdecomposition/JR/NvFloatMath.o: collision/convexdecomposition/JR/NvFloatMath.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvFloatMath.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvFloatMath.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvFloatMath.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvFloatMath.cpp.o
-
-collision/convexdecomposition/JR/NvFloatMath.i: collision/convexdecomposition/JR/NvFloatMath.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvFloatMath.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvFloatMath.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvFloatMath.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvFloatMath.cpp.i
-
-collision/convexdecomposition/JR/NvFloatMath.s: collision/convexdecomposition/JR/NvFloatMath.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvFloatMath.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvFloatMath.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvFloatMath.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvFloatMath.cpp.s
-
-collision/convexdecomposition/JR/NvMeshIslandGeneration.o: collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvMeshIslandGeneration.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.o
-
-collision/convexdecomposition/JR/NvMeshIslandGeneration.i: collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvMeshIslandGeneration.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.i
-
-collision/convexdecomposition/JR/NvMeshIslandGeneration.s: collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvMeshIslandGeneration.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvMeshIslandGeneration.cpp.s
-
-collision/convexdecomposition/JR/NvRayCast.o: collision/convexdecomposition/JR/NvRayCast.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvRayCast.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvRayCast.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvRayCast.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvRayCast.cpp.o
-
-collision/convexdecomposition/JR/NvRayCast.i: collision/convexdecomposition/JR/NvRayCast.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvRayCast.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvRayCast.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvRayCast.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvRayCast.cpp.i
-
-collision/convexdecomposition/JR/NvRayCast.s: collision/convexdecomposition/JR/NvRayCast.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvRayCast.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvRayCast.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvRayCast.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvRayCast.cpp.s
-
-collision/convexdecomposition/JR/NvRemoveTjunctions.o: collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvRemoveTjunctions.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.o
-
-collision/convexdecomposition/JR/NvRemoveTjunctions.i: collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvRemoveTjunctions.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.i
-
-collision/convexdecomposition/JR/NvRemoveTjunctions.s: collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvRemoveTjunctions.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvRemoveTjunctions.cpp.s
-
-collision/convexdecomposition/JR/NvSplitMesh.o: collision/convexdecomposition/JR/NvSplitMesh.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvSplitMesh.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvSplitMesh.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvSplitMesh.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvSplitMesh.cpp.o
-
-collision/convexdecomposition/JR/NvSplitMesh.i: collision/convexdecomposition/JR/NvSplitMesh.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvSplitMesh.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvSplitMesh.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvSplitMesh.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvSplitMesh.cpp.i
-
-collision/convexdecomposition/JR/NvSplitMesh.s: collision/convexdecomposition/JR/NvSplitMesh.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvSplitMesh.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvSplitMesh.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvSplitMesh.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvSplitMesh.cpp.s
-
-collision/convexdecomposition/JR/NvStanHull.o: collision/convexdecomposition/JR/NvStanHull.cpp.o
-
-.PHONY : collision/convexdecomposition/JR/NvStanHull.o
-
-# target to build an object file
-collision/convexdecomposition/JR/NvStanHull.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvStanHull.cpp.o
-.PHONY : collision/convexdecomposition/JR/NvStanHull.cpp.o
-
-collision/convexdecomposition/JR/NvStanHull.i: collision/convexdecomposition/JR/NvStanHull.cpp.i
-
-.PHONY : collision/convexdecomposition/JR/NvStanHull.i
-
-# target to preprocess a source file
-collision/convexdecomposition/JR/NvStanHull.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvStanHull.cpp.i
-.PHONY : collision/convexdecomposition/JR/NvStanHull.cpp.i
-
-collision/convexdecomposition/JR/NvStanHull.s: collision/convexdecomposition/JR/NvStanHull.cpp.s
-
-.PHONY : collision/convexdecomposition/JR/NvStanHull.s
-
-# target to generate assembly for a file
-collision/convexdecomposition/JR/NvStanHull.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/collision/convexdecomposition/JR/NvStanHull.cpp.s
-.PHONY : collision/convexdecomposition/JR/NvStanHull.cpp.s
 
 collision/edgetempest/ChCAABB.o: collision/edgetempest/ChCAABB.cpp.o
 
@@ -8799,33 +8664,6 @@ physics/ChController.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChController.cpp.s
 .PHONY : physics/ChController.cpp.s
 
-physics/ChControls.o: physics/ChControls.cpp.o
-
-.PHONY : physics/ChControls.o
-
-# target to build an object file
-physics/ChControls.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChControls.cpp.o
-.PHONY : physics/ChControls.cpp.o
-
-physics/ChControls.i: physics/ChControls.cpp.i
-
-.PHONY : physics/ChControls.i
-
-# target to preprocess a source file
-physics/ChControls.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChControls.cpp.i
-.PHONY : physics/ChControls.cpp.i
-
-physics/ChControls.s: physics/ChControls.cpp.s
-
-.PHONY : physics/ChControls.s
-
-# target to generate assembly for a file
-physics/ChControls.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChControls.cpp.s
-.PHONY : physics/ChControls.cpp.s
-
 physics/ChConveyor.o: physics/ChConveyor.cpp.o
 
 .PHONY : physics/ChConveyor.o
@@ -8879,33 +8717,6 @@ physics/ChForce.s: physics/ChForce.cpp.s
 physics/ChForce.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChForce.cpp.s
 .PHONY : physics/ChForce.cpp.s
-
-physics/ChGenericConstraint.o: physics/ChGenericConstraint.cpp.o
-
-.PHONY : physics/ChGenericConstraint.o
-
-# target to build an object file
-physics/ChGenericConstraint.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChGenericConstraint.cpp.o
-.PHONY : physics/ChGenericConstraint.cpp.o
-
-physics/ChGenericConstraint.i: physics/ChGenericConstraint.cpp.i
-
-.PHONY : physics/ChGenericConstraint.i
-
-# target to preprocess a source file
-physics/ChGenericConstraint.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChGenericConstraint.cpp.i
-.PHONY : physics/ChGenericConstraint.cpp.i
-
-physics/ChGenericConstraint.s: physics/ChGenericConstraint.cpp.s
-
-.PHONY : physics/ChGenericConstraint.s
-
-# target to generate assembly for a file
-physics/ChGenericConstraint.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChGenericConstraint.cpp.s
-.PHONY : physics/ChGenericConstraint.cpp.s
 
 physics/ChIndexedNodes.o: physics/ChIndexedNodes.cpp.o
 
@@ -10176,6 +9987,33 @@ physics/ChMarker.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChMarker.cpp.s
 .PHONY : physics/ChMarker.cpp.s
 
+physics/ChMaterialSurface.o: physics/ChMaterialSurface.cpp.o
+
+.PHONY : physics/ChMaterialSurface.o
+
+# target to build an object file
+physics/ChMaterialSurface.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChMaterialSurface.cpp.o
+.PHONY : physics/ChMaterialSurface.cpp.o
+
+physics/ChMaterialSurface.i: physics/ChMaterialSurface.cpp.i
+
+.PHONY : physics/ChMaterialSurface.i
+
+# target to preprocess a source file
+physics/ChMaterialSurface.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChMaterialSurface.cpp.i
+.PHONY : physics/ChMaterialSurface.cpp.i
+
+physics/ChMaterialSurface.s: physics/ChMaterialSurface.cpp.s
+
+.PHONY : physics/ChMaterialSurface.s
+
+# target to generate assembly for a file
+physics/ChMaterialSurface.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChMaterialSurface.cpp.s
+.PHONY : physics/ChMaterialSurface.cpp.s
+
 physics/ChMaterialSurfaceNSC.o: physics/ChMaterialSurfaceNSC.cpp.o
 
 .PHONY : physics/ChMaterialSurfaceNSC.o
@@ -10392,33 +10230,6 @@ physics/ChPhysicsItem.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChPhysicsItem.cpp.s
 .PHONY : physics/ChPhysicsItem.cpp.s
 
-physics/ChProbe.o: physics/ChProbe.cpp.o
-
-.PHONY : physics/ChProbe.o
-
-# target to build an object file
-physics/ChProbe.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChProbe.cpp.o
-.PHONY : physics/ChProbe.cpp.o
-
-physics/ChProbe.i: physics/ChProbe.cpp.i
-
-.PHONY : physics/ChProbe.i
-
-# target to preprocess a source file
-physics/ChProbe.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChProbe.cpp.i
-.PHONY : physics/ChProbe.cpp.i
-
-physics/ChProbe.s: physics/ChProbe.cpp.s
-
-.PHONY : physics/ChProbe.s
-
-# target to generate assembly for a file
-physics/ChProbe.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChProbe.cpp.s
-.PHONY : physics/ChProbe.cpp.s
-
 physics/ChProximityContainer.o: physics/ChProximityContainer.cpp.o
 
 .PHONY : physics/ChProximityContainer.o
@@ -10472,33 +10283,6 @@ physics/ChProximityContainerSPH.s: physics/ChProximityContainerSPH.cpp.s
 physics/ChProximityContainerSPH.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChProximityContainerSPH.cpp.s
 .PHONY : physics/ChProximityContainerSPH.cpp.s
-
-physics/ChRef.o: physics/ChRef.cpp.o
-
-.PHONY : physics/ChRef.o
-
-# target to build an object file
-physics/ChRef.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChRef.cpp.o
-.PHONY : physics/ChRef.cpp.o
-
-physics/ChRef.i: physics/ChRef.cpp.i
-
-.PHONY : physics/ChRef.i
-
-# target to preprocess a source file
-physics/ChRef.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChRef.cpp.i
-.PHONY : physics/ChRef.cpp.i
-
-physics/ChRef.s: physics/ChRef.cpp.s
-
-.PHONY : physics/ChRef.s
-
-# target to generate assembly for a file
-physics/ChRef.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono/CMakeFiles/ChronoEngine.dir/build.make src/chrono/CMakeFiles/ChronoEngine.dir/physics/ChRef.cpp.s
-.PHONY : physics/ChRef.cpp.s
 
 physics/ChShaft.o: physics/ChShaft.cpp.o
 
@@ -12378,6 +12162,75 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... ChronoEngine"
+	@echo "... __/chrono_thirdparty/HACD/hacdGraph.o"
+	@echo "... __/chrono_thirdparty/HACD/hacdGraph.i"
+	@echo "... __/chrono_thirdparty/HACD/hacdGraph.s"
+	@echo "... __/chrono_thirdparty/HACD/hacdHACD.o"
+	@echo "... __/chrono_thirdparty/HACD/hacdHACD.i"
+	@echo "... __/chrono_thirdparty/HACD/hacdHACD.s"
+	@echo "... __/chrono_thirdparty/HACD/hacdICHull.o"
+	@echo "... __/chrono_thirdparty/HACD/hacdICHull.i"
+	@echo "... __/chrono_thirdparty/HACD/hacdICHull.s"
+	@echo "... __/chrono_thirdparty/HACD/hacdManifoldMesh.o"
+	@echo "... __/chrono_thirdparty/HACD/hacdManifoldMesh.i"
+	@echo "... __/chrono_thirdparty/HACD/hacdManifoldMesh.s"
+	@echo "... __/chrono_thirdparty/HACD/hacdMeshDecimator.o"
+	@echo "... __/chrono_thirdparty/HACD/hacdMeshDecimator.i"
+	@echo "... __/chrono_thirdparty/HACD/hacdMeshDecimator.s"
+	@echo "... __/chrono_thirdparty/HACD/hacdMicroAllocator.o"
+	@echo "... __/chrono_thirdparty/HACD/hacdMicroAllocator.i"
+	@echo "... __/chrono_thirdparty/HACD/hacdMicroAllocator.s"
+	@echo "... __/chrono_thirdparty/HACD/hacdRaycastMesh.o"
+	@echo "... __/chrono_thirdparty/HACD/hacdRaycastMesh.i"
+	@echo "... __/chrono_thirdparty/HACD/hacdRaycastMesh.s"
+	@echo "... __/chrono_thirdparty/HACDv2/AutoGeometry.o"
+	@echo "... __/chrono_thirdparty/HACDv2/AutoGeometry.i"
+	@echo "... __/chrono_thirdparty/HACDv2/AutoGeometry.s"
+	@echo "... __/chrono_thirdparty/HACDv2/ConvexHull.o"
+	@echo "... __/chrono_thirdparty/HACDv2/ConvexHull.i"
+	@echo "... __/chrono_thirdparty/HACDv2/ConvexHull.s"
+	@echo "... __/chrono_thirdparty/HACDv2/HACD.o"
+	@echo "... __/chrono_thirdparty/HACDv2/HACD.i"
+	@echo "... __/chrono_thirdparty/HACDv2/HACD.s"
+	@echo "... __/chrono_thirdparty/HACDv2/MergeHulls.o"
+	@echo "... __/chrono_thirdparty/HACDv2/MergeHulls.i"
+	@echo "... __/chrono_thirdparty/HACDv2/MergeHulls.s"
+	@echo "... __/chrono_thirdparty/HACDv2/WuQuantizer.o"
+	@echo "... __/chrono_thirdparty/HACDv2/WuQuantizer.i"
+	@echo "... __/chrono_thirdparty/HACDv2/WuQuantizer.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgConvexHull3d.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgConvexHull3d.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgConvexHull3d.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgGoogol.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgGoogol.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgGoogol.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgMatrix.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgMatrix.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgMatrix.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgMeshEffect.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgMeshEffect.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgMeshEffect.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgPolyhedra.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgPolyhedra.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgPolyhedra.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgQuaternion.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgQuaternion.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgQuaternion.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgSmallDeterminant.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgSmallDeterminant.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgSmallDeterminant.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgSphere.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgSphere.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgSphere.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgTree.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgTree.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgTree.s"
+	@echo "... __/chrono_thirdparty/HACDv2/dgTypes.o"
+	@echo "... __/chrono_thirdparty/HACDv2/dgTypes.i"
+	@echo "... __/chrono_thirdparty/HACDv2/dgTypes.s"
+	@echo "... __/chrono_thirdparty/HACDv2/wavefront.o"
+	@echo "... __/chrono_thirdparty/HACDv2/wavefront.i"
+	@echo "... __/chrono_thirdparty/HACDv2/wavefront.s"
 	@echo "... __/chrono_thirdparty/tinyobjloader/tiny_obj_loader.o"
 	@echo "... __/chrono_thirdparty/tinyobjloader/tiny_obj_loader.i"
 	@echo "... __/chrono_thirdparty/tinyobjloader/tiny_obj_loader.s"
@@ -12387,6 +12240,9 @@ help:
 	@echo "... assets/ChAssetLevel.o"
 	@echo "... assets/ChAssetLevel.i"
 	@echo "... assets/ChAssetLevel.s"
+	@echo "... assets/ChBarrelShape.o"
+	@echo "... assets/ChBarrelShape.i"
+	@echo "... assets/ChBarrelShape.s"
 	@echo "... assets/ChBoxShape.o"
 	@echo "... assets/ChBoxShape.i"
 	@echo "... assets/ChBoxShape.s"
@@ -12450,27 +12306,33 @@ help:
 	@echo "... assets/ChTriangleMeshShape.o"
 	@echo "... assets/ChTriangleMeshShape.i"
 	@echo "... assets/ChTriangleMeshShape.s"
+	@echo "... assets/ChVisualMaterial.o"
+	@echo "... assets/ChVisualMaterial.i"
+	@echo "... assets/ChVisualMaterial.s"
 	@echo "... assets/ChVisualization.o"
 	@echo "... assets/ChVisualization.i"
 	@echo "... assets/ChVisualization.s"
-	@echo "... collision/ChCCollisionInfo.o"
-	@echo "... collision/ChCCollisionInfo.i"
-	@echo "... collision/ChCCollisionInfo.s"
-	@echo "... collision/ChCCollisionModel.o"
-	@echo "... collision/ChCCollisionModel.i"
-	@echo "... collision/ChCCollisionModel.s"
-	@echo "... collision/ChCCollisionSystemBullet.o"
-	@echo "... collision/ChCCollisionSystemBullet.i"
-	@echo "... collision/ChCCollisionSystemBullet.s"
-	@echo "... collision/ChCCollisionUtils.o"
-	@echo "... collision/ChCCollisionUtils.i"
-	@echo "... collision/ChCCollisionUtils.s"
-	@echo "... collision/ChCConvexDecomposition.o"
-	@echo "... collision/ChCConvexDecomposition.i"
-	@echo "... collision/ChCConvexDecomposition.s"
-	@echo "... collision/ChCModelBullet.o"
-	@echo "... collision/ChCModelBullet.i"
-	@echo "... collision/ChCModelBullet.s"
+	@echo "... collision/ChCollisionInfo.o"
+	@echo "... collision/ChCollisionInfo.i"
+	@echo "... collision/ChCollisionInfo.s"
+	@echo "... collision/ChCollisionModel.o"
+	@echo "... collision/ChCollisionModel.i"
+	@echo "... collision/ChCollisionModel.s"
+	@echo "... collision/ChCollisionModelBullet.o"
+	@echo "... collision/ChCollisionModelBullet.i"
+	@echo "... collision/ChCollisionModelBullet.s"
+	@echo "... collision/ChCollisionShape.o"
+	@echo "... collision/ChCollisionShape.i"
+	@echo "... collision/ChCollisionShape.s"
+	@echo "... collision/ChCollisionSystemBullet.o"
+	@echo "... collision/ChCollisionSystemBullet.i"
+	@echo "... collision/ChCollisionSystemBullet.s"
+	@echo "... collision/ChCollisionUtils.o"
+	@echo "... collision/ChCollisionUtils.i"
+	@echo "... collision/ChCollisionUtils.s"
+	@echo "... collision/ChConvexDecomposition.o"
+	@echo "... collision/ChConvexDecomposition.i"
+	@echo "... collision/ChConvexDecomposition.s"
 	@echo "... collision/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.o"
 	@echo "... collision/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.i"
 	@echo "... collision/bullet/BulletCollision/BroadphaseCollision/btAxisSweep3.s"
@@ -12747,99 +12609,6 @@ help:
 	@echo "... collision/bullet/LinearMath/btSerializer.o"
 	@echo "... collision/bullet/LinearMath/btSerializer.i"
 	@echo "... collision/bullet/LinearMath/btSerializer.s"
-	@echo "... collision/convexdecomposition/HACD/hacdGraph.o"
-	@echo "... collision/convexdecomposition/HACD/hacdGraph.i"
-	@echo "... collision/convexdecomposition/HACD/hacdGraph.s"
-	@echo "... collision/convexdecomposition/HACD/hacdHACD.o"
-	@echo "... collision/convexdecomposition/HACD/hacdHACD.i"
-	@echo "... collision/convexdecomposition/HACD/hacdHACD.s"
-	@echo "... collision/convexdecomposition/HACD/hacdICHull.o"
-	@echo "... collision/convexdecomposition/HACD/hacdICHull.i"
-	@echo "... collision/convexdecomposition/HACD/hacdICHull.s"
-	@echo "... collision/convexdecomposition/HACD/hacdManifoldMesh.o"
-	@echo "... collision/convexdecomposition/HACD/hacdManifoldMesh.i"
-	@echo "... collision/convexdecomposition/HACD/hacdManifoldMesh.s"
-	@echo "... collision/convexdecomposition/HACD/hacdMeshDecimator.o"
-	@echo "... collision/convexdecomposition/HACD/hacdMeshDecimator.i"
-	@echo "... collision/convexdecomposition/HACD/hacdMeshDecimator.s"
-	@echo "... collision/convexdecomposition/HACD/hacdMicroAllocator.o"
-	@echo "... collision/convexdecomposition/HACD/hacdMicroAllocator.i"
-	@echo "... collision/convexdecomposition/HACD/hacdMicroAllocator.s"
-	@echo "... collision/convexdecomposition/HACD/hacdRaycastMesh.o"
-	@echo "... collision/convexdecomposition/HACD/hacdRaycastMesh.i"
-	@echo "... collision/convexdecomposition/HACD/hacdRaycastMesh.s"
-	@echo "... collision/convexdecomposition/HACDv2/AutoGeometry.o"
-	@echo "... collision/convexdecomposition/HACDv2/AutoGeometry.i"
-	@echo "... collision/convexdecomposition/HACDv2/AutoGeometry.s"
-	@echo "... collision/convexdecomposition/HACDv2/ConvexHull.o"
-	@echo "... collision/convexdecomposition/HACDv2/ConvexHull.i"
-	@echo "... collision/convexdecomposition/HACDv2/ConvexHull.s"
-	@echo "... collision/convexdecomposition/HACDv2/HACD.o"
-	@echo "... collision/convexdecomposition/HACDv2/HACD.i"
-	@echo "... collision/convexdecomposition/HACDv2/HACD.s"
-	@echo "... collision/convexdecomposition/HACDv2/MergeHulls.o"
-	@echo "... collision/convexdecomposition/HACDv2/MergeHulls.i"
-	@echo "... collision/convexdecomposition/HACDv2/MergeHulls.s"
-	@echo "... collision/convexdecomposition/HACDv2/WuQuantizer.o"
-	@echo "... collision/convexdecomposition/HACDv2/WuQuantizer.i"
-	@echo "... collision/convexdecomposition/HACDv2/WuQuantizer.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgConvexHull3d.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgConvexHull3d.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgConvexHull3d.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgGoogol.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgGoogol.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgGoogol.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgMatrix.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgMatrix.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgMatrix.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgMeshEffect.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgMeshEffect.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgMeshEffect.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgPolyhedra.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgPolyhedra.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgPolyhedra.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgQuaternion.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgQuaternion.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgQuaternion.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgSmallDeterminant.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgSmallDeterminant.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgSmallDeterminant.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgSphere.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgSphere.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgSphere.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgTree.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgTree.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgTree.s"
-	@echo "... collision/convexdecomposition/HACDv2/dgTypes.o"
-	@echo "... collision/convexdecomposition/HACDv2/dgTypes.i"
-	@echo "... collision/convexdecomposition/HACDv2/dgTypes.s"
-	@echo "... collision/convexdecomposition/HACDv2/wavefront.o"
-	@echo "... collision/convexdecomposition/HACDv2/wavefront.i"
-	@echo "... collision/convexdecomposition/HACDv2/wavefront.s"
-	@echo "... collision/convexdecomposition/JR/NvConcavityVolume.o"
-	@echo "... collision/convexdecomposition/JR/NvConcavityVolume.i"
-	@echo "... collision/convexdecomposition/JR/NvConcavityVolume.s"
-	@echo "... collision/convexdecomposition/JR/NvConvexDecomposition.o"
-	@echo "... collision/convexdecomposition/JR/NvConvexDecomposition.i"
-	@echo "... collision/convexdecomposition/JR/NvConvexDecomposition.s"
-	@echo "... collision/convexdecomposition/JR/NvFloatMath.o"
-	@echo "... collision/convexdecomposition/JR/NvFloatMath.i"
-	@echo "... collision/convexdecomposition/JR/NvFloatMath.s"
-	@echo "... collision/convexdecomposition/JR/NvMeshIslandGeneration.o"
-	@echo "... collision/convexdecomposition/JR/NvMeshIslandGeneration.i"
-	@echo "... collision/convexdecomposition/JR/NvMeshIslandGeneration.s"
-	@echo "... collision/convexdecomposition/JR/NvRayCast.o"
-	@echo "... collision/convexdecomposition/JR/NvRayCast.i"
-	@echo "... collision/convexdecomposition/JR/NvRayCast.s"
-	@echo "... collision/convexdecomposition/JR/NvRemoveTjunctions.o"
-	@echo "... collision/convexdecomposition/JR/NvRemoveTjunctions.i"
-	@echo "... collision/convexdecomposition/JR/NvRemoveTjunctions.s"
-	@echo "... collision/convexdecomposition/JR/NvSplitMesh.o"
-	@echo "... collision/convexdecomposition/JR/NvSplitMesh.i"
-	@echo "... collision/convexdecomposition/JR/NvSplitMesh.s"
-	@echo "... collision/convexdecomposition/JR/NvStanHull.o"
-	@echo "... collision/convexdecomposition/JR/NvStanHull.i"
-	@echo "... collision/convexdecomposition/JR/NvStanHull.s"
 	@echo "... collision/edgetempest/ChCAABB.o"
 	@echo "... collision/edgetempest/ChCAABB.i"
 	@echo "... collision/edgetempest/ChCAABB.s"
@@ -13332,18 +13101,12 @@ help:
 	@echo "... physics/ChController.o"
 	@echo "... physics/ChController.i"
 	@echo "... physics/ChController.s"
-	@echo "... physics/ChControls.o"
-	@echo "... physics/ChControls.i"
-	@echo "... physics/ChControls.s"
 	@echo "... physics/ChConveyor.o"
 	@echo "... physics/ChConveyor.i"
 	@echo "... physics/ChConveyor.s"
 	@echo "... physics/ChForce.o"
 	@echo "... physics/ChForce.i"
 	@echo "... physics/ChForce.s"
-	@echo "... physics/ChGenericConstraint.o"
-	@echo "... physics/ChGenericConstraint.i"
-	@echo "... physics/ChGenericConstraint.s"
 	@echo "... physics/ChIndexedNodes.o"
 	@echo "... physics/ChIndexedNodes.i"
 	@echo "... physics/ChIndexedNodes.s"
@@ -13485,6 +13248,9 @@ help:
 	@echo "... physics/ChMarker.o"
 	@echo "... physics/ChMarker.i"
 	@echo "... physics/ChMarker.s"
+	@echo "... physics/ChMaterialSurface.o"
+	@echo "... physics/ChMaterialSurface.i"
+	@echo "... physics/ChMaterialSurface.s"
 	@echo "... physics/ChMaterialSurfaceNSC.o"
 	@echo "... physics/ChMaterialSurfaceNSC.i"
 	@echo "... physics/ChMaterialSurfaceNSC.s"
@@ -13509,18 +13275,12 @@ help:
 	@echo "... physics/ChPhysicsItem.o"
 	@echo "... physics/ChPhysicsItem.i"
 	@echo "... physics/ChPhysicsItem.s"
-	@echo "... physics/ChProbe.o"
-	@echo "... physics/ChProbe.i"
-	@echo "... physics/ChProbe.s"
 	@echo "... physics/ChProximityContainer.o"
 	@echo "... physics/ChProximityContainer.i"
 	@echo "... physics/ChProximityContainer.s"
 	@echo "... physics/ChProximityContainerSPH.o"
 	@echo "... physics/ChProximityContainerSPH.i"
 	@echo "... physics/ChProximityContainerSPH.s"
-	@echo "... physics/ChRef.o"
-	@echo "... physics/ChRef.i"
-	@echo "... physics/ChRef.s"
 	@echo "... physics/ChShaft.o"
 	@echo "... physics/ChShaft.i"
 	@echo "... physics/ChShaft.s"

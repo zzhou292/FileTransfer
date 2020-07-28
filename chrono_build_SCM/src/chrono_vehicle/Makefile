@@ -68,25 +68,13 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
+CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jason/Desktop/FileTransfer/chrono_build_SCM
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -121,6 +109,18 @@ package_source:
 package_source/fast: package_source
 
 .PHONY : package_source/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target install
 install: preinstall
@@ -197,6 +197,21 @@ preinstall/fast:
 depend:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/rule:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/rule
+.PHONY : src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/rule
+
+# Convenience name for target.
+ChronoEngine_vehicle_irrlicht: src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/rule
+
+.PHONY : ChronoEngine_vehicle_irrlicht
+
+# fast build rule for target.
+ChronoEngine_vehicle_irrlicht/fast:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build
+.PHONY : ChronoEngine_vehicle_irrlicht/fast
 
 # Convenience name for target.
 src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/rule:
@@ -429,6 +444,33 @@ ChVehicleModelData.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/ChVehicleModelData.cpp.s
 .PHONY : ChVehicleModelData.cpp.s
 
+ChWorldFrame.o: ChWorldFrame.cpp.o
+
+.PHONY : ChWorldFrame.o
+
+# target to build an object file
+ChWorldFrame.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/ChWorldFrame.cpp.o
+.PHONY : ChWorldFrame.cpp.o
+
+ChWorldFrame.i: ChWorldFrame.cpp.i
+
+.PHONY : ChWorldFrame.i
+
+# target to preprocess a source file
+ChWorldFrame.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/ChWorldFrame.cpp.i
+.PHONY : ChWorldFrame.cpp.i
+
+ChWorldFrame.s: ChWorldFrame.cpp.s
+
+.PHONY : ChWorldFrame.s
+
+# target to generate assembly for a file
+ChWorldFrame.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/ChWorldFrame.cpp.s
+.PHONY : ChWorldFrame.cpp.s
+
 __/chrono_thirdparty/Easy_BMP/EasyBMP.o: __/chrono_thirdparty/Easy_BMP/EasyBMP.cpp.o
 
 .PHONY : __/chrono_thirdparty/Easy_BMP/EasyBMP.o
@@ -482,6 +524,33 @@ chassis/ChRigidChassis.s: chassis/ChRigidChassis.cpp.s
 chassis/ChRigidChassis.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/chassis/ChRigidChassis.cpp.s
 .PHONY : chassis/ChRigidChassis.cpp.s
+
+chassis/ChTorsionChassis.o: chassis/ChTorsionChassis.cpp.o
+
+.PHONY : chassis/ChTorsionChassis.o
+
+# target to build an object file
+chassis/ChTorsionChassis.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/chassis/ChTorsionChassis.cpp.o
+.PHONY : chassis/ChTorsionChassis.cpp.o
+
+chassis/ChTorsionChassis.i: chassis/ChTorsionChassis.cpp.i
+
+.PHONY : chassis/ChTorsionChassis.i
+
+# target to preprocess a source file
+chassis/ChTorsionChassis.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/chassis/ChTorsionChassis.cpp.i
+.PHONY : chassis/ChTorsionChassis.cpp.i
+
+chassis/ChTorsionChassis.s: chassis/ChTorsionChassis.cpp.s
+
+.PHONY : chassis/ChTorsionChassis.s
+
+# target to generate assembly for a file
+chassis/ChTorsionChassis.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/chassis/ChTorsionChassis.cpp.s
+.PHONY : chassis/ChTorsionChassis.cpp.s
 
 chassis/RigidChassis.o: chassis/RigidChassis.cpp.o
 
@@ -570,7 +639,7 @@ driver/ChIrrGuiDriver.o: driver/ChIrrGuiDriver.cpp.o
 
 # target to build an object file
 driver/ChIrrGuiDriver.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/driver/ChIrrGuiDriver.cpp.o
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/driver/ChIrrGuiDriver.cpp.o
 .PHONY : driver/ChIrrGuiDriver.cpp.o
 
 driver/ChIrrGuiDriver.i: driver/ChIrrGuiDriver.cpp.i
@@ -579,7 +648,7 @@ driver/ChIrrGuiDriver.i: driver/ChIrrGuiDriver.cpp.i
 
 # target to preprocess a source file
 driver/ChIrrGuiDriver.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/driver/ChIrrGuiDriver.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/driver/ChIrrGuiDriver.cpp.i
 .PHONY : driver/ChIrrGuiDriver.cpp.i
 
 driver/ChIrrGuiDriver.s: driver/ChIrrGuiDriver.cpp.s
@@ -588,7 +657,7 @@ driver/ChIrrGuiDriver.s: driver/ChIrrGuiDriver.cpp.s
 
 # target to generate assembly for a file
 driver/ChIrrGuiDriver.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/driver/ChIrrGuiDriver.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/driver/ChIrrGuiDriver.cpp.s
 .PHONY : driver/ChIrrGuiDriver.cpp.s
 
 driver/ChPathFollowerACCDriver.o: driver/ChPathFollowerACCDriver.cpp.o
@@ -2082,7 +2151,7 @@ tracked_vehicle/test_rig/ChIrrGuiDriverTTR.o: tracked_vehicle/test_rig/ChIrrGuiD
 
 # target to build an object file
 tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.o
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.o
 .PHONY : tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.o
 
 tracked_vehicle/test_rig/ChIrrGuiDriverTTR.i: tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.i
@@ -2091,7 +2160,7 @@ tracked_vehicle/test_rig/ChIrrGuiDriverTTR.i: tracked_vehicle/test_rig/ChIrrGuiD
 
 # target to preprocess a source file
 tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.i
 .PHONY : tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.i
 
 tracked_vehicle/test_rig/ChIrrGuiDriverTTR.s: tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.s
@@ -2100,7 +2169,7 @@ tracked_vehicle/test_rig/ChIrrGuiDriverTTR.s: tracked_vehicle/test_rig/ChIrrGuiD
 
 # target to generate assembly for a file
 tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.s
 .PHONY : tracked_vehicle/test_rig/ChIrrGuiDriverTTR.cpp.s
 
 tracked_vehicle/test_rig/ChRoadDriverTTR.o: tracked_vehicle/test_rig/ChRoadDriverTTR.cpp.o
@@ -2649,7 +2718,7 @@ tracked_vehicle/utils/ChTrackedVehicleIrrApp.o: tracked_vehicle/utils/ChTrackedV
 
 # target to build an object file
 tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.o
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.o
 .PHONY : tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.o
 
 tracked_vehicle/utils/ChTrackedVehicleIrrApp.i: tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.i
@@ -2658,7 +2727,7 @@ tracked_vehicle/utils/ChTrackedVehicleIrrApp.i: tracked_vehicle/utils/ChTrackedV
 
 # target to preprocess a source file
 tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.i
 .PHONY : tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.i
 
 tracked_vehicle/utils/ChTrackedVehicleIrrApp.s: tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.s
@@ -2667,7 +2736,7 @@ tracked_vehicle/utils/ChTrackedVehicleIrrApp.s: tracked_vehicle/utils/ChTrackedV
 
 # target to generate assembly for a file
 tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.s
 .PHONY : tracked_vehicle/utils/ChTrackedVehicleIrrApp.cpp.s
 
 tracked_vehicle/vehicle/TrackedVehicle.o: tracked_vehicle/vehicle/TrackedVehicle.cpp.o
@@ -2811,7 +2880,7 @@ utils/ChVehicleIrrApp.o: utils/ChVehicleIrrApp.cpp.o
 
 # target to build an object file
 utils/ChVehicleIrrApp.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/utils/ChVehicleIrrApp.cpp.o
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/utils/ChVehicleIrrApp.cpp.o
 .PHONY : utils/ChVehicleIrrApp.cpp.o
 
 utils/ChVehicleIrrApp.i: utils/ChVehicleIrrApp.cpp.i
@@ -2820,7 +2889,7 @@ utils/ChVehicleIrrApp.i: utils/ChVehicleIrrApp.cpp.i
 
 # target to preprocess a source file
 utils/ChVehicleIrrApp.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/utils/ChVehicleIrrApp.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/utils/ChVehicleIrrApp.cpp.i
 .PHONY : utils/ChVehicleIrrApp.cpp.i
 
 utils/ChVehicleIrrApp.s: utils/ChVehicleIrrApp.cpp.s
@@ -2829,7 +2898,7 @@ utils/ChVehicleIrrApp.s: utils/ChVehicleIrrApp.cpp.s
 
 # target to generate assembly for a file
 utils/ChVehicleIrrApp.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/utils/ChVehicleIrrApp.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/utils/ChVehicleIrrApp.cpp.s
 .PHONY : utils/ChVehicleIrrApp.cpp.s
 
 utils/ChVehiclePath.o: utils/ChVehiclePath.cpp.o
@@ -3291,6 +3360,33 @@ wheeled_vehicle/driveline/ChSimpleDriveline.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/ChSimpleDriveline.cpp.s
 .PHONY : wheeled_vehicle/driveline/ChSimpleDriveline.cpp.s
 
+wheeled_vehicle/driveline/ChSimpleDrivelineXWD.o: wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.o
+
+.PHONY : wheeled_vehicle/driveline/ChSimpleDrivelineXWD.o
+
+# target to build an object file
+wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.o
+.PHONY : wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.o
+
+wheeled_vehicle/driveline/ChSimpleDrivelineXWD.i: wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.i
+
+.PHONY : wheeled_vehicle/driveline/ChSimpleDrivelineXWD.i
+
+# target to preprocess a source file
+wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.i
+.PHONY : wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.i
+
+wheeled_vehicle/driveline/ChSimpleDrivelineXWD.s: wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.s
+
+.PHONY : wheeled_vehicle/driveline/ChSimpleDrivelineXWD.s
+
+# target to generate assembly for a file
+wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.s
+.PHONY : wheeled_vehicle/driveline/ChSimpleDrivelineXWD.cpp.s
+
 wheeled_vehicle/driveline/ShaftsDriveline2WD.o: wheeled_vehicle/driveline/ShaftsDriveline2WD.cpp.o
 
 .PHONY : wheeled_vehicle/driveline/ShaftsDriveline2WD.o
@@ -3371,6 +3467,33 @@ wheeled_vehicle/driveline/SimpleDriveline.s: wheeled_vehicle/driveline/SimpleDri
 wheeled_vehicle/driveline/SimpleDriveline.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/SimpleDriveline.cpp.s
 .PHONY : wheeled_vehicle/driveline/SimpleDriveline.cpp.s
+
+wheeled_vehicle/driveline/SimpleDrivelineXWD.o: wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.o
+
+.PHONY : wheeled_vehicle/driveline/SimpleDrivelineXWD.o
+
+# target to build an object file
+wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.o
+.PHONY : wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.o
+
+wheeled_vehicle/driveline/SimpleDrivelineXWD.i: wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.i
+
+.PHONY : wheeled_vehicle/driveline/SimpleDrivelineXWD.i
+
+# target to preprocess a source file
+wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.i
+.PHONY : wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.i
+
+wheeled_vehicle/driveline/SimpleDrivelineXWD.s: wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.s
+
+.PHONY : wheeled_vehicle/driveline/SimpleDrivelineXWD.s
+
+# target to generate assembly for a file
+wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.s
+.PHONY : wheeled_vehicle/driveline/SimpleDrivelineXWD.cpp.s
 
 wheeled_vehicle/steering/ChPitmanArm.o: wheeled_vehicle/steering/ChPitmanArm.cpp.o
 
@@ -3777,6 +3900,60 @@ wheeled_vehicle/suspension/ChRigidSuspension.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChRigidSuspension.cpp.s
 .PHONY : wheeled_vehicle/suspension/ChRigidSuspension.cpp.s
 
+wheeled_vehicle/suspension/ChSAELeafspringAxle.o: wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/ChSAELeafspringAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.o
+
+wheeled_vehicle/suspension/ChSAELeafspringAxle.i: wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/ChSAELeafspringAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.i
+
+wheeled_vehicle/suspension/ChSAELeafspringAxle.s: wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/ChSAELeafspringAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/ChSAELeafspringAxle.cpp.s
+
+wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.o: wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.o
+
+wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.i: wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.i
+
+wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.s: wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.cpp.s
+
 wheeled_vehicle/suspension/ChSemiTrailingArm.o: wheeled_vehicle/suspension/ChSemiTrailingArm.cpp.o
 
 .PHONY : wheeled_vehicle/suspension/ChSemiTrailingArm.o
@@ -3804,6 +3981,33 @@ wheeled_vehicle/suspension/ChSemiTrailingArm.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSemiTrailingArm.cpp.s
 .PHONY : wheeled_vehicle/suspension/ChSemiTrailingArm.cpp.s
 
+wheeled_vehicle/suspension/ChSingleWishbone.o: wheeled_vehicle/suspension/ChSingleWishbone.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/ChSingleWishbone.o
+
+# target to build an object file
+wheeled_vehicle/suspension/ChSingleWishbone.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSingleWishbone.cpp.o
+.PHONY : wheeled_vehicle/suspension/ChSingleWishbone.cpp.o
+
+wheeled_vehicle/suspension/ChSingleWishbone.i: wheeled_vehicle/suspension/ChSingleWishbone.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/ChSingleWishbone.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/ChSingleWishbone.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSingleWishbone.cpp.i
+.PHONY : wheeled_vehicle/suspension/ChSingleWishbone.cpp.i
+
+wheeled_vehicle/suspension/ChSingleWishbone.s: wheeled_vehicle/suspension/ChSingleWishbone.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/ChSingleWishbone.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/ChSingleWishbone.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSingleWishbone.cpp.s
+.PHONY : wheeled_vehicle/suspension/ChSingleWishbone.cpp.s
+
 wheeled_vehicle/suspension/ChSolidAxle.o: wheeled_vehicle/suspension/ChSolidAxle.cpp.o
 
 .PHONY : wheeled_vehicle/suspension/ChSolidAxle.o
@@ -3830,6 +4034,60 @@ wheeled_vehicle/suspension/ChSolidAxle.s: wheeled_vehicle/suspension/ChSolidAxle
 wheeled_vehicle/suspension/ChSolidAxle.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSolidAxle.cpp.s
 .PHONY : wheeled_vehicle/suspension/ChSolidAxle.cpp.s
+
+wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.o: wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.o
+
+wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.i: wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.i
+
+wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.s: wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.cpp.s
+
+wheeled_vehicle/suspension/ChSolidThreeLinkAxle.o: wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/ChSolidThreeLinkAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.o
+
+wheeled_vehicle/suspension/ChSolidThreeLinkAxle.i: wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/ChSolidThreeLinkAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.i
+
+wheeled_vehicle/suspension/ChSolidThreeLinkAxle.s: wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/ChSolidThreeLinkAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/ChSolidThreeLinkAxle.cpp.s
 
 wheeled_vehicle/suspension/ChThreeLinkIRS.o: wheeled_vehicle/suspension/ChThreeLinkIRS.cpp.o
 
@@ -4047,6 +4305,114 @@ wheeled_vehicle/suspension/MultiLink.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/MultiLink.cpp.s
 .PHONY : wheeled_vehicle/suspension/MultiLink.cpp.s
 
+wheeled_vehicle/suspension/RigidPinnedAxle.o: wheeled_vehicle/suspension/RigidPinnedAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/RigidPinnedAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/RigidPinnedAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/RigidPinnedAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/RigidPinnedAxle.cpp.o
+
+wheeled_vehicle/suspension/RigidPinnedAxle.i: wheeled_vehicle/suspension/RigidPinnedAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/RigidPinnedAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/RigidPinnedAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/RigidPinnedAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/RigidPinnedAxle.cpp.i
+
+wheeled_vehicle/suspension/RigidPinnedAxle.s: wheeled_vehicle/suspension/RigidPinnedAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/RigidPinnedAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/RigidPinnedAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/RigidPinnedAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/RigidPinnedAxle.cpp.s
+
+wheeled_vehicle/suspension/RigidSuspension.o: wheeled_vehicle/suspension/RigidSuspension.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/RigidSuspension.o
+
+# target to build an object file
+wheeled_vehicle/suspension/RigidSuspension.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/RigidSuspension.cpp.o
+.PHONY : wheeled_vehicle/suspension/RigidSuspension.cpp.o
+
+wheeled_vehicle/suspension/RigidSuspension.i: wheeled_vehicle/suspension/RigidSuspension.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/RigidSuspension.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/RigidSuspension.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/RigidSuspension.cpp.i
+.PHONY : wheeled_vehicle/suspension/RigidSuspension.cpp.i
+
+wheeled_vehicle/suspension/RigidSuspension.s: wheeled_vehicle/suspension/RigidSuspension.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/RigidSuspension.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/RigidSuspension.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/RigidSuspension.cpp.s
+.PHONY : wheeled_vehicle/suspension/RigidSuspension.cpp.s
+
+wheeled_vehicle/suspension/SAELeafspringAxle.o: wheeled_vehicle/suspension/SAELeafspringAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/SAELeafspringAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/SAELeafspringAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SAELeafspringAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/SAELeafspringAxle.cpp.o
+
+wheeled_vehicle/suspension/SAELeafspringAxle.i: wheeled_vehicle/suspension/SAELeafspringAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/SAELeafspringAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/SAELeafspringAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SAELeafspringAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/SAELeafspringAxle.cpp.i
+
+wheeled_vehicle/suspension/SAELeafspringAxle.s: wheeled_vehicle/suspension/SAELeafspringAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/SAELeafspringAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/SAELeafspringAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SAELeafspringAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/SAELeafspringAxle.cpp.s
+
+wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.o: wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.o
+
+wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.i: wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.i
+
+wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.s: wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.cpp.s
+
 wheeled_vehicle/suspension/SemiTrailingArm.o: wheeled_vehicle/suspension/SemiTrailingArm.cpp.o
 
 .PHONY : wheeled_vehicle/suspension/SemiTrailingArm.o
@@ -4100,6 +4466,60 @@ wheeled_vehicle/suspension/SolidAxle.s: wheeled_vehicle/suspension/SolidAxle.cpp
 wheeled_vehicle/suspension/SolidAxle.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SolidAxle.cpp.s
 .PHONY : wheeled_vehicle/suspension/SolidAxle.cpp.s
+
+wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.o: wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.o
+
+wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.i: wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.i
+
+wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.s: wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.cpp.s
+
+wheeled_vehicle/suspension/SolidThreeLinkAxle.o: wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.o
+
+.PHONY : wheeled_vehicle/suspension/SolidThreeLinkAxle.o
+
+# target to build an object file
+wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.o
+.PHONY : wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.o
+
+wheeled_vehicle/suspension/SolidThreeLinkAxle.i: wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.i
+
+.PHONY : wheeled_vehicle/suspension/SolidThreeLinkAxle.i
+
+# target to preprocess a source file
+wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.i
+.PHONY : wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.i
+
+wheeled_vehicle/suspension/SolidThreeLinkAxle.s: wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.s
+
+.PHONY : wheeled_vehicle/suspension/SolidThreeLinkAxle.s
+
+# target to generate assembly for a file
+wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.s
+.PHONY : wheeled_vehicle/suspension/SolidThreeLinkAxle.cpp.s
 
 wheeled_vehicle/suspension/ThreeLinkIRS.o: wheeled_vehicle/suspension/ThreeLinkIRS.cpp.o
 
@@ -4215,7 +4635,7 @@ wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.o: wheeled_vehicle/test_rig/ChIrrGuiD
 
 # target to build an object file
 wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.o
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.o
 .PHONY : wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.o
 
 wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.i: wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.i
@@ -4224,7 +4644,7 @@ wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.i: wheeled_vehicle/test_rig/ChIrrGuiD
 
 # target to preprocess a source file
 wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.i
 .PHONY : wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.i
 
 wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.s: wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.s
@@ -4233,7 +4653,7 @@ wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.s: wheeled_vehicle/test_rig/ChIrrGuiD
 
 # target to generate assembly for a file
 wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.s
 .PHONY : wheeled_vehicle/test_rig/ChIrrGuiDriverSTR.cpp.s
 
 wheeled_vehicle/test_rig/ChSuspensionTestRig.o: wheeled_vehicle/test_rig/ChSuspensionTestRig.cpp.o
@@ -4917,7 +5337,7 @@ wheeled_vehicle/utils/ChWheeledVehicleIrrApp.o: wheeled_vehicle/utils/ChWheeledV
 
 # target to build an object file
 wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.o:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.o
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.o
 .PHONY : wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.o
 
 wheeled_vehicle/utils/ChWheeledVehicleIrrApp.i: wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.i
@@ -4926,7 +5346,7 @@ wheeled_vehicle/utils/ChWheeledVehicleIrrApp.i: wheeled_vehicle/utils/ChWheeledV
 
 # target to preprocess a source file
 wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.i:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.i
 .PHONY : wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.i
 
 wheeled_vehicle/utils/ChWheeledVehicleIrrApp.s: wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.s
@@ -4935,7 +5355,7 @@ wheeled_vehicle/utils/ChWheeledVehicleIrrApp.s: wheeled_vehicle/utils/ChWheeledV
 
 # target to generate assembly for a file
 wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.s:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle.dir/wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.s
 .PHONY : wheeled_vehicle/utils/ChWheeledVehicleIrrApp.cpp.s
 
 wheeled_vehicle/vehicle/WheeledVehicle.o: wheeled_vehicle/vehicle/WheeledVehicle.cpp.o
@@ -5007,6 +5427,7 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... ChronoEngine_vehicle"
+	@echo "... ChronoEngine_vehicle_irrlicht"
 	@echo "... ChChassis.o"
 	@echo "... ChChassis.i"
 	@echo "... ChChassis.s"
@@ -5031,12 +5452,18 @@ help:
 	@echo "... ChVehicleModelData.o"
 	@echo "... ChVehicleModelData.i"
 	@echo "... ChVehicleModelData.s"
+	@echo "... ChWorldFrame.o"
+	@echo "... ChWorldFrame.i"
+	@echo "... ChWorldFrame.s"
 	@echo "... __/chrono_thirdparty/Easy_BMP/EasyBMP.o"
 	@echo "... __/chrono_thirdparty/Easy_BMP/EasyBMP.i"
 	@echo "... __/chrono_thirdparty/Easy_BMP/EasyBMP.s"
 	@echo "... chassis/ChRigidChassis.o"
 	@echo "... chassis/ChRigidChassis.i"
 	@echo "... chassis/ChRigidChassis.s"
+	@echo "... chassis/ChTorsionChassis.o"
+	@echo "... chassis/ChTorsionChassis.i"
+	@echo "... chassis/ChTorsionChassis.s"
 	@echo "... chassis/RigidChassis.o"
 	@echo "... chassis/RigidChassis.i"
 	@echo "... chassis/RigidChassis.s"
@@ -5349,6 +5776,9 @@ help:
 	@echo "... wheeled_vehicle/driveline/ChSimpleDriveline.o"
 	@echo "... wheeled_vehicle/driveline/ChSimpleDriveline.i"
 	@echo "... wheeled_vehicle/driveline/ChSimpleDriveline.s"
+	@echo "... wheeled_vehicle/driveline/ChSimpleDrivelineXWD.o"
+	@echo "... wheeled_vehicle/driveline/ChSimpleDrivelineXWD.i"
+	@echo "... wheeled_vehicle/driveline/ChSimpleDrivelineXWD.s"
 	@echo "... wheeled_vehicle/driveline/ShaftsDriveline2WD.o"
 	@echo "... wheeled_vehicle/driveline/ShaftsDriveline2WD.i"
 	@echo "... wheeled_vehicle/driveline/ShaftsDriveline2WD.s"
@@ -5358,6 +5788,9 @@ help:
 	@echo "... wheeled_vehicle/driveline/SimpleDriveline.o"
 	@echo "... wheeled_vehicle/driveline/SimpleDriveline.i"
 	@echo "... wheeled_vehicle/driveline/SimpleDriveline.s"
+	@echo "... wheeled_vehicle/driveline/SimpleDrivelineXWD.o"
+	@echo "... wheeled_vehicle/driveline/SimpleDrivelineXWD.i"
+	@echo "... wheeled_vehicle/driveline/SimpleDrivelineXWD.s"
 	@echo "... wheeled_vehicle/steering/ChPitmanArm.o"
 	@echo "... wheeled_vehicle/steering/ChPitmanArm.i"
 	@echo "... wheeled_vehicle/steering/ChPitmanArm.s"
@@ -5403,12 +5836,27 @@ help:
 	@echo "... wheeled_vehicle/suspension/ChRigidSuspension.o"
 	@echo "... wheeled_vehicle/suspension/ChRigidSuspension.i"
 	@echo "... wheeled_vehicle/suspension/ChRigidSuspension.s"
+	@echo "... wheeled_vehicle/suspension/ChSAELeafspringAxle.o"
+	@echo "... wheeled_vehicle/suspension/ChSAELeafspringAxle.i"
+	@echo "... wheeled_vehicle/suspension/ChSAELeafspringAxle.s"
+	@echo "... wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.o"
+	@echo "... wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.i"
+	@echo "... wheeled_vehicle/suspension/ChSAEToeBarLeafspringAxle.s"
 	@echo "... wheeled_vehicle/suspension/ChSemiTrailingArm.o"
 	@echo "... wheeled_vehicle/suspension/ChSemiTrailingArm.i"
 	@echo "... wheeled_vehicle/suspension/ChSemiTrailingArm.s"
+	@echo "... wheeled_vehicle/suspension/ChSingleWishbone.o"
+	@echo "... wheeled_vehicle/suspension/ChSingleWishbone.i"
+	@echo "... wheeled_vehicle/suspension/ChSingleWishbone.s"
 	@echo "... wheeled_vehicle/suspension/ChSolidAxle.o"
 	@echo "... wheeled_vehicle/suspension/ChSolidAxle.i"
 	@echo "... wheeled_vehicle/suspension/ChSolidAxle.s"
+	@echo "... wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.o"
+	@echo "... wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.i"
+	@echo "... wheeled_vehicle/suspension/ChSolidBellcrankThreeLinkAxle.s"
+	@echo "... wheeled_vehicle/suspension/ChSolidThreeLinkAxle.o"
+	@echo "... wheeled_vehicle/suspension/ChSolidThreeLinkAxle.i"
+	@echo "... wheeled_vehicle/suspension/ChSolidThreeLinkAxle.s"
 	@echo "... wheeled_vehicle/suspension/ChThreeLinkIRS.o"
 	@echo "... wheeled_vehicle/suspension/ChThreeLinkIRS.i"
 	@echo "... wheeled_vehicle/suspension/ChThreeLinkIRS.s"
@@ -5433,12 +5881,30 @@ help:
 	@echo "... wheeled_vehicle/suspension/MultiLink.o"
 	@echo "... wheeled_vehicle/suspension/MultiLink.i"
 	@echo "... wheeled_vehicle/suspension/MultiLink.s"
+	@echo "... wheeled_vehicle/suspension/RigidPinnedAxle.o"
+	@echo "... wheeled_vehicle/suspension/RigidPinnedAxle.i"
+	@echo "... wheeled_vehicle/suspension/RigidPinnedAxle.s"
+	@echo "... wheeled_vehicle/suspension/RigidSuspension.o"
+	@echo "... wheeled_vehicle/suspension/RigidSuspension.i"
+	@echo "... wheeled_vehicle/suspension/RigidSuspension.s"
+	@echo "... wheeled_vehicle/suspension/SAELeafspringAxle.o"
+	@echo "... wheeled_vehicle/suspension/SAELeafspringAxle.i"
+	@echo "... wheeled_vehicle/suspension/SAELeafspringAxle.s"
+	@echo "... wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.o"
+	@echo "... wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.i"
+	@echo "... wheeled_vehicle/suspension/SAEToeBarLeafspringAxle.s"
 	@echo "... wheeled_vehicle/suspension/SemiTrailingArm.o"
 	@echo "... wheeled_vehicle/suspension/SemiTrailingArm.i"
 	@echo "... wheeled_vehicle/suspension/SemiTrailingArm.s"
 	@echo "... wheeled_vehicle/suspension/SolidAxle.o"
 	@echo "... wheeled_vehicle/suspension/SolidAxle.i"
 	@echo "... wheeled_vehicle/suspension/SolidAxle.s"
+	@echo "... wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.o"
+	@echo "... wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.i"
+	@echo "... wheeled_vehicle/suspension/SolidBellcrankThreeLinkAxle.s"
+	@echo "... wheeled_vehicle/suspension/SolidThreeLinkAxle.o"
+	@echo "... wheeled_vehicle/suspension/SolidThreeLinkAxle.i"
+	@echo "... wheeled_vehicle/suspension/SolidThreeLinkAxle.s"
 	@echo "... wheeled_vehicle/suspension/ThreeLinkIRS.o"
 	@echo "... wheeled_vehicle/suspension/ThreeLinkIRS.i"
 	@echo "... wheeled_vehicle/suspension/ThreeLinkIRS.s"

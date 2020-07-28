@@ -68,25 +68,13 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
+CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jason/Desktop/FileTransfer/chrono_build_SCM
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -131,6 +119,18 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target package_source
 package_source:
@@ -197,6 +197,21 @@ preinstall/fast:
 depend:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+src/demos/fea/CMakeFiles/demo_FEA_truss.dir/rule:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/demos/fea/CMakeFiles/demo_FEA_truss.dir/rule
+.PHONY : src/demos/fea/CMakeFiles/demo_FEA_truss.dir/rule
+
+# Convenience name for target.
+demo_FEA_truss: src/demos/fea/CMakeFiles/demo_FEA_truss.dir/rule
+
+.PHONY : demo_FEA_truss
+
+# fast build rule for target.
+demo_FEA_truss/fast:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/fea/CMakeFiles/demo_FEA_truss.dir/build.make src/demos/fea/CMakeFiles/demo_FEA_truss.dir/build
+.PHONY : demo_FEA_truss/fast
 
 # Convenience name for target.
 src/demos/fea/CMakeFiles/demo_FEA_basic.dir/rule:
@@ -717,6 +732,33 @@ demo_FEA_thermal.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/fea/CMakeFiles/demo_FEA_thermal.dir/build.make src/demos/fea/CMakeFiles/demo_FEA_thermal.dir/demo_FEA_thermal.cpp.s
 .PHONY : demo_FEA_thermal.cpp.s
 
+demo_FEA_truss.o: demo_FEA_truss.cpp.o
+
+.PHONY : demo_FEA_truss.o
+
+# target to build an object file
+demo_FEA_truss.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/fea/CMakeFiles/demo_FEA_truss.dir/build.make src/demos/fea/CMakeFiles/demo_FEA_truss.dir/demo_FEA_truss.cpp.o
+.PHONY : demo_FEA_truss.cpp.o
+
+demo_FEA_truss.i: demo_FEA_truss.cpp.i
+
+.PHONY : demo_FEA_truss.i
+
+# target to preprocess a source file
+demo_FEA_truss.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/fea/CMakeFiles/demo_FEA_truss.dir/build.make src/demos/fea/CMakeFiles/demo_FEA_truss.dir/demo_FEA_truss.cpp.i
+.PHONY : demo_FEA_truss.cpp.i
+
+demo_FEA_truss.s: demo_FEA_truss.cpp.s
+
+.PHONY : demo_FEA_truss.s
+
+# target to generate assembly for a file
+demo_FEA_truss.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/fea/CMakeFiles/demo_FEA_truss.dir/build.make src/demos/fea/CMakeFiles/demo_FEA_truss.dir/demo_FEA_truss.cpp.s
+.PHONY : demo_FEA_truss.cpp.s
+
 demo_FEA_visualize.o: demo_FEA_visualize.cpp.o
 
 .PHONY : demo_FEA_visualize.o
@@ -770,6 +812,7 @@ help:
 	@echo "... demo_FEA_loads_dynamics"
 	@echo "... demo_FEA_loads_statics"
 	@echo "... demo_FEA_thermal"
+	@echo "... demo_FEA_truss"
 	@echo "... demo_FEA_visualize"
 	@echo "... demo_FEA_ancfShell.o"
 	@echo "... demo_FEA_ancfShell.i"
@@ -807,6 +850,9 @@ help:
 	@echo "... demo_FEA_thermal.o"
 	@echo "... demo_FEA_thermal.i"
 	@echo "... demo_FEA_thermal.s"
+	@echo "... demo_FEA_truss.o"
+	@echo "... demo_FEA_truss.i"
+	@echo "... demo_FEA_truss.s"
 	@echo "... demo_FEA_visualize.o"
 	@echo "... demo_FEA_visualize.i"
 	@echo "... demo_FEA_visualize.s"

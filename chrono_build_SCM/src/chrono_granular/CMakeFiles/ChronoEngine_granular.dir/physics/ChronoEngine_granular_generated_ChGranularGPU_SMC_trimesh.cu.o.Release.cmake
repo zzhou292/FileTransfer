@@ -58,7 +58,7 @@ endif()
 
 # Set these up as variables to make reading the generated file easier
 set(CMAKE_COMMAND "/usr/bin/cmake") # path
-set(source_file "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_granular/physics/ChGranularGPU_SMC_trimesh.cu") # path
+set(source_file "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_granular/physics/ChGranularGPU_SMC_trimesh.cu") # path
 set(NVCC_generated_dependency_file "/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_granular/CMakeFiles/ChronoEngine_granular.dir/physics/ChronoEngine_granular_generated_ChGranularGPU_SMC_trimesh.cu.o.NVCC-depend") # path
 set(cmake_dependency_file "/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_granular/CMakeFiles/ChronoEngine_granular.dir/physics/ChronoEngine_granular_generated_ChGranularGPU_SMC_trimesh.cu.o.depend") # path
 set(CUDA_make2cmake "/usr/share/cmake-3.17/Modules/FindCUDA/make2cmake.cmake") # path
@@ -72,14 +72,14 @@ set(generated_file_internal "/home/jason/Desktop/FileTransfer/chrono_build_SCM/s
 set(generated_cubin_file_internal "/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/chrono_granular/CMakeFiles/ChronoEngine_granular.dir/physics/./ChronoEngine_granular_generated_ChGranularGPU_SMC_trimesh.cu.o.cubin.txt") # path
 
 set(CUDA_NVCC_EXECUTABLE "/opt/cuda/bin/nvcc") # path
-set(CUDA_NVCC_FLAGS  -std c++14 -Xcompiler -std=c++14;--compiler-options;-fPIC;-gencode;arch=compute_61,code=sm_61 ;; ) # list
+set(CUDA_NVCC_FLAGS  -std c++14 -Xcompiler -std=c++14;--compiler-options;-fPIC;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75 ;; ) # list
 # Build specific configuration flags
 set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_DEBUG  ; )
 set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m64;-DChronoEngine_granular_EXPORTS) # list
-set(CUDA_NVCC_INCLUDE_DIRS [==[/opt/cuda/include;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src;/home/jason/Desktop/FileTransfer/chrono_build_SCM;/usr/include/eigen3;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/bullet;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/gimpact;/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono/collision/convexdecomposition/HACD;/opt/cuda/include]==]) # list (needs to be in lua quotes to address backslashes)
+set(CUDA_NVCC_INCLUDE_DIRS [==[/opt/cuda/include;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src;/home/jason/Desktop/FileTransfer/chrono_build_SCM;/usr/include/eigen3;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/bullet;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/collision/gimpact;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/../chrono_thirdparty/HACD;/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono/../chrono_thirdparty/HACDv2;/opt/cuda/include]==]) # list (needs to be in lua quotes to address backslashes)
 string(REPLACE "\\" "/" CUDA_NVCC_INCLUDE_DIRS "${CUDA_NVCC_INCLUDE_DIRS}")
 set(CUDA_NVCC_COMPILE_DEFINITIONS [==[CH_API_COMPILE_GRANULAR;BP_USE_FIXEDPOINT_INT_32]==]) # list (needs to be in lua quotes see #16510 ).
 set(format_flag "-c") # string

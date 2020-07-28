@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
+# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,11 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/data" TYPE DIRECTORY FILES "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/data/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/data" TYPE DIRECTORY FILES "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/data/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/template_project" TYPE DIRECTORY FILES "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/template_project/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chrono/template_project" TYPE DIRECTORY FILES "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/template_project/")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

@@ -59,7 +59,7 @@
 #define CHRONO_VEHICLE
 
 // If module FSI was enabled, define CHRONO_FSI
-#define CHRONO_FSI
+#undef CHRONO_FSI
 
 // -----------------------------------------------------------------------------
 // OpenMP settings

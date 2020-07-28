@@ -68,7 +68,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
+CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jason/Desktop/FileTransfer/chrono_build_SCM
@@ -238,6 +238,19 @@ ChronoEngine_granular/fast:
 .PHONY : ChronoEngine_granular/fast
 
 #=============================================================================
+# Target rules for targets named ChronoEngine_vehicle_irrlicht
+
+# Build rule for target.
+ChronoEngine_vehicle_irrlicht: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ChronoEngine_vehicle_irrlicht
+.PHONY : ChronoEngine_vehicle_irrlicht
+
+# fast build rule for target.
+ChronoEngine_vehicle_irrlicht/fast:
+	$(MAKE) $(MAKESILENT) -f src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build.make src/chrono_vehicle/CMakeFiles/ChronoEngine_vehicle_irrlicht.dir/build
+.PHONY : ChronoEngine_vehicle_irrlicht/fast
+
+#=============================================================================
 # Target rules for targets named ChronoEngine_vehicle
 
 # Build rule for target.
@@ -251,17 +264,17 @@ ChronoEngine_vehicle/fast:
 .PHONY : ChronoEngine_vehicle/fast
 
 #=============================================================================
-# Target rules for targets named ChronoEngine_fsi
+# Target rules for targets named ChronoEngine_sensor
 
 # Build rule for target.
-ChronoEngine_fsi: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ChronoEngine_fsi
-.PHONY : ChronoEngine_fsi
+ChronoEngine_sensor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ChronoEngine_sensor
+.PHONY : ChronoEngine_sensor
 
 # fast build rule for target.
-ChronoEngine_fsi/fast:
-	$(MAKE) $(MAKESILENT) -f src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/build.make src/chrono_fsi/CMakeFiles/ChronoEngine_fsi.dir/build
-.PHONY : ChronoEngine_fsi/fast
+ChronoEngine_sensor/fast:
+	$(MAKE) $(MAKESILENT) -f src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/build.make src/chrono_sensor/CMakeFiles/ChronoEngine_sensor.dir/build
+.PHONY : ChronoEngine_sensor/fast
 
 #=============================================================================
 # Target rules for targets named ChronoModels_vehicle
@@ -418,6 +431,19 @@ demo_CH_EulerAngles: cmake_check_build_system
 demo_CH_EulerAngles/fast:
 	$(MAKE) $(MAKESILENT) -f src/demos/core/CMakeFiles/demo_CH_EulerAngles.dir/build.make src/demos/core/CMakeFiles/demo_CH_EulerAngles.dir/build
 .PHONY : demo_CH_EulerAngles/fast
+
+#=============================================================================
+# Target rules for targets named demo_FEA_truss
+
+# Build rule for target.
+demo_FEA_truss: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_FEA_truss
+.PHONY : demo_FEA_truss
+
+# fast build rule for target.
+demo_FEA_truss/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/fea/CMakeFiles/demo_FEA_truss.dir/build.make src/demos/fea/CMakeFiles/demo_FEA_truss.dir/build
+.PHONY : demo_FEA_truss/fast
 
 #=============================================================================
 # Target rules for targets named demo_FEA_basic
@@ -587,6 +613,19 @@ demo_FEA_loads_dynamics: cmake_check_build_system
 demo_FEA_loads_dynamics/fast:
 	$(MAKE) $(MAKESILENT) -f src/demos/fea/CMakeFiles/demo_FEA_loads_dynamics.dir/build.make src/demos/fea/CMakeFiles/demo_FEA_loads_dynamics.dir/build
 .PHONY : demo_FEA_loads_dynamics/fast
+
+#=============================================================================
+# Target rules for targets named demo_IRR_custom_contact
+
+# Build rule for target.
+demo_IRR_custom_contact: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_IRR_custom_contact
+.PHONY : demo_IRR_custom_contact
+
+# fast build rule for target.
+demo_IRR_custom_contact/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/irrlicht/CMakeFiles/demo_IRR_custom_contact.dir/build.make src/demos/irrlicht/CMakeFiles/demo_IRR_custom_contact.dir/build
+.PHONY : demo_IRR_custom_contact/fast
 
 #=============================================================================
 # Target rules for targets named demo_IRR_OpenSim_parser
@@ -1200,19 +1239,6 @@ demo_IRR_rev_trans/fast:
 .PHONY : demo_IRR_rev_trans/fast
 
 #=============================================================================
-# Target rules for targets named demo_GRAN_pythonDecompTest
-
-# Build rule for target.
-demo_GRAN_pythonDecompTest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_GRAN_pythonDecompTest
-.PHONY : demo_GRAN_pythonDecompTest
-
-# fast build rule for target.
-demo_GRAN_pythonDecompTest/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/granular/CMakeFiles/demo_GRAN_pythonDecompTest.dir/build.make src/demos/granular/CMakeFiles/demo_GRAN_pythonDecompTest.dir/build
-.PHONY : demo_GRAN_pythonDecompTest/fast
-
-#=============================================================================
 # Target rules for targets named demo_GRAN_fixedterrain
 
 # Build rule for target.
@@ -1265,30 +1291,17 @@ demo_GRAN_terrainBox_SMC/fast:
 .PHONY : demo_GRAN_terrainBox_SMC/fast
 
 #=============================================================================
-# Target rules for targets named demo_VEH_HMMWV9
+# Target rules for targets named demo_VEH_HMMWV_Accel
 
 # Build rule for target.
-demo_VEH_HMMWV9: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_HMMWV9
-.PHONY : demo_VEH_HMMWV9
+demo_VEH_HMMWV_Accel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_HMMWV_Accel
+.PHONY : demo_VEH_HMMWV_Accel
 
 # fast build rule for target.
-demo_VEH_HMMWV9/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/build.make src/demos/vehicle/demo_HMMWV9/CMakeFiles/demo_VEH_HMMWV9.dir/build
-.PHONY : demo_VEH_HMMWV9/fast
-
-#=============================================================================
-# Target rules for targets named demo_VEH_HMMWV_DefSoil
-
-# Build rule for target.
-demo_VEH_HMMWV_DefSoil: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_HMMWV_DefSoil
-.PHONY : demo_VEH_HMMWV_DefSoil
-
-# fast build rule for target.
-demo_VEH_HMMWV_DefSoil/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_DefSoil.dir/build.make src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_DefSoil.dir/build
-.PHONY : demo_VEH_HMMWV_DefSoil/fast
+demo_VEH_HMMWV_Accel/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_Accel.dir/build.make src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_Accel.dir/build
+.PHONY : demo_VEH_HMMWV_Accel/fast
 
 #=============================================================================
 # Target rules for targets named demo_VEH_HMMWV_DoubleLaneChange
@@ -1304,19 +1317,6 @@ demo_VEH_HMMWV_DoubleLaneChange/fast:
 .PHONY : demo_VEH_HMMWV_DoubleLaneChange/fast
 
 #=============================================================================
-# Target rules for targets named demo_VEH_HMMWV_Accel
-
-# Build rule for target.
-demo_VEH_HMMWV_Accel: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_HMMWV_Accel
-.PHONY : demo_VEH_HMMWV_Accel
-
-# fast build rule for target.
-demo_VEH_HMMWV_Accel/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_Accel.dir/build.make src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_Accel.dir/build
-.PHONY : demo_VEH_HMMWV_Accel/fast
-
-#=============================================================================
 # Target rules for targets named demo_VEH_HMMWV
 
 # Build rule for target.
@@ -1328,6 +1328,45 @@ demo_VEH_HMMWV: cmake_check_build_system
 demo_VEH_HMMWV/fast:
 	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/build.make src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV.dir/build
 .PHONY : demo_VEH_HMMWV/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_HMMWV_DefSoil
+
+# Build rule for target.
+demo_VEH_HMMWV_DefSoil: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_HMMWV_DefSoil
+.PHONY : demo_VEH_HMMWV_DefSoil
+
+# fast build rule for target.
+demo_VEH_HMMWV_DefSoil/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_DefSoil.dir/build.make src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV_DefSoil.dir/build
+.PHONY : demo_VEH_HMMWV_DefSoil/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_HMMWV9_YUP
+
+# Build rule for target.
+demo_VEH_HMMWV9_YUP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_HMMWV9_YUP
+.PHONY : demo_VEH_HMMWV9_YUP
+
+# fast build rule for target.
+demo_VEH_HMMWV9_YUP/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV9_YUP.dir/build.make src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV9_YUP.dir/build
+.PHONY : demo_VEH_HMMWV9_YUP/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_HMMWV9
+
+# Build rule for target.
+demo_VEH_HMMWV9: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_HMMWV9
+.PHONY : demo_VEH_HMMWV9
+
+# fast build rule for target.
+demo_VEH_HMMWV9/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV9.dir/build.make src/demos/vehicle/demo_HMMWV/CMakeFiles/demo_VEH_HMMWV9.dir/build
+.PHONY : demo_VEH_HMMWV9/fast
 
 #=============================================================================
 # Target rules for targets named demo_VEH_WheeledGeneric
@@ -1460,6 +1499,19 @@ demo_VEH_Sedan_Lockable_Diff/fast:
 .PHONY : demo_VEH_Sedan_Lockable_Diff/fast
 
 #=============================================================================
+# Target rules for targets named demo_VEH_Sedan_JSON
+
+# Build rule for target.
+demo_VEH_Sedan_JSON: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_Sedan_JSON
+.PHONY : demo_VEH_Sedan_JSON
+
+# fast build rule for target.
+demo_VEH_Sedan_JSON/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_Sedan/CMakeFiles/demo_VEH_Sedan_JSON.dir/build.make src/demos/vehicle/demo_Sedan/CMakeFiles/demo_VEH_Sedan_JSON.dir/build
+.PHONY : demo_VEH_Sedan_JSON/fast
+
+#=============================================================================
 # Target rules for targets named demo_VEH_Sedan
 
 # Build rule for target.
@@ -1473,6 +1525,19 @@ demo_VEH_Sedan/fast:
 .PHONY : demo_VEH_Sedan/fast
 
 #=============================================================================
+# Target rules for targets named demo_VEH_CityBus_JSON
+
+# Build rule for target.
+demo_VEH_CityBus_JSON: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_CityBus_JSON
+.PHONY : demo_VEH_CityBus_JSON
+
+# fast build rule for target.
+demo_VEH_CityBus_JSON/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_CityBus/CMakeFiles/demo_VEH_CityBus_JSON.dir/build.make src/demos/vehicle/demo_CityBus/CMakeFiles/demo_VEH_CityBus_JSON.dir/build
+.PHONY : demo_VEH_CityBus_JSON/fast
+
+#=============================================================================
 # Target rules for targets named demo_VEH_CityBus
 
 # Build rule for target.
@@ -1484,6 +1549,84 @@ demo_VEH_CityBus: cmake_check_build_system
 demo_VEH_CityBus/fast:
 	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_CityBus/CMakeFiles/demo_VEH_CityBus.dir/build.make src/demos/vehicle/demo_CityBus/CMakeFiles/demo_VEH_CityBus.dir/build
 .PHONY : demo_VEH_CityBus/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_LMTV_ride
+
+# Build rule for target.
+demo_VEH_LMTV_ride: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_LMTV_ride
+.PHONY : demo_VEH_LMTV_ride
+
+# fast build rule for target.
+demo_VEH_LMTV_ride/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_LMTV/CMakeFiles/demo_VEH_LMTV_ride.dir/build.make src/demos/vehicle/demo_LMTV/CMakeFiles/demo_VEH_LMTV_ride.dir/build
+.PHONY : demo_VEH_LMTV_ride/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_LongHaul_OpenLoop
+
+# Build rule for target.
+demo_VEH_LongHaul_OpenLoop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_LongHaul_OpenLoop
+.PHONY : demo_VEH_LongHaul_OpenLoop
+
+# fast build rule for target.
+demo_VEH_LongHaul_OpenLoop/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_LongHaul/CMakeFiles/demo_VEH_LongHaul_OpenLoop.dir/build.make src/demos/vehicle/demo_LongHaul/CMakeFiles/demo_VEH_LongHaul_OpenLoop.dir/build
+.PHONY : demo_VEH_LongHaul_OpenLoop/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_LongHaul_ClosedLoop
+
+# Build rule for target.
+demo_VEH_LongHaul_ClosedLoop: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_LongHaul_ClosedLoop
+.PHONY : demo_VEH_LongHaul_ClosedLoop
+
+# fast build rule for target.
+demo_VEH_LongHaul_ClosedLoop/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_LongHaul/CMakeFiles/demo_VEH_LongHaul_ClosedLoop.dir/build.make src/demos/vehicle/demo_LongHaul/CMakeFiles/demo_VEH_LongHaul_ClosedLoop.dir/build
+.PHONY : demo_VEH_LongHaul_ClosedLoop/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_RCCar
+
+# Build rule for target.
+demo_VEH_RCCar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_RCCar
+.PHONY : demo_VEH_RCCar
+
+# fast build rule for target.
+demo_VEH_RCCar/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_RCCar/CMakeFiles/demo_VEH_RCCar.dir/build.make src/demos/vehicle/demo_RCCar/CMakeFiles/demo_VEH_RCCar.dir/build
+.PHONY : demo_VEH_RCCar/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_Gator_Accel
+
+# Build rule for target.
+demo_VEH_Gator_Accel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_Gator_Accel
+.PHONY : demo_VEH_Gator_Accel
+
+# fast build rule for target.
+demo_VEH_Gator_Accel/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_Gator/CMakeFiles/demo_VEH_Gator_Accel.dir/build.make src/demos/vehicle/demo_Gator/CMakeFiles/demo_VEH_Gator_Accel.dir/build
+.PHONY : demo_VEH_Gator_Accel/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_Gator
+
+# Build rule for target.
+demo_VEH_Gator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_Gator
+.PHONY : demo_VEH_Gator
+
+# fast build rule for target.
+demo_VEH_Gator/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_Gator/CMakeFiles/demo_VEH_Gator.dir/build.make src/demos/vehicle/demo_Gator/CMakeFiles/demo_VEH_Gator.dir/build
+.PHONY : demo_VEH_Gator/fast
 
 #=============================================================================
 # Target rules for targets named demo_VEH_Shock
@@ -1512,6 +1655,19 @@ demo_VEH_Ride/fast:
 .PHONY : demo_VEH_Ride/fast
 
 #=============================================================================
+# Target rules for targets named demo_VEH_UAZBUS_SAE_JSON
+
+# Build rule for target.
+demo_VEH_UAZBUS_SAE_JSON: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_UAZBUS_SAE_JSON
+.PHONY : demo_VEH_UAZBUS_SAE_JSON
+
+# fast build rule for target.
+demo_VEH_UAZBUS_SAE_JSON/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/build
+.PHONY : demo_VEH_UAZBUS_SAE_JSON/fast
+
+#=============================================================================
 # Target rules for targets named demo_VEH_UAZ_JSON
 
 # Build rule for target.
@@ -1525,6 +1681,19 @@ demo_VEH_UAZ_JSON/fast:
 .PHONY : demo_VEH_UAZ_JSON/fast
 
 #=============================================================================
+# Target rules for targets named demo_VEH_UAZBUS_SAE
+
+# Build rule for target.
+demo_VEH_UAZBUS_SAE: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_UAZBUS_SAE
+.PHONY : demo_VEH_UAZBUS_SAE
+
+# fast build rule for target.
+demo_VEH_UAZBUS_SAE/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/build
+.PHONY : demo_VEH_UAZBUS_SAE/fast
+
+#=============================================================================
 # Target rules for targets named demo_VEH_UAZBUS
 
 # Build rule for target.
@@ -1536,6 +1705,58 @@ demo_VEH_UAZBUS: cmake_check_build_system
 demo_VEH_UAZBUS/fast:
 	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/build
 .PHONY : demo_VEH_UAZBUS/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_MAN_JSON
+
+# Build rule for target.
+demo_VEH_MAN_JSON: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_MAN_JSON
+.PHONY : demo_VEH_MAN_JSON
+
+# fast build rule for target.
+demo_VEH_MAN_JSON/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_JSON.dir/build.make src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_JSON.dir/build
+.PHONY : demo_VEH_MAN_JSON/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_MAN_10t
+
+# Build rule for target.
+demo_VEH_MAN_10t: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_MAN_10t
+.PHONY : demo_VEH_MAN_10t
+
+# fast build rule for target.
+demo_VEH_MAN_10t/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_10t.dir/build.make src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_10t.dir/build
+.PHONY : demo_VEH_MAN_10t/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_MAN_7t
+
+# Build rule for target.
+demo_VEH_MAN_7t: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_MAN_7t
+.PHONY : demo_VEH_MAN_7t
+
+# fast build rule for target.
+demo_VEH_MAN_7t/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_7t.dir/build.make src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_7t.dir/build
+.PHONY : demo_VEH_MAN_7t/fast
+
+#=============================================================================
+# Target rules for targets named demo_VEH_MAN_5t
+
+# Build rule for target.
+demo_VEH_MAN_5t: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_VEH_MAN_5t
+.PHONY : demo_VEH_MAN_5t
+
+# fast build rule for target.
+demo_VEH_MAN_5t/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_5t.dir/build.make src/demos/vehicle/demo_MAN/CMakeFiles/demo_VEH_MAN_5t.dir/build
+.PHONY : demo_VEH_MAN_5t/fast
 
 #=============================================================================
 # Target rules for targets named demo_VEH_DeformableSoil
@@ -1616,69 +1837,134 @@ demo_VEH_RigidTerrain/fast:
 .PHONY : demo_VEH_RigidTerrain/fast
 
 #=============================================================================
-# Target rules for targets named demo_FSI_Granular_ConeDrop
+# Target rules for targets named demo_SEN_lidar
 
 # Build rule for target.
-demo_FSI_Granular_ConeDrop: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_FSI_Granular_ConeDrop
-.PHONY : demo_FSI_Granular_ConeDrop
+demo_SEN_lidar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_lidar
+.PHONY : demo_SEN_lidar
 
 # fast build rule for target.
-demo_FSI_Granular_ConeDrop/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/fsi/CMakeFiles/demo_FSI_Granular_ConeDrop.dir/build.make src/demos/fsi/CMakeFiles/demo_FSI_Granular_ConeDrop.dir/build
-.PHONY : demo_FSI_Granular_ConeDrop/fast
+demo_SEN_lidar/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_lidar.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_lidar.dir/build
+.PHONY : demo_SEN_lidar/fast
 
 #=============================================================================
-# Target rules for targets named demo_FSI_CylinderDrop
+# Target rules for targets named demo_SEN_GPSIMU
 
 # Build rule for target.
-demo_FSI_CylinderDrop: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_FSI_CylinderDrop
-.PHONY : demo_FSI_CylinderDrop
+demo_SEN_GPSIMU: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_GPSIMU
+.PHONY : demo_SEN_GPSIMU
 
 # fast build rule for target.
-demo_FSI_CylinderDrop/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/fsi/CMakeFiles/demo_FSI_CylinderDrop.dir/build.make src/demos/fsi/CMakeFiles/demo_FSI_CylinderDrop.dir/build
-.PHONY : demo_FSI_CylinderDrop/fast
+demo_SEN_GPSIMU/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_GPSIMU.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_GPSIMU.dir/build
+.PHONY : demo_SEN_GPSIMU/fast
 
 #=============================================================================
-# Target rules for targets named demo_FSI_Poiseuille_flow
+# Target rules for targets named demo_SEN_rccar
 
 # Build rule for target.
-demo_FSI_Poiseuille_flow: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_FSI_Poiseuille_flow
-.PHONY : demo_FSI_Poiseuille_flow
+demo_SEN_rccar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_rccar
+.PHONY : demo_SEN_rccar
 
 # fast build rule for target.
-demo_FSI_Poiseuille_flow/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/fsi/CMakeFiles/demo_FSI_Poiseuille_flow.dir/build.make src/demos/fsi/CMakeFiles/demo_FSI_Poiseuille_flow.dir/build
-.PHONY : demo_FSI_Poiseuille_flow/fast
+demo_SEN_rccar/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_rccar.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_rccar.dir/build
+.PHONY : demo_SEN_rccar/fast
 
 #=============================================================================
-# Target rules for targets named demo_FSI_Compressibility
+# Target rules for targets named demo_SEN_buildtest
 
 # Build rule for target.
-demo_FSI_Compressibility: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_FSI_Compressibility
-.PHONY : demo_FSI_Compressibility
+demo_SEN_buildtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_buildtest
+.PHONY : demo_SEN_buildtest
 
 # fast build rule for target.
-demo_FSI_Compressibility/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/fsi/CMakeFiles/demo_FSI_Compressibility.dir/build.make src/demos/fsi/CMakeFiles/demo_FSI_Compressibility.dir/build
-.PHONY : demo_FSI_Compressibility/fast
+demo_SEN_buildtest/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_buildtest.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_buildtest.dir/build
+.PHONY : demo_SEN_buildtest/fast
 
 #=============================================================================
-# Target rules for targets named demo_FSI_DamBreak
+# Target rules for targets named demo_SEN_vis_materials
 
 # Build rule for target.
-demo_FSI_DamBreak: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_FSI_DamBreak
-.PHONY : demo_FSI_DamBreak
+demo_SEN_vis_materials: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_vis_materials
+.PHONY : demo_SEN_vis_materials
 
 # fast build rule for target.
-demo_FSI_DamBreak/fast:
-	$(MAKE) $(MAKESILENT) -f src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/build.make src/demos/fsi/CMakeFiles/demo_FSI_DamBreak.dir/build
-.PHONY : demo_FSI_DamBreak/fast
+demo_SEN_vis_materials/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_vis_materials.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_vis_materials.dir/build
+.PHONY : demo_SEN_vis_materials/fast
+
+#=============================================================================
+# Target rules for targets named demo_SEN_HMMWV
+
+# Build rule for target.
+demo_SEN_HMMWV: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_HMMWV
+.PHONY : demo_SEN_HMMWV
+
+# fast build rule for target.
+demo_SEN_HMMWV/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_HMMWV.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_HMMWV.dir/build
+.PHONY : demo_SEN_HMMWV/fast
+
+#=============================================================================
+# Target rules for targets named demo_SEN_normalmap
+
+# Build rule for target.
+demo_SEN_normalmap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_normalmap
+.PHONY : demo_SEN_normalmap
+
+# fast build rule for target.
+demo_SEN_normalmap/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_normalmap.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_normalmap.dir/build
+.PHONY : demo_SEN_normalmap/fast
+
+#=============================================================================
+# Target rules for targets named demo_SEN_deformableSoil
+
+# Build rule for target.
+demo_SEN_deformableSoil: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_deformableSoil
+.PHONY : demo_SEN_deformableSoil
+
+# fast build rule for target.
+demo_SEN_deformableSoil/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_deformableSoil.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_deformableSoil.dir/build
+.PHONY : demo_SEN_deformableSoil/fast
+
+#=============================================================================
+# Target rules for targets named demo_SEN_JSON
+
+# Build rule for target.
+demo_SEN_JSON: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_JSON
+.PHONY : demo_SEN_JSON
+
+# fast build rule for target.
+demo_SEN_JSON/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_JSON.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_JSON.dir/build
+.PHONY : demo_SEN_JSON/fast
+
+#=============================================================================
+# Target rules for targets named demo_SEN_camera
+
+# Build rule for target.
+demo_SEN_camera: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo_SEN_camera
+.PHONY : demo_SEN_camera
+
+# fast build rule for target.
+demo_SEN_camera/fast:
+	$(MAKE) $(MAKESILENT) -f src/demos/sensor/CMakeFiles/demo_SEN_camera.dir/build.make src/demos/sensor/CMakeFiles/demo_SEN_camera.dir/build
+.PHONY : demo_SEN_camera/fast
 
 # Help Target
 help:
@@ -1695,10 +1981,11 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... ChronoEngine"
-	@echo "... ChronoEngine_fsi"
 	@echo "... ChronoEngine_granular"
 	@echo "... ChronoEngine_irrlicht"
+	@echo "... ChronoEngine_sensor"
 	@echo "... ChronoEngine_vehicle"
+	@echo "... ChronoEngine_vehicle_irrlicht"
 	@echo "... ChronoModels_vehicle"
 	@echo "... demo_CH_EulerAngles"
 	@echo "... demo_CH_archive"
@@ -1723,16 +2010,11 @@ help:
 	@echo "... demo_FEA_loads_dynamics"
 	@echo "... demo_FEA_loads_statics"
 	@echo "... demo_FEA_thermal"
+	@echo "... demo_FEA_truss"
 	@echo "... demo_FEA_visualize"
-	@echo "... demo_FSI_Compressibility"
-	@echo "... demo_FSI_CylinderDrop"
-	@echo "... demo_FSI_DamBreak"
-	@echo "... demo_FSI_Granular_ConeDrop"
-	@echo "... demo_FSI_Poiseuille_flow"
 	@echo "... demo_GRAN_ShearBand"
 	@echo "... demo_GRAN_ballcosim"
 	@echo "... demo_GRAN_fixedterrain"
-	@echo "... demo_GRAN_pythonDecompTest"
 	@echo "... demo_GRAN_terrainBox_SMC"
 	@echo "... demo_IRR_Adams_parser"
 	@echo "... demo_IRR_OpenSim_parser"
@@ -1750,6 +2032,7 @@ help:
 	@echo "... demo_IRR_convergence"
 	@echo "... demo_IRR_conveyor"
 	@echo "... demo_IRR_crank"
+	@echo "... demo_IRR_custom_contact"
 	@echo "... demo_IRR_debugDrawer_collisionModels"
 	@echo "... demo_IRR_decomposition"
 	@echo "... demo_IRR_earthquake"
@@ -1781,19 +2064,42 @@ help:
 	@echo "... demo_IRR_tire"
 	@echo "... demo_IRR_tracks"
 	@echo "... demo_IRR_ujoint"
+	@echo "... demo_SEN_GPSIMU"
+	@echo "... demo_SEN_HMMWV"
+	@echo "... demo_SEN_JSON"
+	@echo "... demo_SEN_buildtest"
+	@echo "... demo_SEN_camera"
+	@echo "... demo_SEN_deformableSoil"
+	@echo "... demo_SEN_lidar"
+	@echo "... demo_SEN_normalmap"
+	@echo "... demo_SEN_rccar"
+	@echo "... demo_SEN_vis_materials"
 	@echo "... demo_VEH_ArticulatedVehicle"
 	@echo "... demo_VEH_CityBus"
+	@echo "... demo_VEH_CityBus_JSON"
 	@echo "... demo_VEH_DeformableSoil"
+	@echo "... demo_VEH_Gator"
+	@echo "... demo_VEH_Gator_Accel"
 	@echo "... demo_VEH_HMMWV"
 	@echo "... demo_VEH_HMMWV9"
+	@echo "... demo_VEH_HMMWV9_YUP"
 	@echo "... demo_VEH_HMMWV_Accel"
 	@echo "... demo_VEH_HMMWV_DefSoil"
 	@echo "... demo_VEH_HMMWV_DoubleLaneChange"
+	@echo "... demo_VEH_LMTV_ride"
+	@echo "... demo_VEH_LongHaul_ClosedLoop"
+	@echo "... demo_VEH_LongHaul_OpenLoop"
 	@echo "... demo_VEH_M113"
 	@echo "... demo_VEH_M113_DefSoil"
+	@echo "... demo_VEH_MAN_10t"
+	@echo "... demo_VEH_MAN_5t"
+	@echo "... demo_VEH_MAN_7t"
+	@echo "... demo_VEH_MAN_JSON"
+	@echo "... demo_VEH_RCCar"
 	@echo "... demo_VEH_Ride"
 	@echo "... demo_VEH_RigidTerrain"
 	@echo "... demo_VEH_Sedan"
+	@echo "... demo_VEH_Sedan_JSON"
 	@echo "... demo_VEH_Sedan_Lockable_Diff"
 	@echo "... demo_VEH_Shock"
 	@echo "... demo_VEH_SteeringController"
@@ -1805,6 +2111,8 @@ help:
 	@echo "... demo_VEH_TractorTrailer"
 	@echo "... demo_VEH_TwoCars"
 	@echo "... demo_VEH_UAZBUS"
+	@echo "... demo_VEH_UAZBUS_SAE"
+	@echo "... demo_VEH_UAZBUS_SAE_JSON"
 	@echo "... demo_VEH_UAZ_JSON"
 	@echo "... demo_VEH_WheeledGeneric"
 	@echo "... demo_VEH_WheeledJSON"

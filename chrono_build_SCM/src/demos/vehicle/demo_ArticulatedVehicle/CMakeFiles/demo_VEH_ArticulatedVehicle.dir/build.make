@@ -63,7 +63,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
+CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jason/Desktop/FileTransfer/chrono_build_SCM
@@ -78,43 +78,43 @@ include src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_Articulate
 include src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/flags.make
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.o: src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/flags.make
-src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp
+src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.i"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp > CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp > CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.i
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.s"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/demo_VEH_ArticulatedVehicle.cpp -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/demo_VEH_ArticulatedVehicle.cpp.s
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.o: src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/flags.make
-src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp
+src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.i"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp > CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp > CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.i
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.s"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Front.cpp -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.s
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.o: src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/flags.make
-src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp
+src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.o: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.o"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.o -c /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.i"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp > CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.i
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp > CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.i
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.s"
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.s
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle/subsystems/Articulated_Rear.cpp -o CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.s
 
 # Object files for target demo_VEH_ArticulatedVehicle
 demo_VEH_ArticulatedVehicle_OBJECTS = \
@@ -129,11 +129,12 @@ bin/demo_VEH_ArticulatedVehicle: src/demos/vehicle/demo_ArticulatedVehicle/CMake
 bin/demo_VEH_ArticulatedVehicle: src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Front.cpp.o
 bin/demo_VEH_ArticulatedVehicle: src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/subsystems/Articulated_Rear.cpp.o
 bin/demo_VEH_ArticulatedVehicle: src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/build.make
+bin/demo_VEH_ArticulatedVehicle: lib/libChronoEngine_vehicle_irrlicht.so
 bin/demo_VEH_ArticulatedVehicle: lib/libChronoModels_vehicle.so
-bin/demo_VEH_ArticulatedVehicle: lib/libChronoEngine_vehicle.so
 bin/demo_VEH_ArticulatedVehicle: lib/libChronoEngine_irrlicht.so
-bin/demo_VEH_ArticulatedVehicle: lib/libChronoEngine.so
 bin/demo_VEH_ArticulatedVehicle: /usr/local/lib/libIrrlicht.so
+bin/demo_VEH_ArticulatedVehicle: lib/libChronoEngine_vehicle.so
+bin/demo_VEH_ArticulatedVehicle: lib/libChronoEngine.so
 bin/demo_VEH_ArticulatedVehicle: /usr/local/lib/libmpi.so
 bin/demo_VEH_ArticulatedVehicle: src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../../../bin/demo_VEH_ArticulatedVehicle"
@@ -149,6 +150,6 @@ src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle
 .PHONY : src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/clean
 
 src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/depend:
-	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle/demo_ArticulatedVehicle /home/jason/Desktop/FileTransfer/chrono_build_SCM /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63 /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle/demo_ArticulatedVehicle /home/jason/Desktop/FileTransfer/chrono_build_SCM /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/demos/vehicle/demo_ArticulatedVehicle/CMakeFiles/demo_VEH_ArticulatedVehicle.dir/depend
 

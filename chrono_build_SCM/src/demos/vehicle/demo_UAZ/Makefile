@@ -68,25 +68,13 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release
+CMAKE_SOURCE_DIR = /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jason/Desktop/FileTransfer/chrono_build_SCM
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -166,6 +154,18 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(CMAKE_COMMAND) -E cmake_progress_start /home/jason/Desktop/FileTransfer/chrono_build_SCM/CMakeFiles /home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_UAZ/CMakeFiles/progress.marks
@@ -199,6 +199,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/rule:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/rule
+.PHONY : src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/rule
+
+# Convenience name for target.
+demo_VEH_UAZBUS_SAE_JSON: src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/rule
+
+.PHONY : demo_VEH_UAZBUS_SAE_JSON
+
+# fast build rule for target.
+demo_VEH_UAZBUS_SAE_JSON/fast:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/build
+.PHONY : demo_VEH_UAZBUS_SAE_JSON/fast
+
+# Convenience name for target.
 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZ_JSON.dir/rule:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZ_JSON.dir/rule
 .PHONY : src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZ_JSON.dir/rule
@@ -212,6 +227,21 @@ demo_VEH_UAZ_JSON: src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZ_JSON.dir/r
 demo_VEH_UAZ_JSON/fast:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZ_JSON.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZ_JSON.dir/build
 .PHONY : demo_VEH_UAZ_JSON/fast
+
+# Convenience name for target.
+src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/rule:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/rule
+.PHONY : src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/rule
+
+# Convenience name for target.
+demo_VEH_UAZBUS_SAE: src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/rule
+
+.PHONY : demo_VEH_UAZBUS_SAE
+
+# fast build rule for target.
+demo_VEH_UAZBUS_SAE/fast:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/build
+.PHONY : demo_VEH_UAZBUS_SAE/fast
 
 # Convenience name for target.
 src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/rule:
@@ -255,6 +285,60 @@ demo_VEH_UAZBUS.cpp.s:
 	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS.dir/demo_VEH_UAZBUS.cpp.s
 .PHONY : demo_VEH_UAZBUS.cpp.s
 
+demo_VEH_UAZBUS_SAE.o: demo_VEH_UAZBUS_SAE.cpp.o
+
+.PHONY : demo_VEH_UAZBUS_SAE.o
+
+# target to build an object file
+demo_VEH_UAZBUS_SAE.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/demo_VEH_UAZBUS_SAE.cpp.o
+.PHONY : demo_VEH_UAZBUS_SAE.cpp.o
+
+demo_VEH_UAZBUS_SAE.i: demo_VEH_UAZBUS_SAE.cpp.i
+
+.PHONY : demo_VEH_UAZBUS_SAE.i
+
+# target to preprocess a source file
+demo_VEH_UAZBUS_SAE.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/demo_VEH_UAZBUS_SAE.cpp.i
+.PHONY : demo_VEH_UAZBUS_SAE.cpp.i
+
+demo_VEH_UAZBUS_SAE.s: demo_VEH_UAZBUS_SAE.cpp.s
+
+.PHONY : demo_VEH_UAZBUS_SAE.s
+
+# target to generate assembly for a file
+demo_VEH_UAZBUS_SAE.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE.dir/demo_VEH_UAZBUS_SAE.cpp.s
+.PHONY : demo_VEH_UAZBUS_SAE.cpp.s
+
+demo_VEH_UAZBUS_SAE_JSON.o: demo_VEH_UAZBUS_SAE_JSON.cpp.o
+
+.PHONY : demo_VEH_UAZBUS_SAE_JSON.o
+
+# target to build an object file
+demo_VEH_UAZBUS_SAE_JSON.cpp.o:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/demo_VEH_UAZBUS_SAE_JSON.cpp.o
+.PHONY : demo_VEH_UAZBUS_SAE_JSON.cpp.o
+
+demo_VEH_UAZBUS_SAE_JSON.i: demo_VEH_UAZBUS_SAE_JSON.cpp.i
+
+.PHONY : demo_VEH_UAZBUS_SAE_JSON.i
+
+# target to preprocess a source file
+demo_VEH_UAZBUS_SAE_JSON.cpp.i:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/demo_VEH_UAZBUS_SAE_JSON.cpp.i
+.PHONY : demo_VEH_UAZBUS_SAE_JSON.cpp.i
+
+demo_VEH_UAZBUS_SAE_JSON.s: demo_VEH_UAZBUS_SAE_JSON.cpp.s
+
+.PHONY : demo_VEH_UAZBUS_SAE_JSON.s
+
+# target to generate assembly for a file
+demo_VEH_UAZBUS_SAE_JSON.cpp.s:
+	cd /home/jason/Desktop/FileTransfer/chrono_build_SCM && $(MAKE) $(MAKESILENT) -f src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/build.make src/demos/vehicle/demo_UAZ/CMakeFiles/demo_VEH_UAZBUS_SAE_JSON.dir/demo_VEH_UAZBUS_SAE_JSON.cpp.s
+.PHONY : demo_VEH_UAZBUS_SAE_JSON.cpp.s
+
 demo_VEH_UAZ_JSON.o: demo_VEH_UAZ_JSON.cpp.o
 
 .PHONY : demo_VEH_UAZ_JSON.o
@@ -297,10 +381,18 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... demo_VEH_UAZBUS"
+	@echo "... demo_VEH_UAZBUS_SAE"
+	@echo "... demo_VEH_UAZBUS_SAE_JSON"
 	@echo "... demo_VEH_UAZ_JSON"
 	@echo "... demo_VEH_UAZBUS.o"
 	@echo "... demo_VEH_UAZBUS.i"
 	@echo "... demo_VEH_UAZBUS.s"
+	@echo "... demo_VEH_UAZBUS_SAE.o"
+	@echo "... demo_VEH_UAZBUS_SAE.i"
+	@echo "... demo_VEH_UAZBUS_SAE.s"
+	@echo "... demo_VEH_UAZBUS_SAE_JSON.o"
+	@echo "... demo_VEH_UAZBUS_SAE_JSON.i"
+	@echo "... demo_VEH_UAZBUS_SAE_JSON.s"
 	@echo "... demo_VEH_UAZ_JSON.o"
 	@echo "... demo_VEH_UAZ_JSON.i"
 	@echo "... demo_VEH_UAZ_JSON.s"

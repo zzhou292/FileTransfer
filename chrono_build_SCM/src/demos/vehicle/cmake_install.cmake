@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos/vehicle
+# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos/vehicle
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_HMMWV9/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_HMMWV/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_HMMWV_Parallel/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_WheeledGeneric/cmake_install.cmake")
@@ -53,8 +52,13 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_TwoCars/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_Sedan/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_CityBus/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_LMTV/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_LongHaul/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_RCCar/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_Gator/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_ISO2631/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_UAZ/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_MAN/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_DeformableSoil/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_DeformableSoilAndTire/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/demo_GranularTerrain/cmake_install.cmake")

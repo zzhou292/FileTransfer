@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/demos
+# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/demos
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/irrlicht/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/granular/cmake_install.cmake")
   include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/vehicle/cmake_install.cmake")
-  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/fsi/cmake_install.cmake")
+  include("/home/jason/Desktop/FileTransfer/chrono_build_SCM/src/demos/sensor/cmake_install.cmake")
 
 endif()
 

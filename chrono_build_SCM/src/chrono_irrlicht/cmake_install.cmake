@@ -1,4 +1,4 @@
-# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht
+# Install script for directory: /home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -62,21 +62,18 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/chrono_irrlicht" TYPE FILE FILES
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChApiIrr.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChBodySceneNode.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChBodySceneNodeTools.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrTools.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrAppInterface.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrApp.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrCamera.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrMeshTools.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrWizard.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrParticlesSceneNode.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrAssetConverter.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrNode.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrNodeProxyToAsset.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrNodeAsset.h"
-    "/home/jason/Desktop/FileTransfer/chrono-dev-feature-FSI-release/src/chrono_irrlicht/ChIrrEffects.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChApiIrr.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrTools.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrAppInterface.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrApp.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrCamera.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrMeshTools.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrWizard.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrAssetConverter.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrNode.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrNodeProxyToAsset.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrNodeAsset.h"
+    "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/src/chrono_irrlicht/ChIrrEffects.h"
     )
 endif()
 
