@@ -38,6 +38,7 @@ add_subdirectory(demo_chrono_platoon)
 add_subdirectory(demo_lanemerge)
 add_subdirectory(demo_lanemerge_withtrigger)
 add_subdirectory(demo_collision)
+add_subdirectory(demo_SYN_vehicle_test)
 
 if(SYN_SCM)
     add_subdirectory(demo_SCM)
