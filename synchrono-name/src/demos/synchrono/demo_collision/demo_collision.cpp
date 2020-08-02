@@ -3,7 +3,10 @@
 #include "synchrono/SynVisManager.h"
 #include "synchrono/SynCLI.h"
 
-#include "synchrono/brain/TBrain.h"
+#include "synchrono/brain/TrackingBrain.h"
+#include "synchrono/brain/GeneralBrain.h"
+#include "synchrono/component/TrackingComponent.h"
+#include "synchrono/component/ACCComponent.h"
 #include "synchrono/brain/ACCBrain.h"
 #include "synchrono/brain/TrafficLightBrain.h"
 #include "synchrono/agent/SynSedanAgent.h"
@@ -42,6 +45,20 @@ const double BCAST_RADIUS = 5;
 const bool verbose = false;
 
 // =============================================================================
+void A() 
+{ 
+    printf("This is callback function A invoked when rectangular detection is activated\n"); 
+} 
+
+void B()
+{
+    printf("This is callback function B invoked when circular detection is activated\n");
+}
+
+void C()
+{
+    printf("This is callback function C invoked to test multiple callback func capability\n");
+}
 
 int main(int argc, char* argv[]) {
 
@@ -91,6 +108,10 @@ int main(int argc, char* argv[]) {
             {
                 agent = chrono_types::make_shared<SynSedanAgent>(i);
                 mpi_manager.AddAgent(agent, i);
+            }else if(i==3)
+            {
+                agent = chrono_types::make_shared<SynSedanAgent>(i);
+                mpi_manager.AddAgent(agent, i);
             }
 
             ChVector<> initLoc;
@@ -115,6 +136,14 @@ int main(int argc, char* argv[]) {
                     // City bus
                     initLoc = ChVector<>({-6.4, -70, 0.72});
                     initLoc2 = ChVector<>({-2.8, -70, 0.72});
+                    initRot = QUNIT;
+                    qA_1 = Q_from_AngAxis(0 * CH_C_DEG_TO_RAD, VECT_Y);
+                    qB_1 = Q_from_AngAxis(90 * CH_C_DEG_TO_RAD, VECT_Z);
+                    initRot = initRot >> qA_1 >> qB_1;
+                    break;
+                case 3:
+                    // City bus
+                    initLoc = ChVector<>({-2.8, -55, 0.72});
                     initRot = QUNIT;
                     qA_1 = Q_from_AngAxis(0 * CH_C_DEG_TO_RAD, VECT_Y);
                     qB_1 = Q_from_AngAxis(90 * CH_C_DEG_TO_RAD, VECT_Z);
@@ -160,6 +189,9 @@ int main(int argc, char* argv[]) {
                     case 2:
                         path = path_2;
                         lane = 2;
+                    case 3:
+                        path = path_1;
+                        lane = 3;
                     default:
                         path = path_1;
                         break;
@@ -173,6 +205,9 @@ int main(int argc, char* argv[]) {
                         break;
                     case 2:
                         target_speed = 8;
+                        break;
+                    case 3:
+                        target_speed = 3;
                         break;
                     default:
                         target_speed = 8;
@@ -199,15 +234,50 @@ int main(int argc, char* argv[]) {
                 driver->GetSteeringController().SetGains(turn_Kp, turn_Ki, turn_Kd);
                 driver->GetSteeringController().SetLookAheadDistance(5);
 
-                std::shared_ptr<TBrain> brain =
-                    chrono_types::make_shared<TBrain>(rank, driver, agent->GetVehicle());
-                    //-------------------------------
-                std::cout<<&brain<<std::endl;
-                brain->setLane(lane);
-                agent->SetBrain(brain);
+                std::shared_ptr<GeneralBrain> brain =
+                    chrono_types::make_shared<GeneralBrain>(rank, driver, agent->GetVehicle());
+                
 
-                //std::shared_ptr<TBrain> Tbrain =
-                //    chrono_types::make_shared<TBrain>(rank, driver, agent->GetVehicle());
+                if(rank == 1)
+                {
+                    std::shared_ptr<TrackingComponent> Tcomp =
+                    chrono_types::make_shared<TrackingComponent>(rank, driver, agent->GetVehicle());
+                    
+                    // set target ranks
+                    Tcomp->addTargetRank(2);
+
+                    // pointing to function A (rec detection)
+                    void (*ptr1)() = &A;
+                    // pointing to function B (cir detection)
+                    void (*ptr2)() = &B;
+                    // pointing to function C (callback func array)
+                    void (*ptr3)() = &C;
+                    // set the action when rectangular collision is activated 
+                    Tcomp->addActionUsrRec(ptr1);
+                    // set the action when circular collision is activated
+                    Tcomp->addActionUsrCir(ptr2);
+                    // set the action to test callback function vector
+                    Tcomp->addActionUsrRec(ptr3);
+                    Tcomp->addActionUsrCir(ptr3);
+                    // enable location display
+                    Tcomp->enableLocDisplay();
+                    // disable location display (default is disabled)
+                    // brain->disableLocDisplay();
+
+                    brain->addModule(Tcomp);
+                }
+
+
+                std::shared_ptr<ACCComponent> ACCcomp =
+                    chrono_types::make_shared<ACCComponent>(rank, driver, agent->GetVehicle());
+
+                ACCcomp->setLane(lane);
+                agent->SetBrain(brain);
+                brain->addModule(ACCcomp);
+                
+
+                //std::shared_ptr<TrackingBrain> TrackingBrain =
+                //    chrono_types::make_shared<TrackingBrain>(rank, driver, agent->GetVehicle());
 
                 std::shared_ptr<SynVisManager> vis_manager = chrono_types::make_shared<SynVisManager>();
                 agent->AttachVisManager(vis_manager);
@@ -284,25 +354,6 @@ int main(int argc, char* argv[]) {
 
     // Simulation Loop
     while (step * HEARTBEAT < T_END) {
-        
-        if(rank == 1)
-        {
-            resultVec1 = driver->GetVEHSentinel();
-            
-            mpi_manager.Track(resultVec1);
-            //std::cout<<"Location = "<<resultVec1<<std::endl;
-            //std::cout<<"Location 2 = " << resultVec2<<std::endl;
-        }
-        else if(rank == 2)
-        {
-            resultVec2 = driver->GetVEHSentinel();
-            
-            mpi_manager.Track(resultVec2);
-            //std::cout<<"Location 2 = " << resultVec2<<std::endl;
-        }
-     //std::cout<<"MPI STORED Location - " << 1 << " - "<< mpi_manager.ReturnTrackingData(1)<<std::endl;
-        //std::cout<<"MPI STORED Location - " << 2 << " - "<< mpi_manager.ReturnTrackingData(2)<<std::endl;
-        //std::cout<<"MPI STORED Location 2 = " << mpi_manager.ReturnTrackingData(2)<<std::endl;
 
         
         
@@ -311,6 +362,10 @@ int main(int argc, char* argv[]) {
             driver->ChangeVEHPath(path_3, false);
         }
 
+        if(rank==2 && (step * HEARTBEAT == 8))
+        {
+            driver->ChangeVEHPath(path_2, false);
+        }
         std::chrono::high_resolution_clock::time_point t0 = std::chrono::high_resolution_clock::now();
 
         // Advance

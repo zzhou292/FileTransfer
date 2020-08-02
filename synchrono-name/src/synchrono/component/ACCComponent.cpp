@@ -1,20 +1,24 @@
-#include "synchrono/brain/ACCBrain.h"
+
+#include "synchrono/component/ACCComponent.h"
+
+
+
 
 namespace synchrono {
 namespace agent {
 
-ACCBrain::ACCBrain(int rank, std::shared_ptr<ChDriver> driver, ChVehicle& vehicle)
-    : SynVehicleBrain(rank, driver, vehicle) {
+ACCComponent::ACCComponent(int rank, std::shared_ptr<ChDriver> driver, ChVehicle& vehicle)
+    : SynVehicleComponent(rank, driver, vehicle) {
     m_nearest_vehicle = 1000;
 
     m_rank = rank;
 }
 
 
-ACCBrain::~ACCBrain() {}
+ACCComponent::~ACCComponent() {}
 
-void ACCBrain::Synchronize(double time) {
-    double temp_range = 1000;
+void ACCComponent::Synchronize(double time) {
+        double temp_range = 1000;
     if (false && GetRank() == 4) {
         std::string color = m_light_color == 0 ? "green" : (m_light_color == 1 ? "yellow" : "red");
         std::string box = m_inside_box ? "inside box" : "not inside box";
@@ -26,43 +30,6 @@ void ACCBrain::Synchronize(double time) {
     if (false && GetRank() == 4) {
         std::cout << "Distance is: " << m_dist << std::endl;
     }
-
-#ifdef SENSOR
-    if (m_lidar) {
-        // This only returns non-null at the lidar frequency, so only overwrite if it was non-null
-        UserDIBufferPtr recent_lidar = m_lidar->GetMostRecentBuffer<UserDIBufferPtr>();
-
-        if (recent_lidar->Buffer) {
-            m_recent_lidar_data = recent_lidar;
-        }
-
-        float min_val = m_nearest_vehicle / 15.0;
-        if (GetRank() == 5) {
-            // std::cout << m_nearest_vehicle << std::endl;
-        }
-
-        if (GetRank() == 2 && m_nearest_vehicle != 1000) {
-            // std::cout << m_nearest_vehicle << std::endl;
-        }
-
-        if (m_recent_lidar_data && m_recent_lidar_data->Buffer) {
-            for (int i = 0; i < m_recent_lidar_data->Height; i++) {
-                for (int j = 0; j < m_recent_lidar_data->Width; j++) {
-                    double temp_range = m_recent_lidar_data->Buffer[i * m_recent_lidar_data->Width + j].range;
-                    double temp_intensity = m_recent_lidar_data->Buffer[i * m_recent_lidar_data->Width + j].intensity;
-
-                    if (temp_range < min_val && temp_intensity >= m_lidar_intensity_epsilon) {
-                        min_val = temp_range;
-                    }
-                }
-            }
-        }
-
-        temp_range = temp_range < min_val ? temp_range : min_val;
-        // std::cout << "Range: " << temp_range << std::endl;
-    }
-
-#endif
     std::static_pointer_cast<ChPathFollowerACCDriver>(m_driver)->SetCurrentDistance(temp_range);
 
     // std::cout << "Range is: " << temp_range << std::endl;
@@ -77,13 +44,16 @@ void ACCBrain::Synchronize(double time) {
     // std::cout << "\r\nthrottle: " << driver_inputs.m_throttle;
     // std::cout << "\r\nbraking: " << driver_inputs.m_braking;
     // std::cout << std::endl;
+
 }
 
-void ACCBrain::Advance(double step) {
+void ACCComponent::Advance(double step) {
     m_driver->Advance(step);
 }
 
-void ACCBrain::ProcessMessage(SynMessage* msg, int sender_rank) {
+//Tbrain is going to process the message to extract the location of the sender agent
+//and also updates the location of the agent on the current rank
+void ACCComponent::ProcessMessage(SynMessage* msg, int sender_rank) {
      //std::cout<<"pos"<<m_vehicle.GetChassisBody()->GetPos()<<std::endl;
     switch (msg->GetType()) {
         case SynMessage::TRAFFIC_LIGHT: {
@@ -130,7 +100,8 @@ void ACCBrain::ProcessMessage(SynMessage* msg, int sender_rank) {
     }
 }
 
-double ACCBrain::DistanceToLine(ChVector<> p, ChVector<> l1, ChVector<> l2) {
+
+double ACCComponent::DistanceToLine(ChVector<> p, ChVector<> l1, ChVector<> l2) {
     // https://www.intmath.com/plane-analytic-geometry/perpendicular-distance-point-line.php
     double A = l1.y() - l2.y();
     double B = -(l1.x() - l2.x());
@@ -139,12 +110,15 @@ double ACCBrain::DistanceToLine(ChVector<> p, ChVector<> l1, ChVector<> l2) {
     return d;
 }
 
-bool ACCBrain::IsInsideBox(ChVector<> pos, ChVector<> sp, ChVector<> op, double w) {
+bool ACCComponent::IsInsideBox(ChVector<> pos, ChVector<> sp, ChVector<> op, double w) {
     double len = (sp - op).Length();
     // TODO :: Should be w / 2, but paths are too far away from the actual lanes
 
     return (pos - sp).Length() < len && (pos - op).Length() < len && DistanceToLine(pos, sp, op) < w;
 }
+
+
+
 
 }  // namespace agent
 }  // namespace synchrono

@@ -74,8 +74,7 @@ class SYN_API SynMPIManager {
     int m_rank;       ///< rank which this manager controls
     int m_num_ranks;  ///< total number of ranks in this simulation
 
-    //chrono::Vector buffer1 = ChVector<>(0.00,160.00,0.00);
-    //chrono::Vector buffer2 = ChVector<>(0.00,160.00,0.00);
+    //This vectors stores the location of the agent on the current rank
     chrono::Vector myLoc;
 
     std::map<int, std::shared_ptr<SynAgent>> m_agent_list;  ///< id to agent map on this rank

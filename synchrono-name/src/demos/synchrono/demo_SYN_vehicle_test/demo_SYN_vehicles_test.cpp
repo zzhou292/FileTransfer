@@ -3,6 +3,9 @@
 #include "synchrono/SynMPIManager.h"
 #include "synchrono/SynCLI.h"
 #include "synchrono/SynVehicleBrain.h"
+#include "synchrono/SynVehicleComponent.h"
+#include "synchrono/brain/GeneralBrain.h"
+#include "synchrono/component/TrackingComponent.h"
 
 #include "synchrono/agent/SynCityBusAgent.h"
 #include "synchrono/agent/SynSedanAgent.h"
@@ -31,6 +34,18 @@ using namespace synchrono::mpi;
 using namespace chrono;
 
 // =============================================================================
+
+
+void A() 
+{ 
+    printf("This is callback function A invoked when rectangular detection is activated\n"); 
+} 
+
+void B()
+{
+    printf("This is callback function B invoked when circular detection is activated\n");
+}
+
 
 int main(int argc, char* argv[]) {
     // CLI tools for default synchrono demos
@@ -78,7 +93,7 @@ int main(int argc, char* argv[]) {
         mpi_manager.AddAgent(agent, rank);
 
         // Initialize the vehicle and the terrain
-        agent->InitializeVehicle(ChCoordsys<>({0, 3.0 * rank, 0.5}, {1, 0, 0, 0}));
+        agent->InitializeVehicle(ChCoordsys<>({0 + 4.0 * rank, 3.0 * rank, 0.5}, {1, 0, 0, 0}));
         auto terrain = chrono_types::make_shared<SynRigidTerrain>(agent->GetSystem(), 0, 100, 100);
         agent->SetTerrain(terrain);
 
@@ -96,8 +111,25 @@ int main(int argc, char* argv[]) {
             }
         }
         std::shared_ptr<ChDriver> driver = chrono_types::make_shared<ChDriver>(agent->GetVehicle());
-        std::shared_ptr<SynVehicleBrain> brain =
-            chrono_types::make_shared<SynVehicleBrain>(rank, driver, agent->GetVehicle());
+        std::shared_ptr<GeneralBrain> brain =
+            chrono_types::make_shared<GeneralBrain>(rank, driver, agent->GetVehicle());
+
+        std::shared_ptr<TrackingComponent> module =
+            chrono_types::make_shared<TrackingComponent>(rank, driver, agent->GetVehicle());
+
+        module->enableLocDisplay();
+        void (*ptr1)() = &A;
+        module->addActionUsrRec(ptr1);
+
+        // add TrackingComponent to the GeneralBrain
+        brain->addModule(module);
+
+        // TESTING BLOCK!!!!!!
+        // return the amount of modules added to the brain
+        std::cout << "module size : "<<brain->moduleVecLength() << std::endl;
+
+
+
         agent->SetBrain(brain);
 
         std::shared_ptr<SynVisManager> vis_manager = chrono_types::make_shared<SynVisManager>();
@@ -158,3 +190,6 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
+
+  

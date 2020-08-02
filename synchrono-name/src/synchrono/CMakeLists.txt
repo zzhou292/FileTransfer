@@ -35,8 +35,12 @@ source_group("agent" FILES ${SYN_AGENT_FILES})
 set(SYN_BRAIN_FILES
 	SynBrain.h
 	SynBrain.cpp
+	SynComponent.h
+	SynComponent.cpp
 	SynVehicleBrain.h
 	SynVehicleBrain.cpp
+	SynVehicleComponent.h
+	SynVehicleComponent.cpp
 
 	brain/ACCBrain.h
 	brain/ACCBrain.cpp
@@ -44,8 +48,14 @@ set(SYN_BRAIN_FILES
 	brain/NOOPBrain.cpp
 	brain/TrafficLightBrain.h
 	brain/TrafficLightBrain.cpp
-	brain/TBrain.h
-	brain/TBrain.cpp
+	brain/TrackingBrain.h
+	brain/TrackingBrain.cpp
+	brain/GeneralBrain.h
+	brain/GeneralBrain.cpp
+	component/TrackingComponent.h
+	component/TrackingComponent.cpp
+	component/ACCComponent.h
+	component/ACCComponent.cpp
 )
 source_group("brain" FILES ${SYN_BRAIN_FILES})
 
