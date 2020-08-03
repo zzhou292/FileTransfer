@@ -1,2 +1,0 @@
-Loc: 75, -7.5, 0.5 # Right before entering university
-Rot: -0.00942852, 0.00497593, -0.00215422, -0.999941

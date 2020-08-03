@@ -1,8 +1,0 @@
-[submodule "flatbuffers"]
-	path = flatbuffers
-	url = https://github.com/google/flatbuffers.git
-	ignore = dirty
-[submodule "chrono/chrono-SCM"]
-	path = chrono/chrono-SCM
-	url = https://github.com/uwsbel/chrono-dev.git
-	ignore = dirty

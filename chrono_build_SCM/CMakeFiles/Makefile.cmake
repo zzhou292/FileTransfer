@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/jason/Desktop/FileTransfer/.git/HEAD"
-  "/home/jason/Desktop/FileTransfer/.git/refs/heads/master"
   "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/CMakeLists.txt"
   "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/cmake/CheckOpenMPVersion.cmake"
   "/home/jason/Desktop/FileTransfer/chrono-dev-5985d8c5e92899005e8022fcf8ee6a959d758d63/cmake/ChronoConfig.cmake.in"
